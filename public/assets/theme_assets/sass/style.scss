@@ -10,3 +10,11 @@
 
 // responsive styles
 @import "responsive";
+
+.owl-prev {
+    left: -4rem !important;
+}
+
+.testimonial-carousel .owl-nav button.owl-prev {
+    left: -4rem !important;
+}
