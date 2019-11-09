@@ -10,11 +10,14 @@ import { ContentBlockHome } from "../../content/element/content-block";
 import CardCategoryGrid2 from "../../content/element/card/card-category-grid-2";
 import { PlaceList } from "../../content/element/place-list";
 import Testimonial from "./components/testimonial";
-import ClientLogo from "../../content/element/carousel/client-logo";
+import ClientLogo from "../Dashboard/components/client-logo";
 import { Subscribe } from "../../content/element/subscribe";
 import { connect } from "react-redux";
 import SponsoredCourses from "./components/sponsoredCourses";
-import { PopularCategoryList } from "../../content/element/popularCategoryList";
+import { PopularCategoryList } from "../Dashboard/components/popularCategoryList";
+import ActivityCard from "../../content/element/activityCard";
+import Activities from "./components/activities";
+import PopularCourses from "./components/popularCourses";
 
 const noAction = e => e.preventDefault();
 class Index extends Component {
@@ -39,7 +42,7 @@ class Index extends Component {
         {/* Header section end */}
 
         <section className="categories-cards section-padding-two">
-          <div style={{ maxWidth: "1590px" }} className="container">
+          <div style={{ maxWidth: "1366px" }} className="container">
             <SectionTitle
               title="Öne çıkan eğitimler"
               content="En iyi kurumları , eğitmenleri ve etkinlikleri keşfet"
@@ -51,22 +54,24 @@ class Index extends Component {
         </section>
 
         <section className="section-padding-strict section-bg">
-          <SectionTitle
-            title="En Fazla Aranan Kategoriler"
-            content="En iyi kurumları , eğitmenleri ve etkinlikleri keşfet"
-          />
-          <PopularCategoryList />
+          <div className="container">
+            <SectionTitle
+              title="En Fazla Aranan Kategoriler"
+              content="En iyi kurumları , eğitmenleri ve etkinlikleri keşfet"
+            />
+            <PopularCategoryList />
+          </div>
         </section>
 
         {/* Category section start */}
         <section className="categories-cards section-padding-two">
-          <div className="container">
+          <div style={{ maxWidth: "1366px" }} className="container">
             <SectionTitle
-              title="Öne çıkan eğitimler"
+              title="Yaklaşan Etkinlikler"
               content="En iyi kurumları , eğitmenleri ve etkinlikleri keşfet"
             />
             <div className="row">
-              <CardCategoryGrid4 />
+              <Activities />
             </div>
           </div>
         </section>
@@ -83,7 +88,7 @@ class Index extends Component {
             <div className="row">
               <div className="listing-cards-wrapper col-lg-12">
                 <div className="row">
-                  <CardListingGrid4 logdIn={logdIn()} />
+                  <PopularCourses logdIn={logdIn()} />
                   <div className="col-lg-12 text-center m-top-20">
                     <NavLink
                       onClick={noAction}

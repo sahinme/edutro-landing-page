@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Index from './page/index';
+import Index from './page/Dashboard/index';
 import AllListingGrid from './page/all-listing-grid';
 import AllListingList from './page/all-listing-list';
 import ListingDetails from './page/listing-details';
 import Category from './page/all-categoris';
 import Location from './page/all-location';
-import Pricing from './page/pricing-plan';
+import Pricing from './page/PricingPlan/pricing-plan';
 import Faq from './page/faq';
-import About from './page/about';
+import About from './page/About/about';
 import Contact from './page/contact';
 import Cards from './page/cards';
 import HeaderStyle from './page/header-style';

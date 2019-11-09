@@ -3,15 +3,16 @@ import { connect } from "react-redux";
 import OwlCarousel from "react-owl-carousel2";
 import { NavLink } from "react-router-dom";
 import CourseCard from "../../../content/element/courseCard";
+import ActivityCard from "../../../content/element/activityCard";
 const noAction = e => e.preventDefault();
 
 const options = {
-  items: 6,
+  items: 5,
   dots: false,
   nav: true,
-  responsiveClass: true,
   autoplay: true,
-  autoplayTimeout: 2000,
+  autoplayTimeout: 3000,
+  responsiveClass: true,
   responsive: {
     0: {
       items: 2,
@@ -22,7 +23,7 @@ const options = {
       nav: true
     },
     1000: {
-      items: 6,
+      items: 5,
       nav: true,
       loop: true
     }
@@ -36,8 +37,19 @@ const options = {
 };
 
 const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
+const img = "./assets/img/p1.jpg";
+const rating = 2;
+const badge = "";
+const title = "sdasd";
+const location = "sdfsdf";
+const price = 12.1;
+const phone = 121212;
+const opCl = "12";
+const id = 1;
 
-class SponsoredCourses extends Component {
+const logdIn = null;
+
+class Activities extends Component {
   render() {
     return (
       <Fragment>
@@ -46,7 +58,7 @@ class SponsoredCourses extends Component {
           className="testimonial-carousel owl-carousel"
         >
           {data.map((value, index) => {
-            return <CourseCard></CourseCard>;
+            return <ActivityCard></ActivityCard>;
           })}
         </OwlCarousel>
       </Fragment>
@@ -54,4 +66,4 @@ class SponsoredCourses extends Component {
   }
 }
 
-export default SponsoredCourses;
+export default Activities;

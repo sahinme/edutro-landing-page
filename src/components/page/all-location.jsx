@@ -3,7 +3,7 @@ import Header from "../layout/header";
 import { Footer } from "../layout/footer";
 import { BreadcrumbWraper } from "../content/element/breadcrumb";
 import { connect } from "react-redux";
-import { PopularCategoryList } from "../content/element/popularCategoryList";
+import { PopularCategoryList } from "../page/Dashboard/components/popularCategoryList";
 const AllLocation = props => {
   const light = props.logo[0].light;
   return (

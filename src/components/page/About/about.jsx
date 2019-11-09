@@ -4,9 +4,9 @@ import { Footer } from "../../layout/footer";
 import { BreadcrumbAbout } from "../../content/element/breadcrumb";
 import { ContentBlockAbout } from "../../content/element/content-block";
 import { Counter } from "../../content/element/counter";
-import Testimonial from "../content/element/carousel/testimonial";
+import Testimonial from "../Dashboard/components/testimonial";
 import { SectionTitle } from "../../content/element/section-title";
-import ClientLogo from "../../content/element/carousel/client-logo";
+import ClientLogo from "../../page/Dashboard/components/client-logo";
 import { Subscribe } from "../../content/element/subscribe";
 import { connect } from "react-redux";
 
