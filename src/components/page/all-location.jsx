@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import Header from "../layout/header";
 import { Footer } from "../layout/footer";
 import { BreadcrumbWraper } from "../content/element/breadcrumb";
-import { LocationList } from "../content/element/place-list";
 import { connect } from "react-redux";
+import { PopularCategoryList } from "../content/element/popularCategoryList";
 const AllLocation = props => {
   const light = props.logo[0].light;
   return (
@@ -21,7 +21,7 @@ const AllLocation = props => {
       </section>
       {/* Header section end */}
       <section className="section-padding-strict section-bg">
-        <LocationList />
+        <PopularCategoryList />
       </section>
       <Footer />
     </Fragment>
