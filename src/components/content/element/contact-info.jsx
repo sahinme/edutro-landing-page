@@ -1,58 +1,36 @@
 import React, { Component, Fragment } from "react";
 const noAction = e => e.preventDefault();
+
+const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+const column = data.map(x => {
+  return (
+    <div className="col-lg-3 col-md-4 col-sm-6">
+      <div className="atbd_avatar_wrapper">
+        <div className="atbd_review_avatar">
+          <img
+            alt=""
+            src="./assets/img/review-author-thumb.jpg"
+            className="avatar avatar-32 photo"
+          />
+        </div>
+        <div className="atbd_name_time">
+          <p>Mark Rose</p>
+          <span className="review_time">6 hours ago</span>
+        </div>
+      </div>
+    </div>
+  );
+});
 export class ContactInfo extends Component {
   render() {
     return (
       <Fragment>
-        <div className="atbdb_content_module_contents">
-          <div className="atbd_contact_info">
-            <ul>
-              <li>
-                <div className="atbd_info_title">
-                  <span className="la la-map-marker"></span>Address:
-                </div>
-                <div className="atbd_info">25 East Valley Road, New York</div>
-              </li>
-              <li>
-                <div className="atbd_info_title">
-                  <span className="la la-phone"></span>Phone Number:
-                </div>
-                <div className="atbd_info">(213) 995-7799</div>
-              </li>
-              <li>
-                <div className="atbd_info_title">
-                  <span className="la la-envelope"></span>Email:
-                </div>
-                <span className="atbd_info">support@aazztech.com</span>
-              </li>
-              <li>
-                <div className="atbd_info_title">
-                  <span className="la la-globe"></span>Website:
-                </div>
-                <a
-                  onClick={noAction}
-                  href="http://aazztech.com"
-                  className="atbd_info"
-                >
-                  www.aazztech.com
-                </a>
-              </li>
-            </ul>
+        <div className="atbd_location_grid_wrap">
+          <div className="container">
+            <div className="row">{column}</div>
           </div>
-          <div className="atbd_director_social_wrap">
-            <a onClick={noAction} target="_blank" href="/at_demo">
-              <span className="fab fa-behance"></span>
-            </a>
-            <a onClick={noAction} target="_blank" href="/at_demo">
-              <span className="fab fa-facebook-f"></span>
-            </a>
-            <a onClick={noAction} target="_blank" href="/at_demo">
-              <span className="fab fa-twitter"></span>
-            </a>
-            <a onClick={noAction} target="_blank" href="/at_demo">
-              <span className="fab fa-youtube"></span>
-            </a>
-          </div>
+          {/*<!-- ends: .atbd_location_grid_wrap -->*/}
         </div>
       </Fragment>
     );

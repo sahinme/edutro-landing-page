@@ -8,7 +8,7 @@ export class ListingFetures extends Component {
           <div className="atbd_content_module__tittle_area">
             <div className="atbd_area_title">
               <h4>
-                <span className="la la-list-alt"></span>Features
+                <span className="la la-list-alt"></span>Özellikleri
               </h4>
             </div>
           </div>
@@ -17,23 +17,23 @@ export class ListingFetures extends Component {
               {/* <!--  get data from custom field--> */}
               <li>
                 <div className="atbd_custom_field_title">
-                  <p>Burn Unit: </p>
+                  <p>Sertifika: </p>
                 </div>
                 <div className="atbd_custom_field_content">
-                  <p>Quam kaddui posuere</p>
+                  <p>Uluslarası geçerli üniversite onaylı</p>
                 </div>
               </li>
               <li>
                 <div className="atbd_custom_field_title">
-                  <p>Custom Select Option:</p>
+                  <p>Online video:</p>
                 </div>
                 <div className="atbd_custom_field_content">
-                  <p>Curabitur aliquet quam id dui posuere blandit.</p>
+                  <p>4 eğitim videosu online verilecektir</p>
                 </div>
               </li>
               <li>
                 <div className="atbd_custom_field_title">
-                  <p>Custom Textarea:</p>
+                  <p>Özellik 3:</p>
                 </div>
                 <div className="atbd_custom_field_content">
                   <p>

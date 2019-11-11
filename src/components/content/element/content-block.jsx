@@ -11,9 +11,9 @@ export class ContentBlockHome extends Component {
               <div className="col-lg-12">
                 <div className="section-title">
                   <h2>
-                    Why <span>Direo</span> for your Business?
+                    İşiniz için <span>Edutro</span>
                   </h2>
-                  <p>Explore the popular listings around the world</p>
+                  <p>Eğitim ve aktivitelerinizi tüm dünyayla paylaşın</p>
                 </div>
               </div>
               <div className="col-lg-12">
@@ -34,10 +34,10 @@ export class ContentBlockHome extends Component {
                           </span>
                         </div>
                         <div className="list-content">
-                          <h4>Claim Listing</h4>
+                          <h4>Müşterilerinize anında ulaşın</h4>
                           <p>
-                            Excepteur sint occaecat cupidatat non proident sunt
-                            in culpa officia deserunt mollit.
+                            Canlı destek hattı ve bildirim alma seçeneğiyle ,
+                            müşterilerinizle anlık olarak görüşün
                           </p>
                         </div>
                       </li>
@@ -48,10 +48,10 @@ export class ContentBlockHome extends Component {
                           </span>
                         </div>
                         <div className="list-content">
-                          <h4>Paid Listing</h4>
+                          <h4>Cebinizin Dostu</h4>
                           <p>
-                            Excepteur sint occaecat cupidatat non proident sunt
-                            in culpa officia deserunt mollit.
+                            10.99 TL den başlayan paket fiyatlarıyla , işinizi
+                            büyütmeye başlayın
                           </p>
                         </div>
                       </li>
@@ -62,10 +62,11 @@ export class ContentBlockHome extends Component {
                           </span>
                         </div>
                         <div className="list-content">
-                          <h4>Promote your Business</h4>
+                          <h4>Yönetici Paneli</h4>
                           <p>
-                            Excepteur sint occaecat cupidatat non proident sunt
-                            in culpa officia deserunt mollit.
+                            Masaüstü ve mobil cihazlarınızdan girebileceğiniz
+                            yönetici paneli ile analitik verilerinize kadar
+                            ayarlayın
                           </p>
                         </div>
                       </li>
@@ -78,10 +79,10 @@ export class ContentBlockHome extends Component {
                           to="/at_demo"
                           className="btn btn-success"
                         >
-                          See our Pricing
+                          Hemen Başla
                         </NavLink>
                       </li>
-                      <li>
+                      {/*  <li>
                         <NavLink
                           onClick={noAction}
                           to="/at_demo"
@@ -89,7 +90,7 @@ export class ContentBlockHome extends Component {
                         >
                           Submit Listings
                         </NavLink>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>

@@ -204,7 +204,7 @@ export class Footer extends Component {
                 <div className="col-lg-12">
                   <div className="footer-bottom--content">
                     <NavLink to="/" className="footer-logo">
-                      <img src="./assets/img/logo.png" alt="" />
+                      <img src="./assets/img/main-logo-black.png" alt="" />
                     </NavLink>
                     <p className="m-0 copy-text">
                       ©2019 Edutro. <span className="la la-heart-o" /> Tüm

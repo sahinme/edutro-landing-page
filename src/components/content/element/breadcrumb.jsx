@@ -37,7 +37,9 @@ export class BreadcrumbSingle extends Component {
         <div className="col-lg-8 col-md-7">
           <ul className="list-unstyled listing-info--badges">
             <li>
-              <span className={"atbd_badge atbd_badge_" + badge}>{badge}</span>
+              <span className={"atbd_badge atbd_badge_" + "popüler"}>
+                popüler
+              </span>
             </li>
             <li>
               <span className="atbd_badge atbd_badge_popular">Popular</span>
@@ -77,7 +79,7 @@ export class BreadcrumbSingle extends Component {
             </li>
           </ul>
           {/*<!-- ends: .listing-info-meta -->*/}
-          <h1>Strawberry Basil Lemonade</h1>
+          <h1>Yaşam Koçluğu Eğitimi</h1>
           <p className="subtitle">{title}</p>
         </div>
         <div className="col-lg-4 col-md-5 d-flex align-items-end justify-content-start justify-content-md-end">
@@ -85,7 +87,7 @@ export class BreadcrumbSingle extends Component {
             <div className="atbd_action atbd_save">
               <div className="action_button">
                 <a href=" " onClick={noAction} className="atbdp-favourites">
-                  <span className="la la-heart-o"></span> Save
+                  <span className="la la-heart-o"></span> Favorilere Ekle
                 </a>
               </div>
             </div>
@@ -98,7 +100,7 @@ export class BreadcrumbSingle extends Component {
                 aria-expanded="false"
                 role="menu"
               >
-                <span className="la la-share"></span>Share
+                <span className="la la-share"></span>Paylaş
               </span>
               <div
                 className="atbd_director_social_wrap dropdown-menu"
@@ -150,18 +152,6 @@ export class BreadcrumbSingle extends Component {
               {/* <!--Ends social share--> */}
             </div>
             {/* <!-- Report Abuse--> */}
-            <div className="atbd_action atbd_report">
-              <div className="action_button">
-                <a
-                  href=" "
-                  data-toggle="modal"
-                  data-target="#atbdp-report-abuse-modal"
-                >
-                  <span className="la la-flag-o"></span> Report
-                </a>
-              </div>
-              {/* <!-- Modal (report abuse form) --> */}
-            </div>
           </div>
           {/* <!-- ends: .atbd_listing_action_area --> */}
         </div>

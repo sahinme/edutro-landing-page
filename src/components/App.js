@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Index from './page/Dashboard/index';
 import AllListingGrid from './page/all-listing-grid';
 import AllListingList from './page/all-listing-list';
-import ListingDetails from './page/listing-details';
+import CourseDetails from './page/Course/listing-details';
 import Category from './page/all-categoris';
 import Location from './page/all-location';
 import Pricing from './page/PricingPlan/pricing-plan';
@@ -16,12 +16,14 @@ import BlogRightSide from './page/blog-right-side';
 import BlogGrid from './page/blog-grid';
 import BlogDetails from './page/blog-details';
 import AuthProfile from './page/auth-profile';
-import AuthDeshbord from './page/auth-deshbord';
+import AuthDeshbord from './page/UserDashboard/auth-deshbord';
 import CheckoutBasic from './page/checkout-basic';
 import CheckoutAdvanced from './page/advanced';
 import Enterprise from './page/enterprise';
 import Invoice from './page/invoice';
 import AddListing from './page/add-listing';
+import Notifications from './page/UserDashboard/notifications';
+import CustomerDetail from './page/CustomerDetail';
 
 
 function App(props) {
@@ -31,7 +33,7 @@ function App(props) {
         <Route exact path='/' component={Index} />
         <Route path='/all-listings-grid' component={AllListingGrid} />
         <Route path='/all-listings-list' component={AllListingList} />
-        <Route path='/listing-details:id' component={ListingDetails} />
+        <Route path='/course-details:id' component={CourseDetails} />
         <Route path='/all-categories' component={Category} />
         <Route path='/all-locations' component={Location} />
         <Route path='/pricing-plans' component={Pricing} />
@@ -50,6 +52,8 @@ function App(props) {
         <Route path='/enterprise' component={Enterprise} />
         <Route path='/invoice' component={Invoice} />
         <Route path='/add-listing' component={AddListing} />
+        <Route path='/notifications' component={Notifications} />
+        <Route path='/instructor-profile' component={CustomerDetail} />
 
       </Switch>
     </Router>

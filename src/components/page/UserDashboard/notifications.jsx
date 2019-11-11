@@ -1,23 +1,17 @@
-import React, { Fragment, Component } from "react";
-import Header from "../layout/header";
-import { Footer } from "../layout/footer";
-import { BreadcrumbWraper } from "../content/element/breadcrumb";
+import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { connect } from "react-redux";
-import CardListingGrid4 from "../content/element/card/card-listing-grid-4";
-import { LogOut } from "../../Store/action/logoutAction";
+import { BreadcrumbWraper } from "../../content/element/breadcrumb";
+import cardListingGrid4 from "../../content/element/card/card-listing-grid-4";
+import { Footer } from "../../layout/footer";
+import CardListingGrid4 from "../../content/element/card/card-listing-grid-4";
+import Header from "../../layout/header";
 
 const noAction = e => e.preventDefault();
 
-class AuthDeshbord extends Component {
+class Notifications extends Component {
   render() {
     const logdIn = () => {
-      return this.props.login;
-    };
-    const light = this.props.logo[0].light;
-    const logOut = e => {
-      e.preventDefault();
-      this.props.logOutdata(null);
+      return true;
     };
     return (
       <Fragment>
@@ -27,7 +21,7 @@ class AuthDeshbord extends Component {
             <img src="./assets/img/breadcrumb1.jpg" alt="" />
           </div>
           <div className="mainmenu-wrapper">
-            <Header logo={light} class="menu--light" />
+            <Header logo="light" class="menu--light" />
           </div>
           {/* <!-- ends: .mainmenu-wrapper --> */}
           <BreadcrumbWraper title="Author Deshbord" />
@@ -45,55 +39,17 @@ class AuthDeshbord extends Component {
                         <li className="nav-item">
                           <a
                             className="nav-link active"
-                            id="all-listings"
-                            data-toggle="tab"
-                            href="#listings"
-                            role="tab"
-                            aria-controls="listings"
-                            aria-selected="true"
-                          >
-                            My Listings
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a
-                            className="nav-link"
-                            id="profile-tab"
-                            data-toggle="tab"
-                            href="#profile"
-                            role="tab"
-                            aria-controls="profile"
-                            aria-selected="false"
-                          >
-                            My Profile
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a
-                            className="nav-link"
-                            id="faborite-listings"
+                            id="notifications"
                             data-toggle="tab"
                             href="#favorite"
                             role="tab"
                             aria-controls="favorite"
-                            aria-selected="false"
+                            aria-selected="true"
                           >
-                            Favorite Listing
+                            Bildirim ve Mesajlar
                           </a>
                         </li>
                       </ul>
-                      <div className="nav_button">
-                        <NavLink to="/add-listing" className="btn btn-primary">
-                          <span className="la la-plus"></span> Add Listing
-                        </NavLink>
-                        <NavLink
-                          to="/at_deo"
-                          onClick={logOut}
-                          className="btn btn-secondary"
-                        >
-                          Log Out
-                        </NavLink>
-                      </div>
                     </div>
                   </div>
                   {/*<!-- ends: .col-lg-12 -->*/}
@@ -567,19 +523,4 @@ class AuthDeshbord extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    list: state.list,
-    login: state.login,
-    logo: state.logo
-  };
-};
-const mapDispatchToProp = dispatch => {
-  return {
-    logOutdata: login => dispatch(LogOut(login))
-  };
-};
-export default connect(
-  mapStateToProps,
-  mapDispatchToProp
-)(AuthDeshbord);
+export default Notifications;

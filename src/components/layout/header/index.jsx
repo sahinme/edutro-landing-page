@@ -24,12 +24,11 @@ class Header extends Component {
                     <div className="logo-wrapper order-lg-0 order-sm-1">
                       <div className="logo logo-top">
                         <NavLink to="/">
-                          {/*  <img
-                            src={this.props.logo}
+                          <img
+                            src="./assets/img/logo.png"
                             alt="logoImage"
                             className="img-fluid"
-                          /> */}
-                          <h1 style={{ color: "#aab2de" }}>Edutro</h1>
+                          />
                         </NavLink>{" "}
                       </div>
                     </div>
@@ -175,18 +174,18 @@ class Header extends Component {
                                   </a>
                                   <ul className="list-unstyled">
                                     <li>
-                                      <NavLink to="/author-profile">
-                                        My Profile
+                                      <NavLink to="/dashboard-listings">
+                                        Profil
                                       </NavLink>
                                     </li>
                                     <li>
                                       <NavLink to="/dashboard-listings">
-                                        Deshboard
+                                        Favori Kurslarim
                                       </NavLink>
                                     </li>
                                     <li>
-                                      <NavLink to="/at_demo">
-                                        Favorite Listing
+                                      <NavLink to="/notifications">
+                                        Bildirimler
                                       </NavLink>
                                     </li>
                                     <li>

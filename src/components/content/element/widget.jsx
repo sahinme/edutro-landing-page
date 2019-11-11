@@ -14,7 +14,7 @@ export class SellerInfo extends Component {
             </div>
             <div className="atbd_name_time">
               <h4>
-                Zephy Real Estate{" "}
+                Abay Akademi{" "}
                 <span
                   className="verified"
                   data-toggle="tooltip"
@@ -22,7 +22,7 @@ export class SellerInfo extends Component {
                   title="Verified"
                 ></span>
               </h4>
-              <span className="review_time">Posted 6 days ago</span>
+              <span className="review_time">2 ay önce oluşturuldu</span>
             </div>
           </div>
           {/* <!-- ends: .atbd_avatar_wrapper --> */}
@@ -30,15 +30,7 @@ export class SellerInfo extends Component {
             <ul>
               <li>
                 <span className="la la-map-marker"></span>
-                <span className="atbd_info">25 East Valley Road, Michigan</span>
-              </li>
-              <li>
-                <span className="la la-phone"></span>
-                <span className="atbd_info">(213) 995-7799</span>
-              </li>
-              <li>
-                <span className="la la-envelope"></span>
-                <span className="atbd_info">support@aazztech.com</span>
+                <span className="atbd_info">Ankara / Çankaya</span>
               </li>
               <li>
                 <span className="la la-globe"></span>
@@ -49,40 +41,11 @@ export class SellerInfo extends Component {
             </ul>
           </div>
           {/* <!-- ends: .atbd_widget_contact_info --> */}
-          <div className="atbd_social_wrap">
-            <p>
-              <NavLink to="/at_demo" onClick={noAction}>
-                <span className="fab fa-facebook-f"></span>
-              </NavLink>
-            </p>
-            <p>
-              <NavLink to="/at_demo" onClick={noAction}>
-                <span className="fab fa-twitter"></span>
-              </NavLink>
-            </p>
-            <p>
-              <NavLink to="/at_demo" onClick={noAction}>
-                <span className="fab fa-google-plus-g"></span>
-              </NavLink>
-            </p>
-            <p>
-              <NavLink to="/at_demo" onClick={noAction}>
-                <span className="fab fa-linkedin-in"></span>
-              </NavLink>
-            </p>
-            <p>
-              <NavLink to="/at_demo" onClick={noAction}>
-                <span className="fab fa-dribbble"></span>
-              </NavLink>
-            </p>
-          </div>
-          {/* <!-- ends: .atbd_social_wrap --> */}
           <NavLink
-            onClick={noAction}
-            to="/profile"
+            to="/instructor-profile"
             className="btn btn-outline-primary btn-block"
           >
-            View Profile
+            Profili Gör
           </NavLink>
         </div>
       </Fragment>

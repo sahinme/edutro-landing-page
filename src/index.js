@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducers from './Store/Reducers/rootReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import "antd/dist/antd.css";
 
 const store = createStore(
     rootReducers,

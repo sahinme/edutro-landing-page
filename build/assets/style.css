@@ -1227,7 +1227,7 @@
 .post-bottom .tags ul li a:hover,
 .post-bottom .social-share ul li a:hover,
 .comments-area .comment-lists ul .depth-1 .media .media-body .media_top .reply:hover {
-  background: #f5548e;
+  background: #EA5352;
 }
 
 .iborder-primary {
@@ -1327,7 +1327,7 @@
 .listing-info .listing-info--meta .atbd_listing_rating,
 .pricing .pricing__title h4 .atbd_plan-active,
 .atbd_auhor_profile_area .atbd_author_meta .atbd_listing_meta .atbd_listing_rating {
-  background: #32cc6f;
+  background: #EA5352;
 }
 
 .iborder-success {
@@ -1405,7 +1405,7 @@
 .bg-warning,
 .atbd_listing_thumbnail_area .atbd_upper_badge .atbd_badge.atbd_badge_sponsorlu,
 .listing-info .listing-info--badges .atbd_badge.atbd_badge_sponsorlu {
-  background: #fa8b0c;
+  background: #0c97fa17;
 }
 
 .iborder-warning {
@@ -1435,15 +1435,15 @@
 .atbd_listing_meta .atbd_badge_close,
 .directory_open_hours ul li.atbd_closed span,
 .pricing .pricing__features ul li>span.unavailable:first-child {
-  color: #fd4868;
+  color: #EA5352;
 }
 
 .bg-danger,
-.atbd_listing_thumbnail_area .atbd_upper_badge .atbd_badge.atbd_badge_popular,
+.atbd_listing_thumbnail_area .atbd_upper_badge .atbd_badge.atbd_badge_popüler,
 .post--card2 figure figcaption a,
-.listing-info .listing-info--badges .atbd_badge.atbd_badge_popular,
+.listing-info .listing-info--badges .atbd_badge.atbd_badge_popüler,
 .play-btn {
-  background: #fd4868;
+  background: #f33b3b9e;
 }
 
 .owl-carousel.owl-drag .owl-item {
@@ -2003,6 +2003,10 @@ p {
   opacity: 0;
 }
 
+.atbd_single_listing {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
 .bg_image_holder img {
   display: none;
 }
@@ -2022,7 +2026,7 @@ p {
 }
 
 .overlay.overlay--dark:before {
-  background: rgba(47, 38, 57, 0.8);
+  background: rgba(23, 23, 23, 0.8);
 }
 
 /* product card */
@@ -2042,8 +2046,8 @@ p {
 
 .atbd_listing_thumbnail_area .atbd_thumbnail_overlay_content {
   position: absolute;
-  left: 1.33333rem;
-  top: 1rem;
+  left: 0.33333rem;
+  top: 0.4rem;
 }
 
 .atbd_listing_thumbnail_area .atbd_upper_badge {
@@ -6274,31 +6278,19 @@ p {
 }
 
 .btn-gradient.btn-gradient-one {
-  background: -webkit-gradient(linear, left top, right top, from(#f5548e), to(#903af9));
-  background: -webkit-linear-gradient(left, #f5548e, #903af9);
-  background: -o-linear-gradient(left, #f5548e, #903af9);
-  background: linear-gradient(to right, #f5548e, #903af9);
+  background: #EA5352;
 }
 
 .btn-gradient.btn-gradient-one:before {
-  background: -webkit-gradient(linear, left top, right top, from(#903af9), to(#f5548e));
-  background: -webkit-linear-gradient(left, #903af9, #f5548e);
-  background: -o-linear-gradient(left, #903af9, #f5548e);
-  background: linear-gradient(to right, #903af9, #f5548e);
+  background: #EA5352
 }
 
 .btn-gradient.btn-gradient-two {
-  background: -webkit-gradient(linear, left top, right top, from(#f5548e), to(#fa8b0c));
-  background: -webkit-linear-gradient(left, #f5548e, #fa8b0c);
-  background: -o-linear-gradient(left, #f5548e, #fa8b0c);
-  background: linear-gradient(to right, #f5548e, #fa8b0c);
+  background: #EA5352
 }
 
 .btn-gradient.btn-gradient-two:before {
-  background: -webkit-gradient(linear, left top, right top, from(#fa8b0c), to(#f5548e));
-  background: -webkit-linear-gradient(left, #fa8b0c, #f5548e);
-  background: -o-linear-gradient(left, #fa8b0c, #f5548e);
-  background: linear-gradient(to right, #fa8b0c, #f5548e);
+  background: #EA5352
 }
 
 .btn-gradient.btn-xs {
@@ -7333,7 +7325,7 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #fff;
+  background: #abaaaa59;
   padding: 2rem;
   -webkit-border-radius: 0.1875rem;
   border-radius: 0.1875rem;

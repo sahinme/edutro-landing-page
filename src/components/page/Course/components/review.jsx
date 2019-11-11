@@ -9,13 +9,13 @@ export class Review extends Component {
           <div className="atbd_content_module__tittle_area">
             <div className="atbd_area_title">
               <h4>
-                <span className="la la-star-o"></span>4 Reviews
+                <span className="la la-star-o"></span>4 Değerlendirme
               </h4>
               <label
                 htmlFor="review_content"
                 className="btn btn-secondary btn-icon-left btn-sm not_empty"
               >
-                <span className="la la-star-o"></span> Add a review
+                <span className="la la-star-o"></span> Değerlendir
               </label>
             </div>
           </div>
@@ -32,8 +32,8 @@ export class Review extends Component {
                       />
                     </div>
                     <div className="atbd_name_time">
-                      <p>Mark Rose</p>
-                      <span className="review_time">6 hours ago</span>
+                      <p>Ali Şahin</p>
+                      <span className="review_time">6 saat önce</span>
                     </div>
                   </div>
                   <div className="atbd_rated_stars">
@@ -64,7 +64,7 @@ export class Review extends Component {
                     sed sit amet dui. Curabitur non nulla sit amet nisl tempus
                   </p>
                   <a href="# " className="reply">
-                    <span className="la la-mail-reply-all"></span>Reply
+                    <span className="la la-mail-reply-all"></span>Yanıtla
                   </a>
                 </div>
                 <div className="review_reply_form">
@@ -80,7 +80,9 @@ export class Review extends Component {
                       placeholder="Message"
                       className="form-control"
                     ></textarea>
-                    <button className="btn btn-sm btn-secondary">Reply</button>
+                    <button className="btn btn-sm btn-secondary">
+                      Yanıtla
+                    </button>
                   </form>
                 </div>
                 {/* <!-- comment depth 2 --> */}
@@ -96,8 +98,8 @@ export class Review extends Component {
                           />
                         </div>
                         <div className="atbd_name_time">
-                          <p>Conrad Jane</p>
-                          <span className="review_time">6 hours ago</span>
+                          <p>MeteKog</p>
+                          <span className="review_time">6 saat ago</span>
                         </div>
                       </div>
                     </div>
@@ -108,7 +110,7 @@ export class Review extends Component {
                         convallis at tellus vestibulum ac diam sit amet
                       </p>
                       <a href="# " className="reply">
-                        <span className="la la-mail-reply-all"></span>Reply
+                        <span className="la la-mail-reply-all"></span>Yanıtla
                       </a>
                     </div>
                     <div className="review_reply_form">
@@ -147,7 +149,7 @@ export class Review extends Component {
                     </div>
                     <div className="atbd_name_time">
                       <p>Conrad Jane</p>
-                      <span className="review_time">6 hours ago</span>
+                      <span className="review_time">6 saat ago</span>
                     </div>
                   </div>
                   <div className="atbd_rated_stars">
@@ -266,37 +268,36 @@ export class AddReview extends Component {
           <div className="atbd_content_module__tittle_area">
             <div className="atbd_area_title">
               <h4>
-                <span className="la la-star"></span>Add a Review
+                <span className="la la-star"></span>Kursu Değerlendir
               </h4>
             </div>
           </div>
           <div className="atbdb_content_module_contents atbd_give_review_area">
             <div className="atbd_notice alert alert-info" role="alert">
               <span className="la la-info" aria-hidden="true"></span>
-              You need to{" "}
+              Yorum ve değerlendirme yapmak için{" "}
               <NavLink
                 to="login"
                 data-toggle="modal"
                 data-target="#login_modal"
               >
-                Login
+                Giriş
               </NavLink>{" "}
-              or{" "}
+              yapmalısınız. Hesabınız yok mu ?
               <NavLink
                 to="/register"
                 data-toggle="modal"
                 data-target="#signup_modal"
               >
-                Register
-              </NavLink>{" "}
-              to submit a review
+                Kayıt olun
+              </NavLink>
             </div>
             {/* <!-- ends: .atbd_notice --> */}
             <form action="/" id="atbdp_review_form" method="post">
               <div className="atbd_review_rating_area">
                 {/* <!--It should be displayed on the left side --> */}
                 <div className="atbd_review_update_rating">
-                  <span>Rating: </span>
+                  <span>Puan: </span>
                   <div className="atbd_rating_stars">
                     <div className="br-wrapper br-theme-fontawesome-stars m-left-15">
                       <select className="give_rating">
@@ -318,7 +319,7 @@ export class AddReview extends Component {
                   name="content"
                   id="review_content"
                   className="form-control"
-                  placeholder="Message"
+                  placeholder="Mesajınız"
                   required
                 ></textarea>
               </div>
@@ -346,7 +347,7 @@ export class AddReview extends Component {
                 id="atbdp_review_form_submit"
                 onClick={noAction}
               >
-                Submit Review
+                Yorum yap
               </button>
             </form>
           </div>

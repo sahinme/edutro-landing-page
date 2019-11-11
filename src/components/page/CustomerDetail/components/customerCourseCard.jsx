@@ -9,11 +9,11 @@ const location = "Ankara";
 const price = "2.120";
 const id = 1;
 
-class CourseCard extends Component {
+class CustomerCourseCard extends Component {
   render() {
     return (
       <Fragment>
-        <div /* className="col-lg-4 col-sm-6" */ key="1">
+        <div className="col col-lg-3" key="1">
           <div className="atbd_single_listing ">
             <article className="atbd_single_listing_wrapper">
               <figure className="atbd_listing_thumbnail_area">
@@ -94,4 +94,4 @@ class CourseCard extends Component {
   }
 }
 
-export default CourseCard;
+export default CustomerCourseCard;

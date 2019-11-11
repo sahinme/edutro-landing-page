@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const img = "./assets/img/p1.jpg";
 const rating = 2;
-const badge = "sponsorlu";
+const badge = "popüler";
 const title = "Yasam Koclugu Egitimi";
 const location = "Ankara";
 const price = 2.12;
@@ -11,7 +11,7 @@ const id = 1;
 const phone = "0505 355 90 11";
 const opCl = "open";
 
-const data = [1, 1, 1, 1, 1, 1, 1, 1];
+const data = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 
 class PopularCourses extends Component {
   render() {

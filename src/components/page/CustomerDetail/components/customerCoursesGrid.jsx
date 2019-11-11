@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import CustomerCourseCard from "./customerCourseCard";
 import { connect } from "react-redux";
-import CourseCard from "../courseCard";
-const noAction = e => e.preventDefault();
-class ListingCardGrid4 extends Component {
+
+class CustomerCoursesGrid extends Component {
   render() {
     const { list, logdIn } = this.props;
     return (
@@ -22,7 +21,7 @@ class ListingCardGrid4 extends Component {
               opCl,
               id
             } = value;
-            return <CourseCard></CourseCard>;
+            return <CustomerCourseCard></CustomerCourseCard>;
           })}
       </Fragment>
     );
@@ -33,4 +32,4 @@ const mapStateToProps = state => {
     list: state.list
   };
 };
-export default connect(mapStateToProps)(ListingCardGrid4);
+export default connect(mapStateToProps)(CustomerCoursesGrid);

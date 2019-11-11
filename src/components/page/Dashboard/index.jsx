@@ -7,7 +7,7 @@ import { SectionTitle } from "../../content/element/section-title";
 import CardListingGrid4 from "../../content/element/card/card-listing-grid-4";
 import { NavLink } from "react-router-dom";
 import { ContentBlockHome } from "../../content/element/content-block";
-import CardCategoryGrid2 from "../../content/element/card/card-category-grid-2";
+import CardCategoryGrid2 from "./components/fourCityActivities";
 import { PlaceList } from "../../content/element/place-list";
 import Testimonial from "./components/testimonial";
 import ClientLogo from "../Dashboard/components/client-logo";
@@ -18,6 +18,7 @@ import { PopularCategoryList } from "../Dashboard/components/popularCategoryList
 import ActivityCard from "../../content/element/activityCard";
 import Activities from "./components/activities";
 import PopularCourses from "./components/popularCourses";
+import FourCityActivities from "./components/fourCityActivities";
 
 const noAction = e => e.preventDefault();
 class Index extends Component {
@@ -111,13 +112,13 @@ class Index extends Component {
         <section className="places section-padding">
           <div className="container">
             <SectionTitle
-              title="Destination We Love"
-              content="Explore best listings around the world by city"
+              title="Yaklaşan Etkinlikler"
+              content="Bulunduğun lokasyonda olan tüm etkinlikler ve daha fazlası"
             />
             <div className="row">
               <div className="col-lg-12">
                 <div className="cat-places-wrapper">
-                  <CardCategoryGrid2 />
+                  <FourCityActivities />
                 </div>
               </div>
               <PlaceList />

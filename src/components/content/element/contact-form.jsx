@@ -53,7 +53,7 @@ export class ContactForm extends Component {
             onChange={this.setStateFromInput}
             className="form-control"
             id="atbdp-contact-name"
-            placeholder="Name"
+            placeholder="İsim"
           />
         </div>
         <div className="text-danger">
@@ -68,9 +68,13 @@ export class ContactForm extends Component {
             onChange={this.setStateFromInput}
             className="form-control"
             id="atbdp-contact-email"
-            placeholder="Email"
+            placeholder="E-posta"
           />
         </div>
+        <p>
+          (Bu alan boş bırakılırsa kayıtlı olan <br></br> e-posta adresiniz
+          gönderilir.)
+        </p>
         <div className="text-danger">
           {this.validator.message("Email", this.state.email, "required|email")}
         </div>
@@ -83,7 +87,7 @@ export class ContactForm extends Component {
             onChange={this.setStateFromInput}
             id="atbdp-contact-message"
             rows="3"
-            placeholder="Message"
+            placeholder="Mesajınız"
           ></textarea>
         </div>
 
@@ -92,7 +96,7 @@ export class ContactForm extends Component {
           type="submit"
           className="btn btn-outline-secondary btn-block"
         >
-          Contact Agent
+          İletişime Geç
         </button>
       </form>
     );
