@@ -127,9 +127,17 @@ class Header extends Component {
                           {logdIn() == null ? (
                             <ul className="d-flex list-unstyled align-items-center">
                               <li>
-                                <div className="btn btn-xs btn-gradient btn-gradient-two">
-                                  <span className="la la-plus"></span> Add
-                                  Listing
+                                <div
+                                  style={{ cursor: "pointer" }}
+                                  className="btn btn-xs btn-gradient btn-gradient-two"
+                                >
+                                  <NavLink
+                                    style={{ color: "white" }}
+                                    to="/pricing-plans"
+                                  >
+                                    <span className="la la-plus"></span> Eğitim
+                                    ver
+                                  </NavLink>
                                 </div>
                               </li>
                               <li>
@@ -284,7 +292,4 @@ const mapDispatchToProp = dispatch => {
     logOutdata: login => dispatch(LogOut(login))
   };
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProp
-)(Header);
+export default connect(mapStateToProps, mapDispatchToProp)(Header);

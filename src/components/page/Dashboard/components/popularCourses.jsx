@@ -11,7 +11,7 @@ const id = 1;
 const phone = "0505 355 90 11";
 const opCl = "open";
 
-const data = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+const data = [1, 1, 1, 1, 1, 1, 1, 1];
 
 class PopularCourses extends Component {
   render() {
@@ -19,7 +19,7 @@ class PopularCourses extends Component {
       <Fragment>
         {data.map(x => {
           return (
-            <div className="col-lg-4 col-sm-6" key="1">
+            <div className="col-lg-3 col-sm-6" key="1">
               <div className="atbd_single_listing ">
                 <article className="atbd_single_listing_wrapper">
                   <figure className="atbd_listing_thumbnail_area">

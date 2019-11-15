@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import { categories } from "../../../page/CourseCategories/categories";
 const noAction = e => e.preventDefault();
 
 const key = "1";
@@ -12,7 +13,9 @@ class CategoryCardGrid4 extends Component {
   render() {
     return (
       <Fragment>
-        <div className="col-lg-4 col-sm-6" key={key}>
+      {categories.map(x=>{
+        return (
+          <div className="col-lg-4 col-sm-6" key={x.name}>
           <div className="category-single category--img">
             <figure className="category--img4">
               <img src={img} alt="" />
@@ -20,9 +23,9 @@ class CategoryCardGrid4 extends Component {
                 <NavLink onClick={noAction} to="/at_demo" className="cat-box">
                   <div>
                     <div className="icon">
-                      <span className={"la " + icon}></span>
+                      <span className={"la " + x.icon}></span>
                     </div>
-                    <h4 className="cat-name">{category}</h4>
+                    <h4 className="cat-name">{x.name}</h4>
                     <span className="badge badge-pill badge-success">
                       {list} Listings
                     </span>
@@ -33,6 +36,8 @@ class CategoryCardGrid4 extends Component {
           </div>
           {/*<!-- ends: .category-single -->*/}
         </div>
+        )
+      })}
       </Fragment>
     );
   }

@@ -7,21 +7,9 @@ class ListingCardGrid6 extends Component {
     return (
       <Fragment>
         {Object.values(list).map((value, key) => {
-          const {
-            img,
-            category,
-            icon,
-            rating,
-            badge,
-            title,
-            location,
-            price,
-            phone,
-            opCl,
-            id
-          } = value;
+          const { img, rating, badge, title, location, price, id } = value;
           return (
-            <div className="col-lg-6 col-sm-6" key={key}>
+            <div className="col-lg-6 col-sm-6" key="1">
               <div className="atbd_single_listing ">
                 <article className="atbd_single_listing_wrapper">
                   <figure className="atbd_listing_thumbnail_area">
@@ -58,11 +46,13 @@ class ListingCardGrid6 extends Component {
                   </figure>
                   {/*<!-- ends: .atbd_listing_thumbnail_area -->*/}
                   <div className="atbd_listing_info">
-                    <div className="atbd_content_upper">
-                      <h4 className="atbd_listing_title">
-                        <NavLink to={"/listing-details" + id}>{title}</NavLink>
-                      </h4>
-                      {logdIn === null ? (
+                    <Fragment>
+                      <div className="atbd_content_upper">
+                        <h4 className="atbd_listing_title">
+                          <NavLink to={"/listing-details" + id}>
+                            {title}
+                          </NavLink>
+                        </h4>
                         <div className="atbd_listing_meta">
                           <span className="atbd_meta atbd_listing_rating">
                             {rating}
@@ -71,108 +61,44 @@ class ListingCardGrid6 extends Component {
                           <span className="atbd_meta atbd_listing_price">
                             {"$ " + price}
                           </span>
-                          <span className={"atbd_meta atbd_badge_" + opCl}>
-                            {opCl} Now
-                          </span>
                         </div>
-                      ) : (
-                        <div className="atbd_card_action">
-                          <div className="atbd_listing_meta">
-                            <span className="atbd_meta atbd_listing_rating">
-                              4.5<i className="la la-star"></i>
-                            </span>
+                        <div className="atbd_listing_data_list">
+                          <ul>
+                            <li>
+                              <p>
+                                <span className="la la-map-marker"></span>
+                                {location}
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <span className="la la-calendar-check-o"></span>
+                                20.10.2020
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                        {/*<!-- End atbd listing meta -->*/}
+                      </div>
+                      <div className="atbd_listing_bottom_content">
+                        <div className="atbd_content_left">
+                          <div className="atbd_listing_category">
+                            <a href=" ">
+                              <span className="la la-pencil"></span>
+                              Bilgi &amp; Kayıt
+                            </a>
                           </div>
-                          {/*<!-- ends: .atbd listing meta -->*/}
-                          <div className="db_btn_area">
-                            <div className="dropup edit_listing">
-                              <NavLink
-                                onClick={noAction}
-                                to="/at_demo"
-                                role="button"
-                                className="btn btn-sm btn-outline-secondary dropdown-toggle"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                Edit
-                              </NavLink>
-                              <div className="dropdown-menu">
-                                <NavLink
-                                  onClick={noAction}
-                                  className="dropdown-item"
-                                  to="/at_demo"
-                                >
-                                  <span className="la la-edit color-primary"></span>{" "}
-                                  Edit Your Listing
-                                </NavLink>
-                                <NavLink
-                                  onClick={noAction}
-                                  className="dropdown-item"
-                                  to="/at_demo"
-                                >
-                                  <span className="la la-money color-secondary"></span>{" "}
-                                  Change Your Plan
-                                </NavLink>
-                              </div>
-                            </div>
-                            <NavLink
-                              onClick={noAction}
-                              to="/at_demo"
-                              className="directory_remove_btn btn btn-sm btn-outline-danger"
-                              data-toggle="modal"
-                              data-target="#modal-item-remove"
-                            >
-                              Delete
-                            </NavLink>
-                          </div>{" "}
-                          {/*<!--ends .db_btn_area-->*/}
                         </div>
-                      )}
-
-                      <div className="atbd_listing_data_list">
-                        <ul>
-                          <li>
-                            <p>
-                              <span className="la la-map-marker"></span>
-                              {location}
-                            </p>
+                        <span className="atbd_content_right">
+                          <li className="atbd_count">
+                            <span className="la la-eye"></span>900+
                           </li>
-                          <li>
-                            <p>
-                              <span className="la la-phone"></span>
-                              {phone}
-                            </p>
+                          <li className="atbd_save">
+                            <span className="la la-heart-o"></span>
                           </li>
-                          <li>
-                            <p>
-                              <span className="la la-calendar-check-o"></span>
-                              Posted 2 months ago
-                            </p>
-                          </li>
-                        </ul>
+                        </span>
                       </div>
-                      {/*<!-- End atbd listing meta -->*/}
-                    </div>
-                    {/*<!-- end .atbd_content_upper -->*/}
-                    <div className="atbd_listing_bottom_content">
-                      <div className="atbd_content_left">
-                        <div className="atbd_listing_category">
-                          <a href=" ">
-                            <span className={"la " + icon}></span>
-                            {category}
-                          </a>
-                        </div>
-                      </div>
-                      <ul className="atbd_content_right">
-                        <li className="atbd_count">
-                          <span className="la la-eye"></span>900+
-                        </li>
-                        <li className="atbd_save">
-                          <span className="la la-heart-o"></span>
-                        </li>
-                      </ul>
-                    </div>
-                    {/*<!-- end .atbd_listing_bottom_content -->*/}
+                    </Fragment>
                   </div>
                   {/*<!-- ends: .atbd_listing_info -->*/}
                 </article>

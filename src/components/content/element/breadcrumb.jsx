@@ -13,7 +13,7 @@ export class BreadcrumbWraper extends Component {
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                      <NavLink to="/">Home</NavLink>
+                      <NavLink to="/">Ana Sayfa</NavLink>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
                       {this.props.title}

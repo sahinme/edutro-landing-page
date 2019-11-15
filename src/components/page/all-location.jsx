@@ -3,7 +3,8 @@ import Header from "../layout/header";
 import { Footer } from "../layout/footer";
 import { BreadcrumbWraper } from "../content/element/breadcrumb";
 import { connect } from "react-redux";
-import { PopularCategoryList } from "../page/Dashboard/components/popularCategoryList";
+import { AllLocations } from "../page/Dashboard/components/popularCategoryList";
+import { SectionTitle } from "../content/element/section-title";
 const AllLocation = props => {
   const light = props.logo[0].light;
   return (
@@ -21,7 +22,11 @@ const AllLocation = props => {
       </section>
       {/* Header section end */}
       <section className="section-padding-strict section-bg">
-        <PopularCategoryList />
+        <SectionTitle
+          title="Şehrini Seç Eğitime Başla"
+          content="Tüm şehirlerdeki eğitim ve etkinliklere göz at"
+        />
+        <AllLocations />
       </section>
       <Footer />
     </Fragment>

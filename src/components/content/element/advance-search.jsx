@@ -72,7 +72,7 @@ export class AdvSearch extends Component {
                     </li>
                     <li>
                       <NavLink onClick={noAction} to="/at_demo">
-                        <span className="color-danger">
+                        <span style={{ color: "#FFA400" }} className="color-danger">
                           <i className="la la-user" />
                         </span>
                         Eğitmenler
@@ -80,7 +80,7 @@ export class AdvSearch extends Component {
                     </li>
                     <li>
                       <NavLink onClick={noAction} to="/at_demo">
-                        <span className="color-danger">
+                        <span style={{ color: "#00A1DF" }} className="color-danger">
                           <i className="la la-book" />
                         </span>
                         Kurslar
@@ -88,7 +88,7 @@ export class AdvSearch extends Component {
                     </li>
                     <li>
                       <NavLink onClick={noAction} to="/at_demo">
-                        <span className="color-danger">
+                        <span style={{ color: "#82BC00" }} className="color-danger">
                           <i className="la la-calendar" />
                         </span>
                         Etkinlikler

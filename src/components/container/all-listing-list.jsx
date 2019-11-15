@@ -523,7 +523,7 @@ class ListingList extends Component {
                               </div>
                             </div>
                             <a href=" " className="show-link">
-                              Show More
+                              Daha fazla
                             </a>
                           </div>
                           {/*<!-- ends: .filter-checklist -->*/}
