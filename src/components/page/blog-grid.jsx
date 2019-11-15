@@ -15,7 +15,7 @@ const BlogGrid = props => {
           <img src="./assets/img/breadcrumb1.jpg" alt="" />
         </div>
         <div className="mainmenu-wrapper">
-          <Header logo={light} class="menu--light" />
+          <Header logo="light" class="menu--light" />
         </div>
         {/* <!-- ends: .mainmenu-wrapper --> */}
         <BreadcrumbWraper title="Blog Grid" />

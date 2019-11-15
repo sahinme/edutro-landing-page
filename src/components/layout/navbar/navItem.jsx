@@ -74,30 +74,8 @@ export class NavItem extends Component {
               </li>
             </ul>
           </li>
-          <li className="dropdown has_dropdown">
-            <a
-              className="dropdown-toggle"
-              href="# "
-              id="drop1"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Blog
-            </a>
-            <ul className="dropdown-menu" aria-labelledby="drop1">
-              <li>
-                <NavLink to="/blog-right-sidebar">Blog Right Sidebar</NavLink>
-              </li>
-              <li>
-                <NavLink to="/blog-grid">Blog Grid Layout</NavLink>
-              </li>
-              <li>
-                <NavLink to="/blog-details1">Blog Details</NavLink>
-              </li>
-              {/* <!-- dropdowns example --> */}
-            </ul>
+          <li>
+            <NavLink to="/blog">Blog</NavLink>
           </li>
         </ul>
       </Fragment>

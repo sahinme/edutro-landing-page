@@ -24,6 +24,7 @@ import Notifications from "./page/UserDashboard/notifications";
 import CustomerDetail from "./page/CustomerDetail";
 import CourseCategories from "./page/CourseCategories";
 import SimilarCourses from "./page/SimilarCourses.jsx";
+import Blog from "./page/Blog";
 
 function App(props) {
   return (
@@ -42,7 +43,7 @@ function App(props) {
         <Route path="/cards" component={Cards} />
         <Route path="/headers" component={HeaderStyle} />
         <Route path="/blog-right-sidebar" component={BlogRightSide} />
-        <Route path="/blog-grid" component={BlogGrid} />
+        <Route path="/blog" component={Blog} />
         <Route path="/blog-details:id" component={BlogDetails} />
         <Route path="/author-profile" component={AuthProfile} />
         <Route path="/dashboard-listings" component={AuthDeshbord} />
