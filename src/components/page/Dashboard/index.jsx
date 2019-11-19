@@ -19,6 +19,7 @@ import ActivityCard from "../../content/element/activityCard";
 import Activities from "./components/activities";
 import PopularCourses from "./components/popularCourses";
 import FourCityActivities from "./components/fourCityActivities";
+import Questions from "../Question/questions";
 
 const noAction = e => e.preventDefault();
 class Index extends Component {

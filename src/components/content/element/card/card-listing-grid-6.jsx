@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 const noAction = e => e.preventDefault();
 class ListingCardGrid6 extends Component {
   render() {
@@ -112,4 +113,9 @@ class ListingCardGrid6 extends Component {
   }
 }
 
-export default ListingCardGrid6;
+const mapStateToProps = state => {
+  return {
+    list: state.list
+  };
+};
+export default connect(mapStateToProps)(ListingCardGrid6);

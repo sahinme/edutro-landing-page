@@ -29,50 +29,8 @@ export class NavItem extends Component {
               </li>
             </ul>
           </li>
-          <li className="dropdown has_dropdown">
-            <a
-              className="dropdown-toggle"
-              href="# "
-              id="drop2"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Pages
-            </a>
-            <ul className="dropdown-menu" aria-labelledby="drop2">
-              <li>
-                <NavLink to="/author-profile">Author Profile</NavLink>
-              </li>
-              <li>
-                <NavLink to="/dashboard-listings">Author Dashboard</NavLink>
-              </li>
-              <li>
-                <NavLink to="/pricing-plans">Pricing Plans</NavLink>
-              </li>
-              <li>
-                <NavLink to="/checkout">Checkout</NavLink>
-              </li>
-              <li>
-                <NavLink to="/invoice">Invoice</NavLink>
-              </li>
-              <li>
-                <NavLink to="/faqs">FAQ</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-              <li>
-                <NavLink to="/cards">Products Cards</NavLink>
-              </li>
-              <li>
-                <NavLink to="/headers">Header Styles</NavLink>
-              </li>
-            </ul>
+          <li>
+            <NavLink to="/ques-answ">Soru & Cevap</NavLink>
           </li>
           <li>
             <NavLink to="/blog">Blog</NavLink>

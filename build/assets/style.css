@@ -7285,12 +7285,12 @@ p {
 
 .intro-wrapper {
   position: relative;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
 }
 
 .directory_content_area {
-  height: 85%;
+  height: 69%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

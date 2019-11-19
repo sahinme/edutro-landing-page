@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import Questions from "../../page/Question/questions";
 const noAction = e => e.preventDefault();
 export class AdvSearch extends Component {
   render() {
@@ -72,7 +73,10 @@ export class AdvSearch extends Component {
                     </li>
                     <li>
                       <NavLink onClick={noAction} to="/at_demo">
-                        <span style={{ color: "#FFA400" }} className="color-danger">
+                        <span
+                          style={{ color: "#FFA400" }}
+                          className="color-danger"
+                        >
                           <i className="la la-user" />
                         </span>
                         Eğitmenler
@@ -80,7 +84,10 @@ export class AdvSearch extends Component {
                     </li>
                     <li>
                       <NavLink onClick={noAction} to="/at_demo">
-                        <span style={{ color: "#00A1DF" }} className="color-danger">
+                        <span
+                          style={{ color: "#00A1DF" }}
+                          className="color-danger"
+                        >
                           <i className="la la-book" />
                         </span>
                         Kurslar
@@ -88,7 +95,10 @@ export class AdvSearch extends Component {
                     </li>
                     <li>
                       <NavLink onClick={noAction} to="/at_demo">
-                        <span style={{ color: "#82BC00" }} className="color-danger">
+                        <span
+                          style={{ color: "#82BC00" }}
+                          className="color-danger"
+                        >
                           <i className="la la-calendar" />
                         </span>
                         Etkinlikler
@@ -96,12 +106,14 @@ export class AdvSearch extends Component {
                     </li>
                   </ul>
                 </div>
+
                 {/* ends: .directory_home_category_area */}
               </div>
               {/* ends: .col-lg-10 */}
             </div>
           </div>
         </div>
+
         {/* ends: .directory_search_area */}
       </Fragment>
     );

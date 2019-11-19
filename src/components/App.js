@@ -25,6 +25,8 @@ import CustomerDetail from "./page/CustomerDetail";
 import CourseCategories from "./page/CourseCategories";
 import SimilarCourses from "./page/SimilarCourses.jsx";
 import Blog from "./page/Blog";
+import Questions from "./page/Question/questions";
+import QuestionDetail from "./page/Question/questionDetail";
 
 function App(props) {
   return (
@@ -54,6 +56,8 @@ function App(props) {
         <Route path="/add-listing" component={AddListing} />
         <Route path="/notifications" component={Notifications} />
         <Route path="/instructor-profile" component={CustomerDetail} />
+        <Route path="/ques-answ" component={Questions} />
+        <Route path="/ques-detail" component={QuestionDetail} />
       </Switch>
     </Router>
   );
