@@ -118,23 +118,13 @@ class EducatorCard extends Component {
                       </ul>
 
                       <ul>
-                        <span
-                          style={{ color: "#EA5352" }}
-                          className="rosettes_title"
-                        >
-                          Rozetler
-                        </span>
                         <Divider style={{ margin: "4px 0" }}></Divider>
                         <li>
                           <p>
-                            <span className="la la-calendar-check-o"></span>
-                            Yetkin Egitmen
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            <span className="la la-calendar-check-o"></span>
-                            Matematik Dehasi
+                            <NavLink style={{ color: "#EA5352" }} to="#">
+                              <span className="la la-user"></span>
+                              Profili gör
+                            </NavLink>
                           </p>
                         </li>
                       </ul>

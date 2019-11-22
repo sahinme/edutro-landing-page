@@ -8,7 +8,7 @@ const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const categoryColumn = data.map(x => {
   return (
     <div className="col-lg-3 col-md-4 col-sm-6">
-      <NavLink to="/at_demo" onClick={noAction} className="atbd_location_grid">
+      <NavLink to="/category-detail" className="atbd_location_grid">
         Kisisel Gelisim (21)
       </NavLink>
     </div>
@@ -22,8 +22,8 @@ const locationColumn = data.map((x, key) => {
         {key % 2 === 0 ? "Ankara (102)" : "İstanbul (446)"}
       </NavLink>
     </div>
-  )
-})
+  );
+});
 
 export class PopularCategoryList extends Component {
   render() {

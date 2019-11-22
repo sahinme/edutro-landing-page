@@ -81,7 +81,7 @@ class Sidebar extends Component {
                 <div className="form-group">
                   <input
                     type="text"
-                    placeholder="Eğitim arayın..."
+                    placeholder={this.props.searchPlaceholder}
                     className="form-control"
                     onChange={search}
                   />

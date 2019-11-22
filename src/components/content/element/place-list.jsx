@@ -16,11 +16,7 @@ export class PlaceList extends Component {
               {cities.map((x, y) => {
                 return (
                   <li>
-                    <NavLink
-                      onClick={noAction}
-                      to="/at_demo"
-                      onClick={noAction}
-                    >
+                    <NavLink to="/activities">
                       {this.jsUcfirst(x)} ({y})
                     </NavLink>
                   </li>

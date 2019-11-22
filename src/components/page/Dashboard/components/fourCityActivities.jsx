@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
-const noAction = e => e.preventDefautl();
+const noAction = e => e.preventDefault();
 
 const data = [
   { name: "ankara", act: 20, img: "./assets/img/place1.jpg" },
@@ -21,7 +21,7 @@ class FourCityActivities extends Component {
           return (
             <div className="category-place-single" key={name}>
               <figure>
-                <NavLink onClick={noAction} to="/at_demo">
+                <NavLink to="/activities">
                   <img src={img} alt="" />
                 </NavLink>
                 <figcaption>

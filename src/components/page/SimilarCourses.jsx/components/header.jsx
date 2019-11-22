@@ -71,7 +71,7 @@ class Header extends Component {
       <Fragment>
         <div className="atbd_generic_header">
           <div className="atbd_generic_header_title">
-            <h4>Benzer Egitimler</h4>
+            <h4>{this.props.title}</h4>
             <p>Toplam 59 sonuç gösteriliyor</p>
           </div>
           <div className="atbd_listing_action_btn btn-toolbar" role="toolbar">

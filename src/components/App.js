@@ -29,6 +29,8 @@ import Questions from "./page/Question/questions";
 import QuestionDetail from "./page/Question/questionDetail";
 import FilteredQuestions from "./page/Question/filteredQuestions";
 import CategoryDetail from "./page/CourseCategories/CategoryDetail";
+import LocationActivities from "./page/Activity/locationActivities";
+import ActivityListing from "./page/Activity/activityListing";
 
 function App(props) {
   return (
@@ -62,6 +64,8 @@ function App(props) {
         <Route path="/ques-detail" component={QuestionDetail} />
         <Route path="/filtered-ques" component={FilteredQuestions} />
         <Route path="/category-detail" component={CategoryDetail} />
+        <Route path="/activities" component={LocationActivities} />
+        <Route path="/activities-listing" component={ActivityListing} />
       </Switch>
     </Router>
   );
