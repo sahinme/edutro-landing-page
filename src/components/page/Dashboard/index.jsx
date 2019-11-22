@@ -70,7 +70,7 @@ class Index extends Component {
           <div style={{ maxWidth: "1366px" }} className="container">
             <SectionTitle
               title="Yaklaşan Etkinlikler"
-              content="En iyi kurumları , eğitmenleri ve etkinlikleri keşfet"
+              content="Kurumların, eğitmenlerin düzenlediği seminer, konferans, panel ve daha fazlası"
             />
             <div className="row">
               <Activities />

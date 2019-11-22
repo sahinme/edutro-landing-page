@@ -2103,7 +2103,6 @@ p {
   height: 2.8rem;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #ffffff;
   top: -4px;
   left: -1px;
   z-index: -1;
@@ -7346,6 +7345,11 @@ p {
   width: 100%;
 }
 
+.ant-comment-content-author>span {
+  font-size: 16px !important;
+  color: black !important;
+}
+
 .directory_content_area .search_form .atbd_seach_fields_wrapper .single_search_field.search_category,
 .directory_content_area .search_form .atbd_seach_fields_wrapper .single_search_field.search_location {
   position: relative;
@@ -8040,6 +8044,11 @@ p {
 
 .about-wrapper .about-intro {
   padding-top: 3rem;
+}
+
+.rosset_image {
+  width: 40px;
+  height: 40px;
 }
 
 .about-wrapper .about-intro h1 {

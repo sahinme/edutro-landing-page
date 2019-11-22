@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 
 export class SectionTitle extends Component {
   render() {
+    const { textAlignStyle } = this.props;
     return (
       <Fragment>
         <div className="row">

@@ -9,7 +9,7 @@ const noAction = e => e.preventDefault();
 
 const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
 
-class Questions extends Component {
+class FilteredQuestions extends Component {
   render() {
     return (
       <Fragment>
@@ -27,6 +27,16 @@ class Questions extends Component {
 
         <section className="cards-grid section-padding-two border-bottom">
           <div style={{ maxWidth: "1695px" }} className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="section-title">
+                  <h2>
+                    <span>Yazılım</span> Kategorisindeki En Popüler Sorular
+                  </h2>
+                </div>
+              </div>
+            </div>
+
             <SectionTitle
               title="Alanında Profesyonel Eğitmenlere Soru Sor"
               content="Sorunu paylaş. Yüzlerce kurum ve eğitmen arasından en doğru cevaba ulaş"
@@ -65,6 +75,7 @@ class Questions extends Component {
                   </div>
                 </div>
               </div>
+
               <div style={{ justifyContent: "center" }} className="row">
                 <QuestionGrid />
               </div>
@@ -76,4 +87,4 @@ class Questions extends Component {
   }
 }
 
-export default Questions;
+export default FilteredQuestions;

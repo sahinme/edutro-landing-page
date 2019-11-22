@@ -17,11 +17,7 @@ class CategoryWidget extends Component {
                 <figure className="category--img4">
                   <img src={img} alt="" />
                   <figcaption className="overlay-bg">
-                    <NavLink
-                      onClick={() => {}}
-                      to="/at_demo"
-                      className="cat-box"
-                    >
+                    <NavLink to="/category-detail" className="cat-box">
                       <div>
                         <div className="icon">
                           <span className={"la " + x.icon}></span>

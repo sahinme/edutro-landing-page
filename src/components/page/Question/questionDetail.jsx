@@ -1,7 +1,13 @@
 import React, { Component, Fragment } from "react";
 import { BreadcrumbWraper } from "../../content/element/breadcrumb";
 import Header from "../../layout/header";
-import Comment from "./comment";
+import Comment from "./commentCard";
+import { SimilarListing } from "../../content/element/widget";
+import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+import SimilarQuestions from "./similarQuestions";
+
+const data = [1, 1, 1, 1];
 
 class QuestionDetail extends Component {
   render() {
@@ -20,16 +26,35 @@ class QuestionDetail extends Component {
         {/* Header section end */}
 
         <div class="container">
-          <div class="row">
+          <div style={{ marginTop: "20px" }} class="row">
             <div class="col">
-              <Comment></Comment>
+              <Comment replies={[1, 1, 1, 1]}></Comment>
             </div>
-            <div class="col-md-auto">Variable width content</div>
-            <div class="col col-lg-2">3 of 3</div>
+            <div class="col-lg-4">
+              <div className="widget atbd_widget widget-card">
+                <div className="atbd_widget_title">
+                  <h4>
+                    <span className="la la-list-alt"></span> Benzer Soru &
+                    Cevaplar
+                  </h4>
+                  <NavLink to="/filtered-ques">Hepsi</NavLink>
+                </div>
+                {/*<!-- ends: .atbd_widget_title -->*/}
+                <div className="atbd_categorized_listings atbd_similar_listings">
+                  <SimilarQuestions list={this.props.list} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Fragment>
     );
   }
 }
-export default QuestionDetail;
+const mapStateToProps = state => {
+  return {
+    list: state.list,
+    logo: state.logo
+  };
+};
+export default connect(mapStateToProps)(QuestionDetail);

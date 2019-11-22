@@ -27,6 +27,8 @@ import SimilarCourses from "./page/SimilarCourses.jsx";
 import Blog from "./page/Blog";
 import Questions from "./page/Question/questions";
 import QuestionDetail from "./page/Question/questionDetail";
+import FilteredQuestions from "./page/Question/filteredQuestions";
+import CategoryDetail from "./page/CourseCategories/CategoryDetail";
 
 function App(props) {
   return (
@@ -58,6 +60,8 @@ function App(props) {
         <Route path="/instructor-profile" component={CustomerDetail} />
         <Route path="/ques-answ" component={Questions} />
         <Route path="/ques-detail" component={QuestionDetail} />
+        <Route path="/filtered-ques" component={FilteredQuestions} />
+        <Route path="/category-detail" component={CategoryDetail} />
       </Switch>
     </Router>
   );
