@@ -173,4 +173,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(CheckoutBasic);
+export default  (CheckoutBasic);

@@ -7,7 +7,7 @@ const noAction = e => e.preventDefault();
 class Header extends Component {
   render() {
     const logdIn = () => {
-      return this.props.login;
+      return false;
     };
     const logOut = e => {
       e.preventDefault();
@@ -282,14 +282,5 @@ class Header extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    login: state.login
-  };
-};
-const mapDispatchToProp = dispatch => {
-  return {
-    logOutdata: login => dispatch(LogOut(login))
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProp)(Header);
+
+export default Header;

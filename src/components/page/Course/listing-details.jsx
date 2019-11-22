@@ -211,4 +211,4 @@ const mapStateToProps = state => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(CourseDetail);
+export default  (CourseDetail);

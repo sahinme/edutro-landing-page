@@ -57,4 +57,4 @@ const mapStateToProps = state => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(QuestionDetail);
+export default  (QuestionDetail);

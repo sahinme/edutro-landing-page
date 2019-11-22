@@ -232,4 +232,4 @@ const mapStateToProps = state => {
     login: state.login
   };
 };
-export default connect(mapStateToProps)(Listing);
+export default Listing;

@@ -181,7 +181,4 @@ const mapDispatchToProp = dispatch => {
     userAdd: user => dispatch(SignUp(user))
   };
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProp
-)(Register);
+export default Register;

@@ -16,7 +16,9 @@ class Login extends Component {
   }
 
   render() {
-    var data = this.props.users;
+    var data = [
+      { email: "demo@demo.com", password: "demo", username: "woadud akand" }
+    ];
     const change = e => {
       const email = e.target.value;
       const filter = data.filter(item => {
@@ -178,7 +180,4 @@ const mapDispatchToProp = dispatch => {
     logindata: login => dispatch(LogInAc(login))
   };
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProp
-)(Login);
+export default Login;

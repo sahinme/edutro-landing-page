@@ -40,4 +40,4 @@ const mapStateToProps = state => {
     gallery2: state.gallery2
   };
 };
-export default connect(mapStateToProps)(Gallery);
+export default Gallery;

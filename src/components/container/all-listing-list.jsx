@@ -889,4 +889,4 @@ const mapStateToProps = state => {
     list: state.list
   };
 };
-export default connect(mapStateToProps)(ListingList);
+export default ListingList;

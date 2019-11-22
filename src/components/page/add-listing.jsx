@@ -1171,4 +1171,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(AddListing);
+export default  (AddListing);

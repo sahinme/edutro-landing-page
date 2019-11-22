@@ -80,4 +80,4 @@ const mapStateToProps = (state, ownProps) => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(BlogRight);
+export default  (BlogRight);

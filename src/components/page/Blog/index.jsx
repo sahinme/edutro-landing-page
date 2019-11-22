@@ -67,4 +67,4 @@ const mapStateToProps = (state, ownProps) => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(Blog);
+export default  (Blog);

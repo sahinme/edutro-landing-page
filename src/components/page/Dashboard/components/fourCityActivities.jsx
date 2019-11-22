@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { connect } from "react-redux";
 
 const noAction = e => e.preventDefault();
 
@@ -36,9 +35,4 @@ class FourCityActivities extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    place: state.place
-  };
-};
-export default connect(mapStateToProps)(FourCityActivities);
+export default FourCityActivities;

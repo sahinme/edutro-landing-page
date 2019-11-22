@@ -466,4 +466,4 @@ const mapStateToProps = state => {
     blog: state.blog
   };
 };
-export default connect(mapStateToProps)(DetailsContent);
+export default DetailsContent;

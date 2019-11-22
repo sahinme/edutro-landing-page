@@ -57,4 +57,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(HeaderStyle);
+export default  (HeaderStyle);

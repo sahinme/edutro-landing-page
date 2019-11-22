@@ -67,4 +67,4 @@ const mapStateToProps = state => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(Cards);
+export default  (Cards);

@@ -33,4 +33,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(AllListingGrid);
+export default  (AllListingGrid);

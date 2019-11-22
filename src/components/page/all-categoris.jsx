@@ -38,4 +38,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(AllCategoris);
+export default AllCategoris;

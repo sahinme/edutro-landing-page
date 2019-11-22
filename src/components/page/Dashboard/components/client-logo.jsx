@@ -23,13 +23,15 @@ const options = {
   }
 };
 
+const data = [1, 1, 1, , 1, 1];
+
 class ClientLogo extends Component {
   render() {
     const { client } = this.props;
     return (
       <Fragment>
         <OwlCarousel options={options} className="logo-carousel owl-carousel">
-          {Object.values(client).map((value, key) => {
+          {data.map((value, key) => {
             const { img } = value;
             return (
               <div className="carousel-single" key={key}>
@@ -42,9 +44,5 @@ class ClientLogo extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    client: state.client
-  };
-};
-export default connect(mapStateToProps)(ClientLogo);
+
+export default ClientLogo;

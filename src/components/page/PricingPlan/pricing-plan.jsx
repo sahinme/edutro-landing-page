@@ -261,4 +261,4 @@ const mapStateToProps = state => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(PricingPlan);
+export default  (PricingPlan);

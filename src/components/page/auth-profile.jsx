@@ -239,4 +239,4 @@ const mapStateToProps = state => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(AuthProfile);
+export default  (AuthProfile);

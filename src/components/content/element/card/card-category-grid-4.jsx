@@ -13,31 +13,35 @@ class CategoryCardGrid4 extends Component {
   render() {
     return (
       <Fragment>
-      {categories.map(x=>{
-        return (
-          <div className="col-lg-4 col-sm-6" key={x.name}>
-          <div className="category-single category--img">
-            <figure className="category--img4">
-              <img src={img} alt="" />
-              <figcaption className="overlay-bg">
-                <NavLink onClick={noAction} to="/at_demo" className="cat-box">
-                  <div>
-                    <div className="icon">
-                      <span className={"la " + x.icon}></span>
-                    </div>
-                    <h4 className="cat-name">{x.name}</h4>
-                    <span className="badge badge-pill badge-success">
-                      {list} Listings
-                    </span>
-                  </div>
-                </NavLink>
-              </figcaption>
-            </figure>
-          </div>
-          {/*<!-- ends: .category-single -->*/}
-        </div>
-        )
-      })}
+        {categories.map(x => {
+          return (
+            <div className="col-lg-4 col-sm-6" key={x.name}>
+              <div className="category-single category--img">
+                <figure className="category--img4">
+                  <img src={img} alt="" />
+                  <figcaption className="overlay-bg">
+                    <NavLink
+                      onClick={noAction}
+                      to="/at_demo"
+                      className="cat-box"
+                    >
+                      <div>
+                        <div className="icon">
+                          <span className={"la " + x.icon}></span>
+                        </div>
+                        <h4 className="cat-name">{x.name}</h4>
+                        <span className="badge badge-pill badge-success">
+                          {list} Listings
+                        </span>
+                      </div>
+                    </NavLink>
+                  </figcaption>
+                </figure>
+              </div>
+              {/*<!-- ends: .category-single -->*/}
+            </div>
+          );
+        })}
       </Fragment>
     );
   }
@@ -47,4 +51,4 @@ const mapStateToProps = state => {
     category: state.category
   };
 };
-export default connect(mapStateToProps)(CategoryCardGrid4);
+export default CategoryCardGrid4;

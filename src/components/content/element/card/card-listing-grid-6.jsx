@@ -118,4 +118,4 @@ const mapStateToProps = state => {
     list: state.list
   };
 };
-export default connect(mapStateToProps)(ListingCardGrid6);
+export default ListingCardGrid6;

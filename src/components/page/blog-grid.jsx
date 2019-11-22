@@ -39,4 +39,4 @@ const mapStateToProps = (state, ownProps) => {
     logo: state.logo
   };
 };
-export default connect(mapStateToProps)(BlogGrid);
+export default  (BlogGrid);

@@ -20,14 +20,23 @@ import Activities from "./components/activities";
 import PopularCourses from "./components/popularCourses";
 import FourCityActivities from "./components/fourCityActivities";
 import Questions from "../Question/questions";
+import { inject, observer } from "mobx-react";
+import Stores from "../../../stores/storeIdentifier";
 
 const noAction = e => e.preventDefault();
+
+@inject(Stores.DashboardStore)
+@observer
 class Index extends Component {
+  componentDidMount() {
+    this.props.dashboardStore.getPopularCourses();
+  }
+
   render() {
     const logdIn = () => {
-      return this.props.login;
+      return false;
     };
-    const light = this.props.logo[0].light;
+    const light = "light";
     return (
       <Fragment>
         {/* Header section start */}
@@ -160,12 +169,5 @@ class Index extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    list: state.list,
-    login: state.login,
-    logo: state.logo
-  };
-};
 
-export default connect(mapStateToProps)(Index);
+export default Index;
