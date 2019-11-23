@@ -1,19 +1,25 @@
 import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import moment from "moment";
 
 const img = "./assets/img/p1.jpg";
-const rating = 2;
 const badge = "sponsorlu";
-const title = "Yasam Koclugu Egitimi";
-const location = "Ankara";
-const price = "2.120";
-const id = 1;
 
 class CourseCard extends Component {
   render() {
+    const {
+      title,
+      ownerName,
+      price,
+      startDate,
+      score,
+      key,
+      logoPath,
+      location
+    } = this.props;
     return (
       <Fragment>
-        <div /* className="col-lg-4 col-sm-6" */ key="1">
+        <div /* className="col-lg-4 col-sm-6" */ key={key}>
           <div className="atbd_single_listing ">
             <article className="atbd_single_listing_wrapper">
               <figure className="atbd_listing_thumbnail_area">
@@ -26,10 +32,11 @@ class CourseCard extends Component {
                 <div className="atbd_author atbd_author--thumb">
                   <a href=" ">
                     <img
-                      src="./assets/img/author-thumb2.jpg"
+                      style={{ width: "40px", height: "40px" }}
+                      src={logoPath}
                       alt="AuthorImage"
                     />
-                    <span className="custom-tooltip">Jeffery A, Owner</span>
+                    <span className="custom-tooltip">{ownerName}</span>
                   </a>
                 </div>
                 <div className="atbd_thumbnail_overlay_content">
@@ -53,11 +60,11 @@ class CourseCard extends Component {
                 <Fragment>
                   <div className="atbd_content_upper">
                     <h4 className="atbd_listing_title">
-                      <NavLink to={"/course-details" + id}>{title}</NavLink>
+                      <NavLink to={"/course-details" + key}>{title}</NavLink>
                     </h4>
                     <div className="atbd_listing_meta">
                       <span className="atbd_meta atbd_listing_rating">
-                        {rating}
+                        {score}
                         <i className="la la-star"></i>
                       </span>
                       <span className="atbd_meta atbd_listing_price">
@@ -75,7 +82,7 @@ class CourseCard extends Component {
                         <li>
                           <p>
                             <span className="la la-calendar-check-o"></span>
-                            11.02.2019 Cuma
+                            {moment(startDate).format("L")}
                           </p>
                         </li>
                       </ul>

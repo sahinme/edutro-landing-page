@@ -22,6 +22,7 @@ import FourCityActivities from "./components/fourCityActivities";
 import Questions from "../Question/questions";
 import { inject, observer } from "mobx-react";
 import Stores from "../../../stores/storeIdentifier";
+import dashboardService from "../../../services/dashboard/dashboardService";
 
 const noAction = e => e.preventDefault();
 
@@ -29,7 +30,7 @@ const noAction = e => e.preventDefault();
 @observer
 class Index extends Component {
   componentDidMount() {
-    this.props.dashboardStore.getPopularCourses();
+    this.props.dashboardStore.getAdvertisingCourses();
   }
 
   render() {
