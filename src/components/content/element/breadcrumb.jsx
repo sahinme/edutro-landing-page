@@ -31,7 +31,7 @@ export class BreadcrumbWraper extends Component {
 
 export class BreadcrumbSingle extends Component {
   render() {
-    const { category, rating, badge, title, price } = this.props.filter[0];
+    const { category, score, title, price, description } = this.props.filter;
     return (
       <Fragment>
         <div className="col-lg-8 col-md-7">
@@ -61,7 +61,7 @@ export class BreadcrumbSingle extends Component {
             <li>
               <div className="average-ratings">
                 <span className="atbd_meta atbd_listing_rating">
-                  {rating}
+                  {score}
                   <i className="la la-star"></i>
                 </span>
                 <span>
@@ -73,14 +73,14 @@ export class BreadcrumbSingle extends Component {
               <div className="atbd_listing_category">
                 <a href=" ">
                   <span className="la la-glass"></span>
-                  {category}
+                  {category && category.displayName}
                 </a>
               </div>
             </li>
           </ul>
           {/*<!-- ends: .listing-info-meta -->*/}
-          <h1>Yaşam Koçluğu Eğitimi</h1>
-          <p className="subtitle">{title}</p>
+          <h1>{title}</h1>
+          <p className="subtitle">{description}</p>
         </div>
         <div className="col-lg-4 col-md-5 d-flex align-items-end justify-content-start justify-content-md-end">
           <div className="atbd_listing_action_area">

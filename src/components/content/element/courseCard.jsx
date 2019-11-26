@@ -15,7 +15,8 @@ class CourseCard extends Component {
       score,
       key,
       logoPath,
-      location
+      location,
+      id
     } = this.props;
     return (
       <Fragment>
@@ -60,7 +61,7 @@ class CourseCard extends Component {
                 <Fragment>
                   <div className="atbd_content_upper">
                     <h4 className="atbd_listing_title">
-                      <NavLink to={"/course-details" + key}>{title}</NavLink>
+                      <NavLink to={"/course-details/" + id}>{title}</NavLink>
                     </h4>
                     <div className="atbd_listing_meta">
                       <span className="atbd_meta atbd_listing_rating">

@@ -5,49 +5,59 @@ const noAction = e => e.preventDefault();
 
 export class SellerInfo extends Component {
   render() {
+    const { courseOwner } = this.props;
     return (
       <Fragment>
-        <div className="widget-body atbd_author_info_widget">
-          <div className="atbd_avatar_wrapper">
-            <div className="atbd_review_avatar">
-              <img src="./assets/img/avatar-60x60.jpg" alt="AvatarImage" />
+        {courseOwner && (
+          <div className="widget-body atbd_author_info_widget">
+            <div className="atbd_avatar_wrapper">
+              <div className="atbd_review_avatar">
+                <img
+                  style={{ width: "60px", height: "60px" }}
+                  src={courseOwner[0].logoPath}
+                />
+              </div>
+              <div className="atbd_name_time">
+                <h4>
+                  {courseOwner[0].name}
+                  <span
+                    className="verified"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Verified"
+                  ></span>
+                </h4>
+                <span className="review_time">2 ay önce oluşturuldu</span>
+              </div>
             </div>
-            <div className="atbd_name_time">
-              <h4>
-                Abay Akademi{" "}
-                <span
-                  className="verified"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Verified"
-                ></span>
-              </h4>
-              <span className="review_time">2 ay önce oluşturuldu</span>
+            {/* <!-- ends: .atbd_avatar_wrapper --> */}
+            <div className="atbd_widget_contact_info">
+              <ul>
+                <li>
+                  <span className="la la-map-marker"></span>
+                  <span className="atbd_info">Ankara / Çankaya</span>
+                </li>
+                <li>
+                  <span className="la la-globe"></span>
+                  <NavLink
+                    to="/at_demo"
+                    className="atbd_info"
+                    onClick={noAction}
+                  >
+                    www.aazztech.com
+                  </NavLink>
+                </li>
+              </ul>
             </div>
+            {/* <!-- ends: .atbd_widget_contact_info --> */}
+            <NavLink
+              to="/instructor-profile"
+              className="btn btn-outline-primary btn-block"
+            >
+              Profili Gör
+            </NavLink>
           </div>
-          {/* <!-- ends: .atbd_avatar_wrapper --> */}
-          <div className="atbd_widget_contact_info">
-            <ul>
-              <li>
-                <span className="la la-map-marker"></span>
-                <span className="atbd_info">Ankara / Çankaya</span>
-              </li>
-              <li>
-                <span className="la la-globe"></span>
-                <NavLink to="/at_demo" className="atbd_info" onClick={noAction}>
-                  www.aazztech.com
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-          {/* <!-- ends: .atbd_widget_contact_info --> */}
-          <NavLink
-            to="/instructor-profile"
-            className="btn btn-outline-primary btn-block"
-          >
-            Profili Gör
-          </NavLink>
-        </div>
+        )}
       </Fragment>
     );
   }

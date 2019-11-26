@@ -1,20 +1,27 @@
 import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import moment from "moment";
 
 const img = "./assets/img/p1.jpg";
-const rating = 2;
 const badge = "Konferans";
-const title = "Yasam Koclugu Konferansi";
-const location = "Ankara";
-const price = 50.0;
 const id = 1;
-const phone = "545 47 83";
 
 class ActivityCard extends Component {
   render() {
+    const {
+      /* img */
+      title,
+      logoPath,
+      locationName,
+      price,
+      key,
+      startDate,
+      ownerName,
+      profession
+    } = this.props;
     return (
       <Fragment>
-        <div /* className="col-lg-4 col-sm-6" */ key="1">
+        <div /* className="col-lg-4 col-sm-6" */ key={key}>
           <div className="atbd_single_listing ">
             <article className="atbd_single_listing_wrapper">
               <figure className="atbd_listing_thumbnail_area">
@@ -27,10 +34,14 @@ class ActivityCard extends Component {
                 <div className="atbd_author atbd_author--thumb">
                   <a href=" ">
                     <img
-                      src="./assets/img/author-thumb2.jpg"
+                      style={{ width: "50px", height: "auto" }}
+                      src={logoPath}
                       alt="AuthorImage"
                     />
-                    <span className="custom-tooltip">Jeffery A, Owner</span>
+                    <span className="custom-tooltip">
+                      {ownerName} <br />
+                      {profession && profession}
+                    </span>
                   </a>
                 </div>
                 <div className="atbd_thumbnail_overlay_content">
@@ -61,7 +72,7 @@ class ActivityCard extends Component {
                       className="atbd_listing_meta"
                     >
                       <span className="atbd_meta atbd_listing_price">
-                        {"$ " + price}
+                        {price == 0 ? "ücretsiz" : "₺ " + price}
                       </span>
                       <span className="la la-user">900 kişi katıldı</span>
                     </div>
@@ -70,13 +81,13 @@ class ActivityCard extends Component {
                         <li>
                           <p>
                             <span className="la la-map-marker"></span>
-                            {location}
+                            {locationName}
                           </p>
                         </li>
                         <li>
                           <p>
                             <span className="la la-calendar-check-o"></span>
-                            12.01.2020
+                            {moment(startDate).format("L")}
                           </p>
                         </li>
                       </ul>

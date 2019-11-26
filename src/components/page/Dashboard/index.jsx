@@ -26,11 +26,12 @@ import dashboardService from "../../../services/dashboard/dashboardService";
 
 const noAction = e => e.preventDefault();
 
-@inject(Stores.DashboardStore)
+@inject(Stores.DashboardStore, Stores.CourseStore)
 @observer
 class Index extends Component {
   componentDidMount() {
     this.props.dashboardStore.getAdvertisingCourses();
+    this.props.dashboardStore.getUpcomingEvents();
   }
 
   render() {
@@ -60,7 +61,11 @@ class Index extends Component {
               content="En iyi kurumları , eğitmenleri ve etkinlikleri keşfet"
             />
             <div className="row">
-              <SponsoredCourses />
+              <SponsoredCourses
+                advertisingCourses={
+                  this.props.dashboardStore.advertisingCourses || []
+                }
+              />
             </div>
           </div>
         </section>

@@ -39,8 +39,8 @@ const options = {
 
 const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
 
-@inject(Stores.DashboardStore)
-@observer
+/* @inject(Stores.DashboardStore)
+@observer */
 class SponsoredCourses extends Component {
   render() {
     return (
@@ -49,26 +49,19 @@ class SponsoredCourses extends Component {
           options={options}
           className="testimonial-carousel owl-carousel"
         >
-          {this.props.dashboardStore.advertisingCourses.map((value, index) => {
+          {this.props.advertisingCourses.map((value, index) => {
             const { courseInfo } = value;
             return (
               <CourseCard
                 title={courseInfo.title}
                 startDate={courseInfo.startDate}
                 price={courseInfo.price}
-                key={index}
+                key={value.courseInfo.id}
                 score={courseInfo.score}
+                id={courseInfo.id}
                 location={courseInfo.locationName}
-                logoPath={
-                  value.ownerEducator.educatorId !== null
-                    ? value.ownerEducator.logoPath
-                    : value.ownerTenant.logoPath
-                }
-                ownerName={
-                  value.ownerEducator.educatorId !== null
-                    ? value.ownerEducator.educatorName
-                    : value.ownerTenant.tenantName
-                }
+                logoPath={courseInfo.courseOwnerInfo[0].logoPath}
+                ownerName={courseInfo.courseOwnerInfo[0].name}
               ></CourseCard>
             );
           })}

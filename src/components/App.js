@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Index from "./page/Dashboard/index";
 import AllListingList from "./page/all-listing-list";
-import CourseDetails from "./page/Course/listing-details";
 import Location from "./page/all-location";
 import Pricing from "./page/PricingPlan/pricing-plan";
 import Faq from "./page/faq";
@@ -11,7 +10,6 @@ import Contact from "./page/contact";
 import Cards from "./page/cards";
 import HeaderStyle from "./page/header-style";
 import BlogRightSide from "./page/blog-right-side";
-import BlogGrid from "./page/blog-grid";
 import BlogDetails from "./page/blog-details";
 import AuthProfile from "./page/auth-profile";
 import AuthDeshbord from "./page/UserDashboard/auth-deshbord";
@@ -31,6 +29,7 @@ import FilteredQuestions from "./page/Question/filteredQuestions";
 import CategoryDetail from "./page/CourseCategories/CategoryDetail";
 import LocationActivities from "./page/Activity/locationActivities";
 import ActivityListing from "./page/Activity/activityListing";
+import CourseDetail from "./page/Course";
 
 function App(props) {
   return (
@@ -39,7 +38,7 @@ function App(props) {
         <Route exact path="/" component={Index} />
         <Route path="/all-listings-grid" component={SimilarCourses} />
         <Route path="/all-listings-list" component={AllListingList} />
-        <Route path="/course-details:id" component={CourseDetails} />
+        <Route path="/course-details/:id" component={CourseDetail} />
         <Route path="/all-categories" component={CourseCategories} />
         <Route path="/all-locations" component={Location} />
         <Route path="/pricing-plans" component={Pricing} />

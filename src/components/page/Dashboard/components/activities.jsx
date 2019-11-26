@@ -4,10 +4,11 @@ import OwlCarousel from "react-owl-carousel2";
 import { NavLink } from "react-router-dom";
 import CourseCard from "../../../content/element/courseCard";
 import ActivityCard from "../../../content/element/activityCard";
+import { inject, observer } from "mobx-react";
+import Stores from "../../../../stores/storeIdentifier";
 const noAction = e => e.preventDefault();
 
 const options = {
-  items: 5,
   dots: false,
   nav: true,
   autoplay: true,
@@ -49,6 +50,8 @@ const id = 1;
 
 const logdIn = null;
 
+@inject(Stores.DashboardStore)
+@observer
 class Activities extends Component {
   render() {
     return (
@@ -57,8 +60,20 @@ class Activities extends Component {
           options={options}
           className="testimonial-carousel owl-carousel"
         >
-          {data.map((value, index) => {
-            return <ActivityCard></ActivityCard>;
+          {this.props.dashboardStore.upcomingEvents.map((value, index) => {
+            return (
+              <ActivityCard
+                title={value.title}
+                price={value.price}
+                locationName={value.locationName}
+                startDate={value.startDate}
+                ownerName={value.ownerInfo[0].name}
+                ownerId={value.ownerInfo[0].id}
+                logoPath={value.ownerInfo[0].logoPath}
+                key={index}
+                profession={value.ownerInfo[0].profession}
+              ></ActivityCard>
+            );
           })}
         </OwlCarousel>
       </Fragment>
