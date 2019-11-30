@@ -1,18 +1,13 @@
 import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
 import OwlCarousel from "react-owl-carousel2";
-import { NavLink } from "react-router-dom";
 import CourseCard from "../../../content/element/courseCard";
-import { inject, observer } from "mobx-react";
-import Stores from "../../../../stores/storeIdentifier";
-const noAction = e => e.preventDefault();
 
 const options = {
   items: 6,
   dots: false,
   nav: true,
   responsiveClass: true,
-  autoplay: true,
+  autoplay: false,
   autoplayTimeout: 2000,
   responsive: {
     0: {
@@ -39,8 +34,6 @@ const options = {
 
 const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
 
-/* @inject(Stores.DashboardStore)
-@observer */
 class SponsoredCourses extends Component {
   render() {
     return (

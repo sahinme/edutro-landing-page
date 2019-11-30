@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import moment from "moment";
 
-const img = "./assets/img/p1.jpg";
+const img = "https://i.udemycdn.com/course/240x135/1258436_2dc3_4.jpg";
 const badge = "sponsorlu";
 
 class CourseCard extends Component {
@@ -18,6 +18,7 @@ class CourseCard extends Component {
       location,
       id
     } = this.props;
+
     return (
       <Fragment>
         <div /* className="col-lg-4 col-sm-6" */ key={key}>
@@ -61,17 +62,48 @@ class CourseCard extends Component {
                 <Fragment>
                   <div className="atbd_content_upper">
                     <h4 className="atbd_listing_title">
-                      <NavLink to={"/course-details/" + id}>{title}</NavLink>
+                      <NavLink
+                        className="course_title"
+                        to={"/course-details/" + id}
+                      >
+                        {title}
+                      </NavLink>
                     </h4>
                     <div className="atbd_listing_meta">
-                      <span className="atbd_meta atbd_listing_rating">
-                        {score}
-                        <i className="la la-star"></i>
-                      </span>
-                      <span className="atbd_meta atbd_listing_price">
-                        {"₺ " + price}
+                      <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span style={{ marginLeft: "5px" }}>4.3</span>
+                      <span>
+                        <span style={{ marginLeft: "5px" }}>
+                          <i
+                            style={{ color: "#fa8b0c", marginLeft: "5px" }}
+                            className="la la-comment"
+                          ></i>
+                        </span>
+                        <span style={{ marginLeft: "5px" }}>(182)</span>
                       </span>
                     </div>
+                    <span
+                      style={{ textDecoration: "line-through" }}
+                      className="atbd_meta atbd_listing_price"
+                    >
+                      {"₺" + Math.round(price * 100) / 100}
+                    </span>
+                    <span
+                      style={{
+                        marginLeft: "13px",
+                        fontSize: "17px",
+                        fontWeight: "700"
+                      }}
+                      className="atbd_meta atbd_listing_price"
+                    >
+                      {"₺" + price.toFixed(2)}
+                    </span>
                     <div className="atbd_listing_data_list">
                       <ul>
                         <li>

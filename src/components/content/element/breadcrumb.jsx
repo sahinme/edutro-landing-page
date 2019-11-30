@@ -42,7 +42,7 @@ export class BreadcrumbSingle extends Component {
               </span>
             </li>
             <li>
-              <span className="atbd_badge atbd_badge_popular">Popular</span>
+              <span className="atbd_badge atbd_badge_popular">Popüler</span>
             </li>
           </ul>
           <ul className="list-unstyled listing-info--meta">

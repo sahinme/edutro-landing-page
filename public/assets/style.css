@@ -2191,6 +2191,23 @@ p {
   margin-bottom: 0;
 }
 
+.course_title {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  height: 38px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #29303b;
+  -webkit-box-orient: vertical;
+}
+
+.checked {
+  color: orange;
+}
+
 .atbd_listing_info .atbd_card_action .db_btn_area {
   display: -webkit-box;
   display: -webkit-flex;

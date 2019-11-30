@@ -9,10 +9,19 @@ import CustomerStory from "./components/customerStory";
 import CustomerInfo from "./components/customerInfo";
 import CustomerStakeholders from "./components/customerStakeholders";
 import CustomerCoursesGrid from "./components/customerCoursesGrid";
+import { inject, observer } from "mobx-react";
+import Stores from "../../../stores/storeIdentifier";
 
 const noAction = e => e.preventDefault();
 
+@inject(Stores.EducatorStore)
+@observer
 class CustomerDetail extends Component {
+  componentDidMount() {
+    const { match: { params: { id } = {} } = {} } = this.props;
+    this.props.educatorStore.getEducatorDetail(id);
+  }
+
   render() {
     return (
       <Fragment>
@@ -111,9 +120,9 @@ class CustomerDetail extends Component {
                 </div>
                 {/*<!-- ends: .atbd_author_listings_area -->*/}
 
-                <div className="row">
+                {/*  <div className="row">
                   <CustomerCoursesGrid />
-                </div>
+                </div> */}
               </div>
               <div className="col col-lg-3">
                 <NavLink
@@ -174,9 +183,9 @@ class CustomerDetail extends Component {
                 </div>
                 {/*<!-- ends: .atbd_author_listings_area -->*/}
 
-                <div className="row">
+                {/*   <div className="row">
                   <CustomerCoursesGrid />
-                </div>
+                </div> */}
               </div>
               <div className="col col-lg-3">
                 <NavLink

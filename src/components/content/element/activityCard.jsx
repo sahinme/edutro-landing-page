@@ -65,7 +65,12 @@ class ActivityCard extends Component {
                 <Fragment>
                   <div className="atbd_content_upper">
                     <h4 className="atbd_listing_title">
-                      <NavLink to={"/listing-details" + id}>{title}</NavLink>
+                      <NavLink
+                        className="course_title"
+                        to={"/listing-details" + id}
+                      >
+                        {title}
+                      </NavLink>
                     </h4>
                     <div
                       style={{ justifyContent: "space-between" }}

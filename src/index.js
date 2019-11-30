@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducers from './Store/Reducers/rootReducer';
 import { Provider } from 'mobx-react';
 import "antd/dist/antd.css";
+import "font-awesome/css/font-awesome.css";
 import initializeStores from './stores/storeInitializer';
 
 const stores = initializeStores();
