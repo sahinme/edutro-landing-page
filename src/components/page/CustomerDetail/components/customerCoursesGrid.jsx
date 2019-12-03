@@ -4,32 +4,27 @@ import { connect } from "react-redux";
 
 class CustomerCoursesGrid extends Component {
   render() {
-    const { list, logdIn } = this.props;
+    const { courses } = this.props;
     return (
       <Fragment>
-        {Object.values(list)
-          .slice(0, 6)
-          .map((value, key) => {
-            const {
-              img,
-              rating,
-              badge,
-              title,
-              location,
-              price,
-              phone,
-              opCl,
-              id
-            } = value;
-            return <CustomerCourseCard></CustomerCourseCard>;
+        {courses &&
+          courses.map((value, key) => {
+            const { startDate, title, locationName, price, id, score } = value;
+            return (
+              <CustomerCourseCard
+                title={title}
+                startDate={startDate}
+                price={price}
+                key={id}
+                score={score}
+                id={id}
+                location={locationName}
+              ></CustomerCourseCard>
+            );
           })}
       </Fragment>
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    list: state.list
-  };
-};
-export default  (CustomerCoursesGrid);
+
+export default CustomerCoursesGrid;

@@ -14,18 +14,20 @@ import Stores from "../../../stores/storeIdentifier";
 
 const noAction = e => e.preventDefault();
 
-@inject(Stores.EducatorStore)
+@inject(Stores.TenantStore, Stores.CommentStore)
 @observer
 class CustomerDetail extends Component {
   componentDidMount() {
     const { match: { params: { id } = {} } = {} } = this.props;
-    this.props.educatorStore.getEducatorDetail(id);
+    this.props.tenantStore.getTenantDetails(id);
+    this.props.commentStore.getEntityComments(id, "educator");
   }
 
   render() {
+    const { tenant } = this.props.tenantStore;
+    const { comments } = this.props.commentStore;
     return (
       <Fragment>
-        {/* Header section start */}
         <section className="header-breadcrumb bgimage overlay overlay--dark">
           <div className="bg_image_holder">
             <img src="./assets/img/breadcrumb1.jpg" alt="" />
@@ -34,44 +36,60 @@ class CustomerDetail extends Component {
             <Header logo="light" class="menu--light" />
           </div>
           <BreadcrumbWraper title="Author Profile" />
+          <p>{comments && comments[0] && comments[0].id}</p>
         </section>
 
         <section className="author-info-area section-padding-strict section-bg">
           <div className="container">
             <div className="row">
-              <CustomerTitle></CustomerTitle>
+              <CustomerTitle title={tenant}></CustomerTitle>
               <div className="col-lg-8 col-md-7 m-bottom-30">
-                <CustomerStory></CustomerStory>
+                <CustomerStory story={tenant.aboutUs}></CustomerStory>
               </div>
               <div className="col-lg-4 col-md-5 m-bottom-30">
-                <CustomerInfo></CustomerInfo>
+                <CustomerInfo informations={tenant}></CustomerInfo>
               </div>
 
-              <div className="atbd_content_module atbd_contact_information_module">
-                <div className="atbd_content_module__tittle_area">
-                  <div className="atbd_area_title">
-                    <h4>
-                      <span className="la la-user"></span>Birlikte çalışılan
-                      kurumlar
-                    </h4>
+              {tenant &&
+                tenant.tenantEducators &&
+                tenant.tenantEducators.length > 0 && (
+                  <div className="col-lg-12">
+                    <div className="atbd_content_module atbd_contact_information_module">
+                      <div className="atbd_content_module__tittle_area">
+                        <div className="atbd_area_title">
+                          <h4>
+                            <span className="la la-user"></span>Birlikte
+                            çalışılan eğitmenler
+                          </h4>
+                        </div>
+                      </div>
+
+                      <CustomerStakeholders
+                        stakeholders={tenant.tenantEducators}
+                      ></CustomerStakeholders>
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <CustomerStakeholders></CustomerStakeholders>
-              </div>
-
-              <div className="atbd_content_module atbd_contact_information_module">
-                <div className="atbd_content_module__tittle_area">
-                  <div className="atbd_area_title">
-                    <h4>
-                      <span className="la la-user"></span>Birlikte çalışılan
-                      eğitmenler
-                    </h4>
+              {tenant &&
+                tenant.tenantEducators &&
+                tenant.tenantEducators.length > 0 && (
+                  <div style={{ marginTop: "20px" }} className="col-lg-12">
+                    <div className="atbd_content_module atbd_contact_information_module">
+                      <div className="atbd_content_module__tittle_area">
+                        <div className="atbd_area_title">
+                          <h4>
+                            <span className="la la-user"></span>Birlikte
+                            çalışılan kurumlar
+                          </h4>
+                        </div>
+                      </div>
+                      <CustomerStakeholders
+                        stakeholders={tenant.tenantEducators}
+                      ></CustomerStakeholders>
+                    </div>
                   </div>
-                </div>
-
-                <CustomerStakeholders></CustomerStakeholders>
-              </div>
+                )}
 
               <div className="col-lg-12">
                 <div className="atbd_author_listings_area m-bottom-30">
@@ -120,9 +138,9 @@ class CustomerDetail extends Component {
                 </div>
                 {/*<!-- ends: .atbd_author_listings_area -->*/}
 
-                {/*  <div className="row">
-                  <CustomerCoursesGrid />
-                </div> */}
+                <div className="row">
+                  <CustomerCoursesGrid courses={tenant.courses} />
+                </div>
               </div>
               <div className="col col-lg-3">
                 <NavLink

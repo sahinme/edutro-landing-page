@@ -5,6 +5,7 @@ const noAction = e => e.preventDefault();
 
 class CustomerInfo extends Component {
   render() {
+    const { informations } = this.props;
     return (
       <Fragment>
         <div className="widget atbd_widget widget-card">
@@ -19,9 +20,7 @@ class CustomerInfo extends Component {
               <ul>
                 <li>
                   <span className="la la-map-marker"></span>
-                  <span className="atbd_info">
-                    25 East Valley Road, Michigan
-                  </span>
+                  <span className="atbd_info">{informations.address}</span>
                 </li>
                 <li>
                   <span className="la la-globe"></span>

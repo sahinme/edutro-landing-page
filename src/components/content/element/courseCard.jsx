@@ -18,7 +18,6 @@ class CourseCard extends Component {
       location,
       id
     } = this.props;
-
     return (
       <Fragment>
         <div /* className="col-lg-4 col-sm-6" */ key={key}>
@@ -34,9 +33,13 @@ class CourseCard extends Component {
                 <div className="atbd_author atbd_author--thumb">
                   <a href=" ">
                     <img
-                      style={{ width: "40px", height: "40px" }}
+                      style={{
+                        backgroundColor: "white",
+                        width: "40px",
+                        height: "40px"
+                      }}
                       src={logoPath}
-                      alt="AuthorImage"
+                      //alt="AuthorImage"
                     />
                     <span className="custom-tooltip">{ownerName}</span>
                   </a>
@@ -64,18 +67,18 @@ class CourseCard extends Component {
                     <h4 className="atbd_listing_title">
                       <NavLink
                         className="course_title"
-                        to={"/course-details/" + id}
+                        to={"/course-details" + id}
                       >
                         {title}
                       </NavLink>
                     </h4>
                     <div className="atbd_listing_meta">
                       <div>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
+                        <span className="fa fa-star checked"></span>
+                        <span className="fa fa-star checked"></span>
+                        <span className="fa fa-star checked"></span>
+                        <span className="fa fa-star"></span>
+                        <span className="fa fa-star"></span>
                       </div>
                       <span style={{ marginLeft: "5px" }}>4.3</span>
                       <span>

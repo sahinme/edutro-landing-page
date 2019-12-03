@@ -22,12 +22,13 @@ import Stores from "../../../stores/storeIdentifier";
 
 const noAction = e => e.preventDefault();
 
-@inject(Stores.CourseStore)
+@inject(Stores.CourseStore, Stores.CommentStore)
 @observer
 class CourseDetail extends Component {
   componentDidMount() {
     const { match: { params: { id } = {} } = {} } = this.props;
     this.props.courseStore.getCourseById(id);
+    this.props.commentStore.getEntityComments(id, "educator");
   }
 
   render() {
@@ -56,7 +57,7 @@ class CourseDetail extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-8">
-                <ContentStory />
+                <ContentStory story={course.description} />
 
                 <div className="atbd_content_module atbd_contact_information_module">
                   <div className="atbd_content_module__tittle_area">

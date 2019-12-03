@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import moment from "moment";
 
-const img = "./assets/img/p1.jpg";
+const img = "https://i.udemycdn.com/course/240x135/2015076_2944_2.jpg";
 const badge = "Konferans";
 const id = 1;
 

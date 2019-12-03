@@ -63,7 +63,7 @@ class Index extends Component {
             <div className="row">
               <SponsoredCourses
                 advertisingCourses={
-                  this.props.dashboardStore.advertisingCourses || []
+                  this.props.dashboardStore.advertisingCourses
                 }
               />
             </div>
@@ -122,8 +122,6 @@ class Index extends Component {
         </section>
         {/* Listing section end */}
 
-        <ContentBlockHome />
-
         {/* Place section start */}
         <section className="places section-padding">
           <div className="container">
@@ -142,6 +140,8 @@ class Index extends Component {
           </div>
         </section>
         {/* Place section end */}
+
+        <ContentBlockHome />
 
         {/* Testimonial section start */}
         <section className="testimonial-wrapper section-padding--bottom">

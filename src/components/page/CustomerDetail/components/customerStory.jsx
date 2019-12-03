@@ -10,7 +10,7 @@ const values = {
 class CustomerStory extends Component {
   render() {
     const { about1, about2 } = values;
-
+    const { story } = this.props;
     return (
       <Fragment>
         <div className="atbd_author_module">
@@ -23,11 +23,7 @@ class CustomerStory extends Component {
               </div>
             </div>
             <div className="atbdb_content_module_contents">
-              <p>
-                {about1}
-                <br /> <br />
-                {about2}
-              </p>
+              <p>{story}</p>
             </div>
           </div>
         </div>

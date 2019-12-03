@@ -6,11 +6,12 @@ const data = [1, 1, 1, 1];
 
 class CustomerStakeholders extends Component {
   render() {
+    const { stakeholders } = this.props;
     return (
       <Fragment>
         <Card>
           <Row type="flex" justify="flex-start">
-            {data.map(x => {
+            {stakeholders.map(x => {
               return (
                 <Col span={10}>
                   <div
@@ -29,7 +30,7 @@ class CustomerStakeholders extends Component {
                     >
                       <a>
                         <h4>
-                          Abay Akademi{" "}
+                          {x.educatorName}
                           <span
                             className="verified"
                             data-toggle="tooltip"

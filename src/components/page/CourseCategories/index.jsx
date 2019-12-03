@@ -4,9 +4,15 @@ import CategoryWidget from "./components/categoryWidget";
 import Header from "../../layout/header/index";
 import { Footer } from "../../layout/footer/index";
 import { BreadcrumbWraper } from "../../content/element/breadcrumb";
+import { inject, observer } from "mobx-react";
+import Stores from "../../../stores/storeIdentifier";
 
+@inject(Stores.CategoryStore)
+@observer
 class CourseCategories extends Component {
-  state = {};
+  componentDidMount() {
+    this.props.categoryStore.getAllCategories();
+  }
   render() {
     return (
       <Fragment>
@@ -43,7 +49,9 @@ class CourseCategories extends Component {
               </div>
             </div>
             <div className="row">
-              <CategoryWidget />
+              <CategoryWidget
+                categories={this.props.categoryStore.categories}
+              />
             </div>
           </div>
         </section>

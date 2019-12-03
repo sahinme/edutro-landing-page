@@ -38,7 +38,7 @@ function App(props) {
         <Route exact path="/" component={Index} />
         <Route path="/all-listings-grid" component={SimilarCourses} />
         <Route path="/all-listings-list" component={AllListingList} />
-        <Route path="/course-details/:id" component={CourseDetail} />
+        <Route path="/course-details:id" component={CourseDetail} />
         <Route path="/all-categories" component={CourseCategories} />
         <Route path="/all-locations" component={Location} />
         <Route path="/pricing-plans" component={Pricing} />
@@ -58,13 +58,14 @@ function App(props) {
         <Route path="/invoice" component={Invoice} />
         <Route path="/add-listing" component={AddListing} />
         <Route path="/notifications" component={Notifications} />
-        <Route path="/instructor-profile" component={CustomerDetail} />
+        <Route path="/instructor-profile:id" component={CustomerDetail} />
         <Route path="/ques-answ" component={Questions} />
         <Route path="/ques-detail" component={QuestionDetail} />
         <Route path="/filtered-ques" component={FilteredQuestions} />
-        <Route path="/category-detail" component={CategoryDetail} />
+        <Route path="/category-detail:id" component={CategoryDetail} />
         <Route path="/activities" component={LocationActivities} />
         <Route path="/activities-listing" component={ActivityListing} />
+        <Route path="/aaaa" component={CustomerDetail} />
       </Switch>
     </Router>
   );

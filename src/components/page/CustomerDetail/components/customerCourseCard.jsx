@@ -1,19 +1,26 @@
 import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import moment from "moment";
 
-const img = "./assets/img/p1.jpg";
-const rating = 2;
+const img = "https://i.udemycdn.com/course/240x135/1258436_2dc3_4.jpg";
 const badge = "sponsorlu";
-const title = "Yasam Koclugu Egitimi";
-const location = "Ankara";
-const price = "2.120";
-const id = 1;
 
 class CustomerCourseCard extends Component {
   render() {
+    const {
+      title,
+      ownerName,
+      price,
+      startDate,
+      score,
+      key,
+      logoPath,
+      location,
+      id
+    } = this.props;
     return (
       <Fragment>
-        <div className="col col-lg-3" key="1">
+        <div className="col col-lg-3" key={key}>
           <div className="atbd_single_listing ">
             <article className="atbd_single_listing_wrapper">
               <figure className="atbd_listing_thumbnail_area">
@@ -23,15 +30,6 @@ class CustomerCourseCard extends Component {
                   </a>
                 </div>
                 {/*<!-- ends: .atbd_listing_image -->*/}
-                <div className="atbd_author atbd_author--thumb">
-                  <a href=" ">
-                    <img
-                      src="./assets/img/author-thumb2.jpg"
-                      alt="AuthorImage"
-                    />
-                    <span className="custom-tooltip">Jeffery A, Owner</span>
-                  </a>
-                </div>
                 <div className="atbd_thumbnail_overlay_content">
                   <ul className="atbd_upper_badge">
                     <li>
@@ -53,17 +51,48 @@ class CustomerCourseCard extends Component {
                 <Fragment>
                   <div className="atbd_content_upper">
                     <h4 className="atbd_listing_title">
-                      <NavLink to={"/course-details" + id}>{title}</NavLink>
+                      <NavLink
+                        className="course_title"
+                        to={"/course-details" + id}
+                      >
+                        {title}
+                      </NavLink>
                     </h4>
                     <div className="atbd_listing_meta">
-                      <span className="atbd_meta atbd_listing_rating">
-                        {rating}
-                        <i className="la la-star"></i>
-                      </span>
-                      <span className="atbd_meta atbd_listing_price">
-                        {"₺ " + price}
+                      <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
+                      <span style={{ marginLeft: "5px" }}>4.3</span>
+                      <span>
+                        <span style={{ marginLeft: "5px" }}>
+                          <i
+                            style={{ color: "#fa8b0c", marginLeft: "5px" }}
+                            className="la la-comment"
+                          ></i>
+                        </span>
+                        <span style={{ marginLeft: "5px" }}>(182)</span>
                       </span>
                     </div>
+                    <span
+                      style={{ textDecoration: "line-through" }}
+                      className="atbd_meta atbd_listing_price"
+                    >
+                      {"₺" + Math.round(price * 100) / 100}
+                    </span>
+                    <span
+                      style={{
+                        marginLeft: "13px",
+                        fontSize: "17px",
+                        fontWeight: "700"
+                      }}
+                      className="atbd_meta atbd_listing_price"
+                    >
+                      {"₺" + price.toFixed(2)}
+                    </span>
                     <div className="atbd_listing_data_list">
                       <ul>
                         <li>
@@ -75,7 +104,7 @@ class CustomerCourseCard extends Component {
                         <li>
                           <p>
                             <span className="la la-calendar-check-o"></span>
-                            11.02.2019 Cuma
+                            {moment(startDate).format("L")}
                           </p>
                         </li>
                       </ul>

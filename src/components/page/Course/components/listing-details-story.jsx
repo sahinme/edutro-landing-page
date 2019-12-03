@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 
 export class ContentStory extends Component {
   render() {
+    const { story } = this.props;
     return (
       <Fragment>
         <div className="atbd_content_module atbd_listing_details">
@@ -13,15 +14,7 @@ export class ContentStory extends Component {
             </div>
           </div>
           <div className="atbdb_content_module_contents">
-            <p>
-              Yaşam Koçluğu yapmak için kişisel gelişimin temeli ve tavanı olan
-              NLP yani Sinir Dili Programlama sistemini bilmeniz gerekir ve bu
-              eğitim NLP ile başlar. Koçluk yapmaya başladığınız zaman illaki
-              sizden Öğrenci Koçluğu talep edilecektir. Öğrenci Koçluğuyla
-              beraber aile ile kontak kurmanız gerekecektir. Burada da Aile
-              Koçluğu devreye girecektir. Tüm koçluk çalışmalarınızı NLP
-              teknikleri ile destekleyerek fark yaratabilirsiniz
-            </p>
+            <p>{story}</p>
           </div>
         </div>
       </Fragment>

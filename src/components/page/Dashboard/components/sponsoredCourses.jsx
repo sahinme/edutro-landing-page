@@ -32,33 +32,33 @@ const options = {
   loop: true
 };
 
-const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
-
 class SponsoredCourses extends Component {
   render() {
+    const { advertisingCourses } = this.props;
     return (
       <Fragment>
-        <OwlCarousel
-          options={options}
-          className="testimonial-carousel owl-carousel"
-        >
-          {this.props.advertisingCourses.map((value, index) => {
-            const { courseInfo } = value;
-            return (
-              <CourseCard
-                title={courseInfo.title}
-                startDate={courseInfo.startDate}
-                price={courseInfo.price}
-                key={value.courseInfo.id}
-                score={courseInfo.score}
-                id={courseInfo.id}
-                location={courseInfo.locationName}
-                logoPath={courseInfo.courseOwnerInfo[0].logoPath}
-                ownerName={courseInfo.courseOwnerInfo[0].name}
-              ></CourseCard>
-            );
-          })}
-        </OwlCarousel>
+        {advertisingCourses && (
+          <OwlCarousel
+            options={options}
+            className="testimonial-carousel owl-carousel"
+          >
+            {advertisingCourses.map((value, index) => {
+              return (
+                <CourseCard
+                  title={value.courseInfo.title}
+                  startDate={value.courseInfo.startDate}
+                  price={value.courseInfo.price}
+                  key={value.courseInfo.id}
+                  score={value.courseInfo.score}
+                  id={value.courseInfo.id}
+                  location={value.courseInfo.locationName}
+                  logoPath={value.courseInfo.courseOwnerInfo[0].logoPath}
+                  ownerName={value.courseInfo.courseOwnerInfo[0].name}
+                ></CourseCard>
+              );
+            })}
+          </OwlCarousel>
+        )}
       </Fragment>
     );
   }

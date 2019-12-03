@@ -38,7 +38,7 @@ const options = {
 };
 
 const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
-const img = "./assets/img/p1.jpg";
+const img = "https://i.udemycdn.com/course/240x135/2015076_2944_2.jpg";
 const rating = 2;
 const badge = "";
 const title = "sdasd";

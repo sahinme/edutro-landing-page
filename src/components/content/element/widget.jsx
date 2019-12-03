@@ -51,7 +51,7 @@ export class SellerInfo extends Component {
             </div>
             {/* <!-- ends: .atbd_widget_contact_info --> */}
             <NavLink
-              to={"/instructor-profile/" + courseOwner[0].id}
+              to={"/instructor-profile" + courseOwner[0].id}
               className="btn btn-outline-primary btn-block"
             >
               Profili Gör

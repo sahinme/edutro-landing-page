@@ -32,20 +32,43 @@ const options = {
   loop: true
 };
 
-const data = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
-
 class PopularCourses extends Component {
   render() {
+    const { courses } = this.props;
     return (
       <Fragment>
-        <OwlCarousel
-          options={options}
-          className="testimonial-carousel owl-carousel"
-        >
-          {data.map((value, index) => {
-            return <CourseCard></CourseCard>;
-          })}
-        </OwlCarousel>
+        {courses && (
+          <OwlCarousel
+            options={options}
+            className="testimonial-carousel owl-carousel"
+          >
+            {courses.map((value, index) => {
+              return (
+                <CourseCard
+                  title={value.title}
+                  startDate={value.startDate}
+                  price={value.price}
+                  key={value.id}
+                  score={value.score}
+                  id={value.id}
+                  location={value.locationName}
+                  logoPath={
+                    value &&
+                    value.courseOwnerInfo &&
+                    value.courseOwnerInfo[0] &&
+                    value.courseOwnerInfo[0].logoPath
+                  }
+                  ownerName={
+                    value &&
+                    value.courseOwnerInfo &&
+                    value.courseOwnerInfo[0] &&
+                    value.courseOwnerInfo[0].name
+                  }
+                ></CourseCard>
+              );
+            })}
+          </OwlCarousel>
+        )}
       </Fragment>
     );
   }

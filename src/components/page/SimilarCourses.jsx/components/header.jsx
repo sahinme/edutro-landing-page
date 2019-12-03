@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   render() {
+    const { courses } = this.props;
     const sort = [];
     const sorting = e => {
       e.preventDefault();
@@ -64,7 +65,7 @@ class Header extends Component {
           });
       }
     };
-    Object.values(this.props.data).map(item => {
+    Object.values(this.props.courses).map(item => {
       return sort.push(item);
     });
     return (
@@ -72,7 +73,7 @@ class Header extends Component {
         <div className="atbd_generic_header">
           <div className="atbd_generic_header_title">
             <h4>{this.props.title}</h4>
-            <p>Toplam 59 sonuç gösteriliyor</p>
+            <p>Toplam {courses && courses.length} sonuç gösteriliyor</p>
           </div>
           <div className="atbd_listing_action_btn btn-toolbar" role="toolbar">
             <div className="view-mode">

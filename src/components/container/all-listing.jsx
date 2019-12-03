@@ -14,8 +14,8 @@ import Sidebar from "../page/SimilarCourses.jsx/components/sidebar";
 const noAction = e => e.preventDefault();
 class Listing extends Component {
   state = {
-    list: this.props.list,
-    cate: this.props.list,
+    list: this.props.courses,
+    cate: this.props.courses,
     count: 0,
     perPage: 4,
     data: {}
@@ -56,10 +56,6 @@ class Listing extends Component {
   }
 
   render() {
-    const logdIn = () => {
-      return this.props.login;
-    };
-
     // sorting here
     const sort = [];
     Object.values(this.state.list).map(item => {
@@ -184,14 +180,14 @@ class Listing extends Component {
       });
     };
     // filter by price range end
-
+    const { courses } = this.props;
     return (
       <Fragment>
         <section className="all-listing-wrapper section-bg">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <Header data={[]}></Header>
+                <Header courses={courses}></Header>
               </div>{" "}
               {/*<!-- ends: .col-lg-12 -->*/}
               <div className="col-lg-12 listing-items">
@@ -200,20 +196,36 @@ class Listing extends Component {
                   {/* wiget */}
                   <div className="col-lg-8 order-lg-1 order-0">
                     <div className="row">
-                      {Object.values(this.state.list).length ? (
-                        <Fragment>
-                          <ListingCardGrid6
-                            list={this.state.list}
-                            logdIn={logdIn()}
-                          />
-                        </Fragment>
-                      ) : (
-                        <div className="col-lg-12">
-                          <div className="alert alert-warning" role="alert">
-                            Data Not found!
-                          </div>
-                        </div>
-                      )}
+                      {courses &&
+                        courses.length > 0 &&
+                        courses.map(value => {
+                          return (
+                            <Fragment>
+                              <ListingCardGrid6
+                                title={value.title}
+                                startDate={value.startDate}
+                                price={value.price}
+                                key={value.id}
+                                score={value.score}
+                                id={value.id}
+                                location={value.locationName}
+                                logoPath={
+                                  value &&
+                                  value.courseOwnerInfo &&
+                                  value.courseOwnerInfo[0] &&
+                                  value.courseOwnerInfo[0].logoPath
+                                }
+                                ownerName={
+                                  value &&
+                                  value.courseOwnerInfo &&
+                                  value.courseOwnerInfo[0] &&
+                                  value.courseOwnerInfo[0].name
+                                }
+                                categoryName={value.category.displayName}
+                              />
+                            </Fragment>
+                          );
+                        })}
                     </div>
                   </div>
                 </div>
