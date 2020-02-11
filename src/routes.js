@@ -79,7 +79,7 @@ const routes = [
     { path: '/page-team', component: PageTeam },
     { path: '/page-terms', component: PageTerms },
     { path: '/egitimler', component: PageWork },
-    { path: '/page-work-detail', component: PageWorkDetail },
+    { path: '/egitimler', component: PageWorkDetail },
     { path: '/index', component: Main }
 
 ];
