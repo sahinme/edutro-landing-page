@@ -62,7 +62,7 @@ class Services extends Component {
                                         </div>
                                         <div className="fees">
                                             <ul className="list-unstyled float-right mb-0">
-                                                <li className="h3"><span className="h6">$</span>75</li>
+                                                <li className="h3"><span className="h6">₺</span>75</li>
                                             </ul>
                                             <ul className="list-unstyled mb-0 numbers">
                                                 <li><i className="mdi mdi-school text-muted"></i> 30 Students</li>

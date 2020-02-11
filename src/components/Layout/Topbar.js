@@ -96,7 +96,7 @@ class Topbar extends Component {
                                     <Link to="/#" onClick={(event) => { event.preventDefault(); this.setState({ docs: !this.state.docs }) }} >Kurumsal</Link><span className="menu-arrow"></span>
                                     <ul className={this.state.docs ? "submenu open" : "submenu"}>
                                         <li><Link to="/documentation">Hakkımızda </Link></li>
-                                        <li><Link to="/changelog">İletişim</Link></li>
+                                        <li><Link to="/page-contact-one">İletişim</Link></li>
                                     </ul>
                                 </li>
                             </ul>
