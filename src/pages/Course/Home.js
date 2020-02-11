@@ -17,7 +17,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            autoplay: true
+            autoplay: false
         }
     }
 
@@ -58,7 +58,7 @@ class Home extends Component {
                             pauseOnVisibility={true}
                             onSelect={this.visiableOnSelect}
                             indicators={false}
-                            slideshowSpeed={3000} >
+                            slideshowSpeed={30000} >
 
                             <div className="item">
                                 <li className="bg-slider" style={{ background: `url(${bg01})`, backgroundPosition: "center center" }}>

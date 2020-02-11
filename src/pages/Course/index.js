@@ -11,6 +11,7 @@ import Services from './Services';
 import Testi from './Testi';
 import Partner from '../../components/Shared/Partner';
 import Home from './Home';
+import Search from '../CloudHosting/Search';
 
 
 
@@ -56,7 +57,6 @@ class Index extends Component {
                 <Home />
 
                 <Feature />
-
 
                 <Services />
 

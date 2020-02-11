@@ -3,20 +3,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col } from "reactstrap";
 
-// import images
-import course1 from "../../images/course/1.jpg";
-import course2 from "../../images/course/2.jpg";
-import course3 from "../../images/course/3.jpg";
-import course4 from "../../images/course/4.jpg";
-import course5 from "../../images/course/5.jpg";
-import course6 from "../../images/course/6.jpg";
-import course7 from "../../images/course/7.jpg";
-import course9 from "../../images/course/9.jpg";
-
-import team01 from "../../images/team/1.jpg";
-import team02 from "../../images/team/2.jpg";
-import team03 from "../../images/team/3.jpg";
-import team04 from "../../images/team/4.jpg";
 import CourseCard from "./CourseCard";
 import TeacherCard from "./TeacherCard";
 
