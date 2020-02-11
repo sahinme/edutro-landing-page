@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducers from './Store/Reducers/rootReducer';
-import { Provider } from 'mobx-react';
-import "antd/dist/antd.css";
-import "font-awesome/css/font-awesome.css";
-import initializeStores from './stores/storeInitializer';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom';
 
-const stores = initializeStores();
+const app = (
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+);
 
-ReactDOM.render(
-    <Provider {...stores}><App /></Provider>,
-    document.getElementById('root')
-)
-
+ReactDOM.render(app, document.getElementById('root'));
+serviceWorker.unregister();
