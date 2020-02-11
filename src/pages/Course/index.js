@@ -16,30 +16,28 @@ import Home from './Home';
 
 class Index extends Component {
 
-  
+
 
     componentDidMount() {
         document.body.classList = "";
         document.getElementById('topnav').classList.add('bg-white');
         window.addEventListener("scroll", this.scrollNavigation, true);
-      }
-  
-       // Make sure to remove the DOM listener when the component is unmounted.
-       componentWillUnmount() {
-        window.removeEventListener("scroll",this.scrollNavigation);
-     }
-      scrollNavigation = () => {
-          var doc = document.documentElement;
-          var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-          if(top > 80)
-          {
-               document.getElementById('topnav').classList.add('nav-sticky');
-          }
-          else
-          {
+    }
+
+    // Make sure to remove the DOM listener when the component is unmounted.
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.scrollNavigation);
+    }
+    scrollNavigation = () => {
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        if (top > 80) {
+            document.getElementById('topnav').classList.add('nav-sticky');
+        }
+        else {
             document.getElementById('topnav').classList.remove('nav-sticky');
-          }
-      }
+        }
+    }
 
     render() {
 
@@ -55,32 +53,25 @@ class Index extends Component {
                     </div>
                 </div> */}
 
-                {/* Hero Start */}
-                 <Home />
+                <Home />
 
-                {/* Feature */}
                 <Feature />
 
-                {/* About */}
-                <About />
 
-                {/* Cta */}
-                <Cta />
-
-                {/* Services */}
                 <Services />
 
-                {/* Cta1 */}
-                <Cta1 />
+                <Cta />
 
-                {/* Testi */}
                 <Testi />
 
-                {/* Partner */}
+
+                <Cta1 />
+
+
                 <section className="bg-light section-two">
                     <div className="container">
                         <Row className="justify-content-center">
-                        <Partner />
+                            <Partner />
                         </Row>
                     </div>
                 </section>

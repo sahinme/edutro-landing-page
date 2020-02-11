@@ -49,7 +49,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index" target="_blank">
-                                        <img src={index} alt="demo-img" className="img-responsive rounded" />
+                                            <img src={index} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Index</h4>
                                     </div>
@@ -67,7 +67,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-agency" target="_blank">
-                                            <img src={agency}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={agency} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Agency</h4>
                                     </div>
@@ -76,7 +76,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-apps" target="_blank">
-                                            <img src={apps}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={apps} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Application</h4>
                                     </div>
@@ -103,7 +103,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-marketing" target="_blank">
-                                            <img src={marketing}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={marketing} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Marketing</h4>
                                     </div>
@@ -112,7 +112,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-hotel" target="_blank">
-                                            <img  src={hotel}   alt="demo-img" className="img-responsive rounded" />
+                                            <img src={hotel} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Hotel</h4>
                                     </div>
@@ -130,7 +130,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-coworking" target="_blank">
-                                            <img src={coworking}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={coworking} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Coworking Space</h4>
                                     </div>
@@ -139,7 +139,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-cloud-hosting" target="_blank">
-                                            <img src={hosting}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={hosting} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Cloud Hosting</h4>
                                     </div>
@@ -157,7 +157,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-course" target="_blank">
-                                            <img src={course}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={course} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Course</h4>
                                     </div>
@@ -166,7 +166,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-personal" target="_blank">
-                                            <img  src={personal} alt="demo-img" className="img-responsive rounded" />
+                                            <img src={personal} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Personal Portfolio</h4>
                                     </div>
@@ -193,7 +193,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-portfolio" target="_blank">
-                                            <img src={portfolio}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={portfolio} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Minimal Portfolio</h4>
                                     </div>
@@ -202,7 +202,7 @@ class Demo extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="demo-box">
                                         <Link to="index-services" target="_blank">
-                                            <img src={services}  alt="demo-img" className="img-responsive rounded" />
+                                            <img src={services} alt="demo-img" className="img-responsive rounded" />
                                         </Link>
                                         <h4 className="mt-3 text-uppercase">Services</h4>
                                     </div>

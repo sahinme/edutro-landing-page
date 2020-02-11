@@ -10,7 +10,7 @@ import './css/materialdesignicons.min.css';
 import routes from './routes';
 
 // Root Include
-const Root = React.lazy(() => import('./pages/Home/indexRoot'));
+const Root = React.lazy(() => import('./pages/Course'));
 const PageComingSoon = React.lazy(() => import('./pages/PageComingSoon'));
 const PageContactDetail = React.lazy(() => import('./pages/PageContactDetail'));
 const PageCoverLogin = React.lazy(() => import('./pages/PageCoverLogin'));
@@ -55,7 +55,7 @@ class App extends Component {
             <Route path="/page-maintenance" component={PageMaintenance} />
             <Route path="/page-recovery-password" component={PageRecoveryPassword} />
             <Route path="/page-signup" component={PageSignup} />
-            <Route path="/" component={Root} />
+            <Route path="/" component={withLayout(Root)} />
             </Switch>
           </React.Suspense>
         </Router>
