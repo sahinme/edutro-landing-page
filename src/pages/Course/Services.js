@@ -29,7 +29,7 @@ class Services extends Component {
     render() {
         return (
             <React.Fragment>
-                <section className="section" id="courses">
+                <section style={{ paddingTop: "25px" }} className="section" id="courses">
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-12 text-center">

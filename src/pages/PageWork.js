@@ -15,6 +15,7 @@ import work9 from '../images/work/9.jpg';
 import work10 from '../images/work/10.jpg';
 import work11 from '../images/work/11.jpg';
 import work12 from '../images/work/12.jpg';
+import Search from './CloudHosting/Search';
 
 class PageWork extends Component {
 
@@ -28,10 +29,10 @@ class PageWork extends Component {
     componentDidMount() {
         window.addEventListener("scroll", this.scrollNavigation, true);
     }
-     // Make sure to remove the DOM listener when the component is unmounted.
-     componentWillUnmount() {
+    // Make sure to remove the DOM listener when the component is unmounted.
+    componentWillUnmount() {
         window.removeEventListener("scroll", this.scrollNavigation);
-     }
+    }
     scrollNavigation = () => {
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
@@ -39,13 +40,13 @@ class PageWork extends Component {
         if (top > 80 && topnav) {
             topnav.classList.add('nav-sticky');
         }
-        else if(topnav) {
+        else if (topnav) {
             topnav.classList.remove('nav-sticky');
         }
     }
 
     render() {
-
+        const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
         return (
             <React.Fragment>
                 <section className="bg-half bg-light">
@@ -55,13 +56,10 @@ class PageWork extends Component {
                                 <Row className="justify-content-center">
                                     <Col lg={12} className="text-center">
                                         <div className="page-next-level">
-                                            <h4 className="title"> Works & Portfolio </h4>
+                                            <h4 className="title"> Eğitimleri Keşfet </h4>
                                             <ul className="page-next d-inline-block bg-white shadow p-2 pl-4 pr-4 rounded mb-0">
-                                                <li><Link to="/index" className="text-uppercase font-weight-bold text-dark">Home</Link></li>
-                                                <li><Link to="#" className="text-uppercase font-weight-bold text-dark">Pages</Link></li>
-                                                <li><Link to="#" className="text-uppercase font-weight-bold text-dark">Portfolio</Link></li>
                                                 <li>
-                                                    <span className="text-uppercase text-primary font-weight-bold">Work Grid</span>
+                                                    <span className="text-uppercase text-primary font-weight-bold">Eğitimler</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -72,213 +70,32 @@ class PageWork extends Component {
                     </div>
                 </section>
 
+                <Search />
+
                 <section className="section">
                     <div className="container">
                         <Row>
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work1} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Shifting Perspective</Link>
-                                            <small className="text-light">Studio</small>
+                            {data.map(item => {
+                                return (
+                                    <Col lg={4} md={6} className="col-12 mb-4 pb-2">
+                                        <div className="work-container position-relative rounded">
+                                            <div className="position-relative overflow-hidden">
+                                                <img src={work1} className="img-fluid rounded" alt="work" />
+                                                <div className="overlay-work"></div>
+                                                <div className="content">
+                                                    <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Shifting Perspective</Link>
+                                                    <small className="text-light">Studio</small>
+                                                </div>
+                                                <div className="client">
+                                                    <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
+                                                    <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
+                                    </Col>
 
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work2} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Colors Magazine</Link>
-                                            <small className="text-light">Web Design</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work3} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Spa Cosmetics</Link>
-                                            <small className="text-light">Developing</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work4} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Riser Coffee</Link>
-                                            <small className="text-light">Branding</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work5} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Dancing With Myself</Link>
-                                            <small className="text-light">Photography</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work6} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">New trends in SEO</Link>
-                                            <small className="text-light">Business</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work7} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Shifting Perspective</Link>
-                                            <small className="text-light">Studio</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work8} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Colors Magazine</Link>
-                                            <small className="text-light">Web Design</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work9} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Spa Cosmetics</Link>
-                                            <small className="text-light">Developing</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work10} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Riser Coffee</Link>
-                                            <small className="text-light">Branding</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work11} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Dancing With Myself</Link>
-                                            <small className="text-light">Photography</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                <div className="work-container position-relative shadow rounded">
-                                    <div className="position-relative overflow-hidden">
-                                        <img src={work12} className="img-fluid rounded" alt="work" />
-                                        <div className="overlay-work"></div>
-                                        <div className="content">
-                                            <Link to="page-work-detail" className="title text-white d-block font-weight-bold">New trends in SEO</Link>
-                                            <small className="text-light">Business</small>
-                                        </div>
-                                        <div className="client">
-                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                            <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Col>
-
+                                )
+                            })}
 
                             <div className="col-12">
                                 <ul className="pagination justify-content-center mb-0 list-unstyled">

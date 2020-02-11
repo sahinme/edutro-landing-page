@@ -78,7 +78,7 @@ const routes = [
     { path: '/page-services', component: PageServices },
     { path: '/page-team', component: PageTeam },
     { path: '/page-terms', component: PageTerms },
-    { path: '/page-work', component: PageWork },
+    { path: '/egitimler', component: PageWork },
     { path: '/page-work-detail', component: PageWorkDetail },
     { path: '/index', component: Main }
 
