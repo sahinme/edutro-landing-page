@@ -49,7 +49,7 @@ class Home extends Component {
     render() {
         return (
             <React.Fragment>
-                 <section className="main-slider">
+                <section className="main-slider">
                     <ul className="slides">
 
                         <RBCarousel
@@ -61,7 +61,7 @@ class Home extends Component {
                             slideshowSpeed={3000} >
 
                             <div className="item">
-                                <li className="bg-slider" style={{ background: `url(${bg01})`, backgroundPosition : "center center" }}>
+                                <li className="bg-slider" style={{ background: `url(${bg01})`, backgroundPosition: "center center" }}>
                                     <div className="home-center">
                                         <div className="home-desc-center">
                                             <div className="container">
@@ -82,7 +82,7 @@ class Home extends Component {
                                 </li>
                             </div>
                             <div className="item">
-                                <li className="bg-slider" style={{ background: `url(${bg04})`, backgroundPosition : "center center"  }}>
+                                <li className="bg-slider" style={{ background: `url(${bg04})`, backgroundPosition: "center center" }}>
                                     <div className="home-center">
                                         <div className="home-desc-center">
                                             <div className="container">
@@ -103,7 +103,7 @@ class Home extends Component {
                                 </li>
                             </div>
                             <div className="item">
-                                <li className="bg-slider" style={{ background: `url(${bg05})`, backgroundPosition : "center center"  }}>
+                                <li className="bg-slider" style={{ background: `url(${bg05})`, backgroundPosition: "center center" }}>
                                     <div className="home-center">
                                         <div className="home-desc-center">
                                             <div className="container">
