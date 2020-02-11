@@ -291,7 +291,7 @@ class Services extends Component {
                                     <div className="position-relative d-block overflow-hidden">
                                         <img src={course7} className="img-fluid rounded-top mx-auto" alt="Landrick" />
                                         <div className="overlay-work"></div>
-                                       <Link to="#" className="text-white h6 preview">Preview Now <i className="mdi mdi-chevron-right"></i></Link>
+                                        <Link to="#" className="text-white h6 preview">Preview Now <i className="mdi mdi-chevron-right"></i></Link>
                                     </div>
                                     <div className="content p-3">
                                         <h5><Link to="#" className="title text-dark">Skills Development Facilitation</Link></h5>
@@ -357,7 +357,7 @@ class Services extends Component {
                             </Col>
 
                             <Col className="mt-4 pt-2 text-center">
-                                <Link to="#" className="btn btn-primary">See More Courses <i className="mdi mdi-chevron-right"></i></Link>
+                                <Link to="#" className="btn btn-primary">Daha Fazla<i className="mdi mdi-chevron-right"></i></Link>
                             </Col>
                         </Row>
                     </div>
