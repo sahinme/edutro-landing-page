@@ -2,6 +2,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col } from "reactstrap";
+import CourseHeader from "./CourseHeader";
+import CourseInformationCard from "./CourseInformationCard";
+import WhatYouGet from "./WhatYouGet";
+import Requirements from "./Requirements";
 
 class PageJobDetail extends Component {
   constructor(props) {
@@ -29,244 +33,39 @@ class PageJobDetail extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="bg-half bg-light">
-          <div className="home-center">
-            <div className="home-desc-center">
-              <div className="container">
-                <Row className="justify-content-center">
-                  <Col lg={12} className="text-center">
-                    <div className="page-next-level">
-                      <h4 className="title mb-3"> Back-End Developer </h4>
-                      <p className="para-desc mx-auto text-muted">
-                        Launch your campaign and benefit from our expertise on
-                        designing and managing conversion centered bootstrap4
-                        html page.
-                      </p>
-                      <ul className="list-unstyled">
-                        <li className="list-inline-item text-primary mr-3">
-                          <i className="mdi mdi-map-marker text-warning mr-2"></i>
-                          Beijing, China
-                        </li>
-                        <li className="list-inline-item text-primary">
-                          <i className="mdi mdi-office-building text-warning mr-2"></i>
-                          Vivo
-                        </li>
-                      </ul>
-                      <ul className="page-next d-inline-block bg-white shadow p-2 pl-4 pr-4 rounded mb-0">
-                        <li>
-                          <Link
-                            to="/index"
-                            className="text-uppercase font-weight-bold text-dark"
-                          >
-                            Home
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="#"
-                            className="ml-1 text-uppercase font-weight-bold text-dark"
-                          >
-                            Pages
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to="#"
-                            className="ml-1 text-uppercase font-weight-bold text-dark"
-                          >
-                            Careers
-                          </Link>
-                        </li>
-                        <li>
-                          <span className="ml-1 text-uppercase text-primary font-weight-bold">
-                            Job Detail
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <CourseHeader />
         <section className="section">
           <div className="container">
             <Row>
-              <Col lg={4} md={5} className="col-12">
-                <div className="sidebar rounded shadow">
-                  <div className="widget border-bottom p-4">
-                    <h5 className="mb-0">Job Information</h5>
-                  </div>
-
-                  <div className="p-4">
-                    <div className="widget">
-                      <i className="mdi mdi-account-check mdi-24px float-left mr-3"></i>
-                      <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Eğitim Adı</h4>
-                        <p className="text-success">NLP Eğitimi</p>
-                      </div>
-                    </div>
-                    <div className="widget">
-                      <i className="mdi mdi-map-marker mdi-24px float-left mr-3"></i>
-                      <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Lokasyon:</h4>
-                        <p className="text-success">Ankara</p>
-                      </div>
-                    </div>
-                    <div className="widget">
-                      <i className="mdi mdi-monitor mdi-24px float-left mr-3"></i>
-                      <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Online Video:</h4>
-                        <p className="text-success">Başlangıç</p>
-                      </div>
-                    </div>
-                    <div className="widget">
-                      <i className="mdi mdi-briefcase-outline mdi-24px float-left mr-3"></i>
-                      <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Sertifika:</h4>
-                        <p className="text-success">Var</p>
-                      </div>
-                    </div>
-                    <div className="widget">
-                      <i className="mdi mdi-school mdi-24px float-left mr-3"></i>
-                      <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Katılım Belgesi:</h4>
-                        <p className="text-success">Var</p>
-                      </div>
-                    </div>
-                    <div className="widget">
-                      <i className="mdi mdi-currency-usd mdi-24px float-left mr-3"></i>
-                      <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Ücret:</h4>
-                        <p className="text-success">1500 ₺</p>
-                      </div>
-                    </div>
-                    <div className="widget">
-                      <i className="mdi mdi-clock-outline mdi-24px float-left mr-3"></i>
-                      <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">
-                          Eğitim Tarihi:
-                        </h4>
-                        <p className="text-success mb-0">5th Mart, 2020</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Col>
-
+              <CourseInformationCard />
               <Col lg={8} md={7} className="col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div className="ml-lg-4">
-                  <h5>Job Description: </h5>
-                  <p className="text-muted">
-                    One disadvantage of Lorum Ipsum is that in Latin certain
-                    letters appear more frequently than others - which creates a
-                    distinct visual impression. Moreover, in Latin only words at
-                    the beginning of sentences are capitalized.
-                  </p>
-                  <p className="text-muted">
-                    This means that Lorem Ipsum cannot accurately represent, for
-                    example, German, in which all nouns are capitalized. Thus,
-                    Lorem Ipsum has only limited suitability as a visual filler
-                    for German texts. If the fill text is intended to illustrate
-                    the characteristics of different typefaces.
-                  </p>
-                  <p className="text-muted">
-                    It sometimes makes sense to select texts containing the
-                    various letters and symbols specific to the output language.
-                  </p>
+                  <h5>Neler Öğreneceksiniz: </h5>
+                  <WhatYouGet />
 
-                  <h5 className="mt-4">Responsibilities and Duties: </h5>
-                  <p className="text-muted">
-                    It sometimes makes sense to select texts containing the
-                    various letters and symbols specific to the output language.
-                  </p>
-                  <ul className="list-unstyled">
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Participate in requirements analysis
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Write clean, scalable code using C# and .NET frameworks
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Test and deploy applications and systems
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Revise, update, refactor and debug code
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Improve existing software
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Develop documentation throughout the software development
-                      life cycle (SDLC)
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Serve as an expert on applications and provide technical
-                      support
-                    </li>
-                  </ul>
+                  <h5 className="mt-4">Gereksinimler: </h5>
+                  <Requirements />
 
                   <h5 className="mt-4">
-                    Required Experience, Skills and Qualifications:{" "}
+                    Açıklama:
                   </h5>
                   <p className="text-muted">
                     It sometimes makes sense to select texts containing the
                     various letters and symbols specific to the output language.
+                    It sometimes makes sense to select texts containing the
+                    various letters and symbols specific to the output language.
+                    It sometimes makes sense to select texts containing the
+                    various letters and symbols specific to the output language.
+                    It sometimes makes sense to select texts containing the
+                    various letters and symbols specific to the output language.
+                    It sometimes makes sense to select texts containing the
+                    various letters and symbols specific to the output language.
                   </p>
-                  <ul className="list-unstyled">
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Proven experience as a .NET Developer or Application
-                      Developer
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      good understanding of SQL and Relational Databases,
-                      specifically Microsoft SQL Server.
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Experience designing, developing and creating RESTful web
-                      services and APIs
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Basic know how of Agile process and practices
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Good understanding of object-oriented programming.
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Good understanding of concurrent programming.
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Sound knowledge of application architecture and design.
-                    </li>
-                    <li className="text-muted">
-                      <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>
-                      Excellent problem solving and analytical skills
-                    </li>
-                  </ul>
 
                   <div className="mt-4">
-                    <a
-                      href="page-job-apply"
-                      className="btn btn-outline-primary"
-                    >
-                      Apply Now <i className="mdi mdi-send"></i>
-                    </a>
+                    <Link className="btn btn-outline-primary" to="/egitimler/basvuru-yap" >
+                      Hemen Başvur <i className="mdi mdi-send"></i>
+                    </Link>
                   </div>
                 </div>
               </Col>

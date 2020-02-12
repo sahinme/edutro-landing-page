@@ -70,7 +70,7 @@ const routes = [
     { path: '/page-contact-one', component: PageContactOne },
     { path: '/page-contact-three', component: PageContactThree },
     { path: '/page-contact-two', component: PageContactTwo },
-    { path: '/page-job-apply', component: PageJobApply },
+    { path: '/egitimler/basvuru-yap', component: PageJobApply },
     { path: '/egitimler/:courseName', component: PageJobDetail },
     { path: '/page-job', component: PageJob },
     { path: '/page-pricing', component: PagePricing },
@@ -79,7 +79,7 @@ const routes = [
     { path: '/page-team', component: PageTeam },
     { path: '/page-terms', component: PageTerms },
     { path: '/egitimler', component: PageWork },
-    { path: '/egitimler', component: PageWorkDetail },
+    { path: '/page-work-detail', component: PageWorkDetail },
     { path: '/index', component: Main }
 
 ];
