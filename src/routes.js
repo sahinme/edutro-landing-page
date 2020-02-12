@@ -71,7 +71,7 @@ const routes = [
     { path: '/page-contact-three', component: PageContactThree },
     { path: '/page-contact-two', component: PageContactTwo },
     { path: '/page-job-apply', component: PageJobApply },
-    { path: '/page-job-detail', component: PageJobDetail },
+    { path: '/egitimler/:courseName', component: PageJobDetail },
     { path: '/page-job', component: PageJob },
     { path: '/page-pricing', component: PagePricing },
     { path: '/page-privacy', component: PagePrivacy },

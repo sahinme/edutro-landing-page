@@ -16,6 +16,7 @@ import work10 from '../images/work/10.jpg';
 import work11 from '../images/work/11.jpg';
 import work12 from '../images/work/12.jpg';
 import Search from './CloudHosting/Search';
+import CourseCard from './Course/CourseCard';
 
 class PageWork extends Component {
 
@@ -74,31 +75,42 @@ class PageWork extends Component {
 
                 <section className="section">
                     <div className="container">
+
+                        <Row className="border-bottom">
+                            <Col lg={9} md={8}>
+                                <div className="section-title">
+                                    <h4 className="title mb-2">Tüm Eğitimler</h4>
+                                    <p className="text-muted mb-0">En popüler eğitimler</p>
+                                </div>
+                            </Col>
+
+                            <Col lg={3} md={4} className="mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                <div className="form custom-form">
+                                    <div className="form-group">
+                                        <label>Eğitimleri filtrele :</label>
+                                        <select className="form-control" id="Sortbylist-Shop">
+                                            <option>Yeni</option>
+                                            <option>En ucuz</option>
+                                            <option>En pahalı</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+
                         <Row>
                             {data.map(item => {
                                 return (
-                                    <Col lg={4} md={6} className="col-12 mb-4 pb-2">
-                                        <div className="work-container position-relative rounded">
-                                            <div className="position-relative overflow-hidden">
-                                                <img src={work1} className="img-fluid rounded" alt="work" />
-                                                <div className="overlay-work"></div>
-                                                <div className="content">
-                                                    <Link to="page-work-detail" className="title text-white d-block font-weight-bold">Shifting Perspective</Link>
-                                                    <small className="text-light">Studio</small>
-                                                </div>
-                                                <div className="client">
-                                                    <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
-                                                    <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Col>
-
+                                    <CourseCard
+                                        title="Program for Missionaries"
+                                        price="899.99"
+                                        students="20"
+                                    />
                                 )
                             })}
 
                             <div className="col-12">
-                                <ul className="pagination justify-content-center mb-0 list-unstyled">
+                                <ul style={{ marginTop: "30px" }} className="pagination justify-content-center mb-0 list-unstyled">
                                     <li><Link to="#" className="pr-3 pl-3 pt-2 pb-2">Prev</Link></li>
                                     <li className="active"><Link to="#" className="pr-3 pl-3 pt-2 pb-2">1</Link></li>
                                     <li><Link to="#" className="pr-3 pl-3 pt-2 pb-2">2</Link></li>

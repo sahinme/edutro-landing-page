@@ -118,36 +118,36 @@ class PageJobDetail extends Component {
                     <div className="widget">
                       <i className="mdi mdi-monitor mdi-24px float-left mr-3"></i>
                       <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Eğitimi Düzeyi:</h4>
+                        <h4 className="widget-title mb-0">Online Video:</h4>
                         <p className="text-success">Başlangıç</p>
                       </div>
                     </div>
                     <div className="widget">
                       <i className="mdi mdi-briefcase-outline mdi-24px float-left mr-3"></i>
                       <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Tecrübe:</h4>
-                        <p className="text-success">Başlangıç</p>
+                        <h4 className="widget-title mb-0">Sertifika:</h4>
+                        <p className="text-success">Var</p>
                       </div>
                     </div>
                     <div className="widget">
                       <i className="mdi mdi-school mdi-24px float-left mr-3"></i>
                       <div className="overflow-hidden d-block">
-                        <h4 className="widget-title mb-0">Nitelikler:</h4>
-                        <p className="text-success">MSCIT</p>
+                        <h4 className="widget-title mb-0">Katılım Belgesi:</h4>
+                        <p className="text-success">Var</p>
                       </div>
                     </div>
                     <div className="widget">
                       <i className="mdi mdi-currency-usd mdi-24px float-left mr-3"></i>
                       <div className="overflow-hidden d-block">
                         <h4 className="widget-title mb-0">Ücret:</h4>
-                        <p className="text-success">1500 TL</p>
+                        <p className="text-success">1500 ₺</p>
                       </div>
                     </div>
                     <div className="widget">
                       <i className="mdi mdi-clock-outline mdi-24px float-left mr-3"></i>
                       <div className="overflow-hidden d-block">
                         <h4 className="widget-title mb-0">
-                          Yayınlanma Tarihi:
+                          Eğitim Tarihi:
                         </h4>
                         <p className="text-success mb-0">5th Mart, 2020</p>
                       </div>

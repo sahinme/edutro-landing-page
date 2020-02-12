@@ -18,13 +18,16 @@ class CourseCard extends Component {
                 alt="Landrick"
               />
               <div className="overlay-work"></div>
-              <Link to="#" className="text-white h6 preview">
+              <Link
+                to={`/egitimler/${title}`}
+                className="text-white h6 preview"
+              >
                 Hemen İnceleyin <i className="mdi mdi-chevron-right"></i>
               </Link>
             </div>
             <div className="content p-3">
               <h5>
-                <Link to="#" className="title text-dark">
+                <Link to={`/egitimler/${title}`} className="title text-dark">
                   {title}
                 </Link>
               </h5>

@@ -14,6 +14,7 @@ class Services extends Component {
 
   render() {
     const data = [1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1];
+    const data2 = [1, 1, 1, 1];
     return (
       <React.Fragment>
         <section className="section" id="courses">
@@ -70,7 +71,7 @@ class Services extends Component {
             </Row>
 
             <Row>
-              {data.map(teacher => {
+              {data2.map(teacher => {
                 return (
                   <TeacherCard name="Seyit Ahmet Abay" alan="Kişisel Gelişim" />
                 );
