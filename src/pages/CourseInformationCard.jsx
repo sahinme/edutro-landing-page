@@ -15,8 +15,8 @@ class CourseInformationCard extends Component {
             <div className="widget">
               <i className="mdi mdi-account-check mdi-24px float-left mr-3"></i>
               <div className="overflow-hidden d-block">
-                <h4 className="widget-title mb-0">Eğitim Adı</h4>
-                <p className="text-success">NLP Eğitimi</p>
+                <h4 className="widget-title mb-0">Kontenjan</h4>
+                <p className="text-success">13 kişi</p>
               </div>
             </div>
             <div className="widget">
@@ -34,7 +34,7 @@ class CourseInformationCard extends Component {
               </div>
             </div>
             <div className="widget">
-              <i className="mdi mdi-briefcase-outline mdi-24px float-left mr-3"></i>
+              <i className="mdi mdi-file-document-box mdi-24px float-left mr-3"></i>
               <div className="overflow-hidden d-block">
                 <h4 className="widget-title mb-0">Sertifika:</h4>
                 <p className="text-success">Var</p>
@@ -48,17 +48,31 @@ class CourseInformationCard extends Component {
               </div>
             </div>
             <div className="widget">
-              <i className="mdi mdi-currency-usd mdi-24px float-left mr-3"></i>
+              <i className="mdi mdi-currency-try mdi-24px float-left mr-3"></i>
               <div className="overflow-hidden d-block">
                 <h4 className="widget-title mb-0">Ücret:</h4>
                 <p className="text-success">1500 ₺</p>
               </div>
             </div>
             <div className="widget">
+              <i className="mdi mdi-calendar-text mdi-24px float-left mr-3"></i>
+              <div className="overflow-hidden d-block">
+                <h4 className="widget-title mb-0">Başlangıç Tarihi:</h4>
+                <p className="text-success mb-0">5 Mart, 2020</p>
+              </div>
+            </div>
+            <div style={{ marginTop: "15px" }} className="widget">
+              <i className="mdi mdi-calendar-remove mdi-24px float-left mr-3"></i>
+              <div className="overflow-hidden d-block">
+                <h4 className="widget-title mb-0">Bitiş Tarihi:</h4>
+                <p className="text-success mb-0">5 Mart, 2020</p>
+              </div>
+            </div>
+            <div style={{ marginTop: "15px" }} className="widget">
               <i className="mdi mdi-clock-outline mdi-24px float-left mr-3"></i>
               <div className="overflow-hidden d-block">
-                <h4 className="widget-title mb-0">Eğitim Tarihi:</h4>
-                <p className="text-success mb-0">5th Mart, 2020</p>
+                <h4 className="widget-title mb-0">Eğitim Süresi:</h4>
+                <p className="text-success mb-0">3 gün</p>
               </div>
             </div>
           </div>
