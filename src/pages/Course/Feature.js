@@ -15,86 +15,41 @@ class Feature extends Component {
   }
 
   render() {
+    const FeatureCard = ({ title, description, img,link }) => (
+      <Col md={4}>
+        <div className="course-feature text-center position-relative d-block overflow-hidden bg-white rounded p-4 pt-5 pb-5">
+          <div className="icon">
+            <img src={img} height="55" alt="" />
+          </div>
+          <h4 className="mt-3">
+            <Link to="#" className="title text-dark">
+              {title}
+            </Link>
+          </h4>
+          <p className="text-muted">
+            {description}
+          </p>
+          <Link to={link} className="text-primary read-more">
+            Keşfet <i className="mdi mdi-chevron-right"></i>
+          </Link>
+          <img
+            src={img}
+            className="full-img"
+            height="300"
+            alt=""
+          />
+        </div>
+      </Col>
+    );
+
     return (
       <React.Fragment>
         <section className="section">
           <div className="container">
             <Row>
-              <Col md={4}>
-                <div className="course-feature text-center position-relative d-block overflow-hidden bg-white rounded p-4 pt-5 pb-5">
-                  <div className="icon">
-                    <img src={insurance} height="55" alt="" />
-                  </div>
-                  <h4 className="mt-3">
-                    <Link to="#" className="title text-dark">
-                      {" "}
-                      Sınırsız erişim
-                    </Link>
-                  </h4>
-                  <p className="text-muted">
-                    It is a long established fact that a reader will be of a
-                    page reader will be of a page when looking at its layout.{" "}
-                  </p>
-                  <Link to="#" className="text-primary read-more">
-                    Read More <i className="mdi mdi-chevron-right"></i>
-                  </Link>
-                  <img
-                    src={insurance}
-                    className="full-img"
-                    height="300"
-                    alt=""
-                  />
-                </div>
-              </Col>
-
-              <Col md={4}>
-                <div className="course-feature text-center position-relative d-block overflow-hidden bg-white rounded p-4 pt-5 pb-5">
-                  <div className="icon">
-                    <img src={graduationHat} height="55" alt="" />
-                  </div>
-                  <h4 className="mt-3">
-                    <Link to="#" className="title text-dark">
-                      {" "}
-                      Our Courses
-                    </Link>
-                  </h4>
-                  <p className="text-muted">
-                    It is a long established fact that a reader will be of a
-                    page when reader will be of a page looking at its layout.{" "}
-                  </p>
-                  <Link to="#" className="text-primary read-more">
-                    Read More <i className="mdi mdi-chevron-right"></i>
-                  </Link>
-                  <img
-                    src={graduationHat}
-                    className="full-img"
-                    height="300"
-                    alt=""
-                  />
-                </div>
-              </Col>
-
-              <Col md={4}>
-                <div className="course-feature text-center position-relative d-block overflow-hidden bg-white rounded mb-0 p-4 pt-5 pb-5">
-                  <div className="icon">
-                    <img src={ai} height="55" alt="" />
-                  </div>
-                  <h4 className="mt-3">
-                    <Link to="#" className="title text-dark">
-                      {" "}
-                      Expert Teachers
-                    </Link>
-                  </h4>
-                  <p className="text-muted">
-                    It is a long established fact that a reader will be of a
-                    page when reader will be of a page looking at its layout.{" "}
-                  </p>
-                  <Link to="#" className="text-primary read-more">
-                    Read More <i className="mdi mdi-chevron-right"></i>
-                  </Link>
-                  <img src={ai} className="full-img" height="300" alt="" />
-                </div>
-              </Col>
+              <FeatureCard link="egitimler" title="Profesyonel Eğitim Kurumları" img={insurance} description="Şehrini seç sana en uygun eğitimi keşfet" />
+              <FeatureCard  link="egitimler" title="Lokasyon Tabanlı Arama" img={insurance} description="Şehrini seç sana en uygun eğitimi keşfet" />
+              <FeatureCard  link="egitimler" title="Alanında Uzman Eğitmenler" img={insurance} description="Şehrini seç sana en uygun eğitimi keşfet" />
             </Row>
           </div>
         </section>

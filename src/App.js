@@ -24,7 +24,7 @@ const PageSignup = React.lazy(() => import('./pages/PageSignup'));
 
 function withLayout(WrappedComponent) {
   // ...and returns another component...
-  return class extends React.Component {  
+  return class extends React.Component {
     render() {
       return <Layout>
         <WrappedComponent></WrappedComponent>
@@ -38,24 +38,24 @@ class App extends Component {
   render() {
 
     return (
-      <React.Fragment>  
-      <Router>
+      <React.Fragment>
+        <Router>
           <React.Suspense fallback={<div></div>}>
             <Switch>
-            {routes.map((route, idx) =>
+              {routes.map((route, idx) =>
                 <Route path={route.path} component={withLayout(route.component)} key={idx} />
-            )}
-            <Route path="/page-comingsoon" component={PageComingSoon} />
-            <Route path="/page-contact-detail" component={PageContactDetail} />
-            <Route path="/page-cover-login" component={PageCoverLogin} />
-            <Route path="/page-cover-re-password" component={PageCoverRePassword} />
-            <Route path="/page-cover-signup" component={PageCoverSignup} />
-            <Route path="/page-error" component={PageError} />
-            <Route path="/page-login" component={PageLogin} />
-            <Route path="/page-maintenance" component={PageMaintenance} />
-            <Route path="/page-recovery-password" component={PageRecoveryPassword} />
-            <Route path="/page-signup" component={PageSignup} />
-            <Route path="/" component={withLayout(Root)} />
+              )}
+              <Route path="/page-comingsoon" component={PageComingSoon} />
+              <Route path="/page-contact-detail" component={PageContactDetail} />
+              <Route path="/page-cover-login" component={PageCoverLogin} />
+              <Route path="/page-cover-re-password" component={PageCoverRePassword} />
+              <Route path="/page-cover-signup" component={PageCoverSignup} />
+              <Route path="/page-error" component={PageError} />
+              <Route path="/giris-yap" component={PageLogin} />
+              <Route path="/page-maintenance" component={PageMaintenance} />
+              <Route path="/page-recovery-password" component={PageRecoveryPassword} />
+              <Route path="/kayit-ol" component={PageSignup} />
+              <Route path="/" component={withLayout(Root)} />
             </Switch>
           </React.Suspense>
         </Router>

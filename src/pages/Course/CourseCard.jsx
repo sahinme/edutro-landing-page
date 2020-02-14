@@ -64,10 +64,10 @@ class CourseCard extends Component {
                 <ul className="list-unstyled mb-0 numbers">
                   <li>
                     <i className="mdi mdi-school text-muted"></i>{" "}
-                    {students + " Kayıtlı"}
+                    Ankara
                   </li>
                   <li>
-                    <i className="mdi mdi-book text-muted"></i> 5 Lession
+                    <i className="mdi mdi-book text-muted"></i> 5 Mart, 2020
                   </li>
                 </ul>
               </div>

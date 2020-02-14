@@ -68,10 +68,10 @@ class Home extends Component {
                                                 <Row className="justify-content-center">
                                                     <Col className="text-center">
                                                         <div className="title-heading text-white mt-4">
-                                                            <h1 className="display-4 font-weight-bold mb-3">You Can Learn Anything With Us</h1>
-                                                            <p className="para-desc mx-auto text-light">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+                                                            <h1 className="display-4 font-weight-bold mb-3">Sınırlarınızı Aşın</h1>
+                                                            <p className="para-desc mx-auto text-light">Yüzlerce eğitim, etkinlik ve daha fazlası, size en yakın yerde</p>
                                                             <div className="mt-4">
-                                                                <Link to="#courses" className="btn btn-primary mt-2 mr-2 mouse-down"><i className="mdi mdi-book-open-variant"></i> Find Courses</Link>
+                                                                <Link to="egitimler" className="btn btn-primary mt-2 mr-2 mouse-down"><i className="mdi mdi-book-open-variant"></i> Şehrinde neler öğrenebilirsin ?</Link>
                                                             </div>
                                                         </div>
                                                     </Col>

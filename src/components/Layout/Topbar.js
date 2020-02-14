@@ -71,7 +71,7 @@ class Topbar extends Component {
                             </Link>
                         </div>
                         <div className="buy-button">
-                            <Link to="#" className="btn btn-primary">
+                            <Link to="/giris-yap" className="btn btn-primary">
                                 Giriş Yap
               </Link>
                         </div>
@@ -99,7 +99,7 @@ class Topbar extends Component {
                         >
                             <ul className="navigation-menu" id="top-menu">
                                 <li>
-                                    <Link to="/">Home</Link>
+                                    <Link to="/">Ana Sayfa</Link>
                                 </li>
                                 <li>
                                     <Link to="/egitimler">Eğitimler</Link>

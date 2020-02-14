@@ -16,9 +16,6 @@ import Search from '../CloudHosting/Search';
 
 
 class Index extends Component {
-
-
-
     componentDidMount() {
         document.body.classList = "";
         document.getElementById('topnav').classList.add('bg-white');
@@ -56,7 +53,7 @@ class Index extends Component {
 
                 <Home />
 
-                <Feature />
+                <Search />
 
                 <Services />
 

@@ -19,29 +19,35 @@
     display: table-cell;
     vertical-align: middle;
 }
+
 .bg-home {
-    height: 100vh;    
+    height: 100vh;
     @include home-common();
 }
+
 .bg-half-260 {
-    padding: 260px 0;    
+    padding: 260px 0;
     @include home-common();
 }
+
 .bg-half-170 {
-    padding: 170px 0;    
+    padding: 170px 0;
     @include home-common();
 }
+
 .bg-half {
     padding: 144px 0 50px;
     @include home-common();
-    
+
 }
+
 //Gradient Home
-.gradient{
+.gradient {
     background: $primary !important;
     background: linear-gradient(45deg, $primary, $primary) !important;
     opacity: 0.9;
 }
+
 //Saas
 .home-dashboard {
     img {
@@ -50,11 +56,13 @@
         z-index: 1;
     }
 }
+
 //Studio
 .studio-home {
     padding: 7%;
     border-radius: 30px;
 }
+
 //Agency
 .agency-wrapper {
     &:before {
@@ -70,6 +78,7 @@
         z-index: -1;
     }
 }
+
 //Marketing
 .bg-marketing {
     padding: 76px 0 120px;
@@ -78,15 +87,18 @@
 
 //Coworking Landing
 .home-slider {
+
     .carousel-control-next,
     .carousel-control-prev {
         width: 5%;
     }
+
     .carousel-item,
     .carousel {
         height: 100vh;
         width: 100%;
     }
+
     .carousel-item {
         background-position: center center;
         background-size: cover;
@@ -94,22 +106,25 @@
 }
 
 //Hotel Landing
-.main-slider{
+.main-slider {
     .slides {
         .bg-slider {
-            background-size: cover;
-            height: 100vh;
+            background-size: cover !important;
+            height: 70vh;
             position: relative;
-            @include home-common(); 
+            @include home-common();
+
             &.shopping {
                 height: 75vh;
             }
         }
     }
-}        
-.flex-control-paging li a{
+}
+
+.flex-control-paging li a {
     background: $white;
     box-shadow: none;
+
     &.flex-active {
         background: $primary;
         cursor: default;
@@ -119,9 +134,11 @@
         box-shadow: none;
     }
 }
+
 .flex-control-nav {
     display: none;
 }
+
 .bg-animation-left {
     &:after {
         content: "";
@@ -135,10 +152,12 @@
         clip-path: polygon(0 0, 90% 0, 70% 100%, 0% 100%);
     }
 }
+
 // Responsive 
-@media (min-width: 769px){    
+@media (min-width: 769px) {
+
     //studio 
-    .bg-studio:after{
+    .bg-studio:after {
         position: absolute;
         right: 0px;
         top: 0px;
@@ -149,26 +168,36 @@
         z-index: 2;
     }
 }
+
 @media (max-width: 768px) {
     .agency-wrapper {
         &:before {
             right: 12rem;
         }
     }
+
     .bg-half {
         padding: 169px 0 50px;
     }
 }
+
 @media (max-width: 767px) {
-    .bg-home, .bg-half-170, .bg-half-260, .main-slider .slides .bg-slider, .bg-marketing {        
+
+    .bg-home,
+    .bg-half-170,
+    .bg-half-260,
+    .main-slider .slides .bg-slider,
+    .bg-marketing {
         padding: 150px 0;
         height: auto;
-    } 
+    }
+
     .agency-wrapper {
         &:before {
             right: 0rem;
         }
     }
+
     .bg-animation-left {
         &:after {
             width: 100%;
