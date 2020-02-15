@@ -69,7 +69,7 @@ class Topbar extends Component {
           <div className="container">
             <div>
               <Link className="logo" to="/">
-                <img src={logo} />
+                <img style={{ height: "40px" }} src={logo} />
               </Link>
             </div>
             <div className="buy-button">
