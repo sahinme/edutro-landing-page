@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap";
 
 class CourseHeader extends Component {
   render() {
+    const { title } = this.props;
     return (
       <section className="bg-half bg-light">
         <div className="home-center">
@@ -11,7 +12,7 @@ class CourseHeader extends Component {
               <Row className="justify-content-center">
                 <Col lg={12} className="text-center">
                   <div className="page-next-level">
-                    <h4 className="title mb-3"> Back-End Developer </h4>
+                    <h4 className="title mb-3"> {title} </h4>
                     <p className="para-desc mx-auto text-muted">
                       Launch your campaign and benefit from our expertise on
                       designing and managing conversion centered bootstrap4 html

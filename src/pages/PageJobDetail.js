@@ -6,6 +6,7 @@ import CourseHeader from "./CourseHeader";
 import CourseInformationCard from "./CourseInformationCard";
 import WhatYouGet from "./WhatYouGet";
 import Requirements from "./Requirements";
+import { Helmet } from "react-helmet";
 
 class PageJobDetail extends Component {
   constructor(props) {
@@ -33,7 +34,8 @@ class PageJobDetail extends Component {
   render() {
     return (
       <React.Fragment>
-        <CourseHeader />
+        <Helmet title="Üniversite Onaylı NLP Eğitimi" />
+        <CourseHeader title="NLP Eğitimi" />
         <section className="section">
           <div className="container">
             <Row>

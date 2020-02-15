@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
+import logo from "../../images/edutro.png";
+
 class Topbar extends Component {
   constructor(props) {
     super(props);
@@ -66,14 +68,14 @@ class Topbar extends Component {
         <header id="topnav" className="defaultscroll sticky">
           <div className="container">
             <div>
-              <Link className="logo" to="/index">
-                Edutro<span className="text-primary">.</span>
+              <Link className="logo" to="/">
+                <img src={logo} />
               </Link>
             </div>
             <div className="buy-button">
               <Link to="/giris-yap" className="btn btn-primary">
                 Giriş Yap
-                        </Link>
+              </Link>
             </div>
             <div className="menu-extras">
               <div className="menu-item">

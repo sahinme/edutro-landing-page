@@ -63,8 +63,7 @@ class CourseCard extends Component {
                 </ul>
                 <ul className="list-unstyled mb-0 numbers">
                   <li>
-                    <i className="mdi mdi-school text-muted"></i>{" "}
-                    Ankara
+                    <i className="mdi mdi-school text-muted"></i> Ankara
                   </li>
                   <li>
                     <i className="mdi mdi-book text-muted"></i> 5 Mart, 2020

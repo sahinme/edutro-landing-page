@@ -2,21 +2,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
-
-import work1 from '../images/work/1.jpg';
-import work2 from '../images/work/2.jpg';
-import work3 from '../images/work/3.jpg';
-import work4 from '../images/work/4.jpg';
-import work5 from '../images/work/5.jpg';
-import work6 from '../images/work/6.jpg';
-import work7 from '../images/work/7.jpg';
-import work8 from '../images/work/8.jpg';
-import work9 from '../images/work/9.jpg';
-import work10 from '../images/work/10.jpg';
-import work11 from '../images/work/11.jpg';
-import work12 from '../images/work/12.jpg';
 import Search from './CloudHosting/Search';
 import CourseCard from './Course/CourseCard';
+import { Helmet } from 'react-helmet';
 
 class PageWork extends Component {
 
@@ -50,6 +38,7 @@ class PageWork extends Component {
         const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
         return (
             <React.Fragment>
+                <Helmet title="Eğitimler" />
                 <section className="bg-half bg-light">
                     <div className="home-center">
                         <div className="home-desc-center">

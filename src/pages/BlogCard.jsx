@@ -17,12 +17,15 @@ class BlogCard extends Component {
             </div>
             <div className="content p-4">
               <h4>
-                <Link to="#" className="title text-dark">
+                <Link to="page-blog-detail" className="title text-dark">
                   {title}
                 </Link>
               </h4>
               <div className="post-meta mt-3">
-                <Link to="#" className="text-muted float-right readmore">
+                <Link
+                  to="page-blog-detail"
+                  className="text-muted float-right readmore"
+                >
                   Yazıya git <i className="mdi mdi-chevron-right"></i>
                 </Link>
                 <ul className="list-unstyled mb-0">

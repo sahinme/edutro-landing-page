@@ -2,17 +2,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col } from "reactstrap";
-
+import { Helmet } from "react-helmet";
 // import images
 import blog01 from "../images/blog/01.jpg";
-import blog02 from "../images/blog/02.jpg";
-import blog03 from "../images/blog/03.jpg";
-import blog04 from "../images/blog/04.jpg";
-import blog05 from "../images/blog/05.jpg";
-import blog06 from "../images/blog/06.jpg";
 import blog07 from "../images/blog/07.jpg";
 import blog08 from "../images/blog/08.jpg";
-import TeacherCard from "./Course/TeacherCard";
 import BlogCard from "./BlogCard";
 
 class PageBlogSidebar extends Component {
@@ -46,6 +40,8 @@ class PageBlogSidebar extends Component {
 
     return (
       <React.Fragment>
+        <Helmet title="Blog" />
+
         <section className="bg-half bg-light">
           <div className="home-center">
             <div className="home-desc-center">
