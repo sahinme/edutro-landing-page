@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import client1 from "../images/client/01.jpg";
 import { Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class CourseInformationCard extends Component {
   render() {
@@ -92,8 +93,13 @@ class CourseInformationCard extends Component {
                 />
               </span>
               <div className="overflow-hidden d-block">
-                <h4 className="widget-title mb-0">Abay Akademi</h4>
-                <p className="text-success">Eğitim ve Danışmanlık Merkezi</p>
+                <Link
+                  style={{ color: "black" }}
+                  to={`/egitmenler/abay-akademi`}
+                >
+                  <h4 className="widget-title mb-0">Abay Akademi</h4>
+                  <p className="text-success">Eğitim ve Danışmanlık Merkezi</p>
+                </Link>
               </div>
             </div>
           </div>

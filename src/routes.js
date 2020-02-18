@@ -63,7 +63,7 @@ const routes = [
     { path: '/changelog', component: ChangeLog },
     { path: '/components', component: Components },
     { path: '/documentation', component: Documentation },
-    { path: '/page-aboutus', component: PageAboutUs },
+    { path: '/egitmenler/:educatorName', component: PageAboutUs },
     { path: '/page-blog', component: PageBlog },
     { path: '/page-blog-detail', component: PageBlogDetail },
     { path: '/page-blog-sidebar', component: PageBlogSidebar },

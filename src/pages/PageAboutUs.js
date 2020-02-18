@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
+import { Helmet } from "react-helmet";
 
 // import images
 import about from '../images/about.jpg';
@@ -53,6 +54,7 @@ class PageAboutUs extends Component {
 
         return (
             <React.Fragment>
+                <Helmet title="Abay Akademi" />
                 <section className="bg-half bg-light">
                     <div className="home-center">
                         <div className="home-desc-center">
@@ -122,7 +124,7 @@ class PageAboutUs extends Component {
                         </Row>
                         <Row className="justify-content-center">
                             <Col className="text-center mt-4 pt-2">
-                                <Link to="#" className="btn btn-primary">See More <i className="mdi mdi-arrow-right"></i></Link>
+                                <Link to="#" className="btn btn-primary">Eğitmene Soru Sor <i className="mdi mdi-arrow-right"></i></Link>
                             </Col>
                         </Row>
                     </div>
