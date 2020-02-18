@@ -54,7 +54,7 @@ class Services extends Component {
             </Row>
           </div>
 
-          <div className="container mt-100 mt-60" id="instructors">
+          {/* <div className="container mt-100 mt-60" id="instructors">
             <Row className="justify-content-center">
               <Col className="text-center">
                 <div className="section-title mb-4 pb-2">
@@ -77,7 +77,7 @@ class Services extends Component {
                 );
               })}
             </Row>
-          </div>
+          </div> */}
         </section>
       </React.Fragment>
     );

@@ -63,10 +63,15 @@ class PageJobDetail extends Component {
                     It sometimes makes sense to select texts containing the
                     various letters and symbols specific to the output language.
                   </p>
-
+                
                   <div className="mt-4">
                     <Link className="btn btn-outline-primary" to="/egitimler/basvuru-yap" >
                       Hemen Başvur <i className="mdi mdi-send"></i>
+                    </Link>
+                  </div>
+                  <div className="mt-4">
+                    <Link className="btn btn-outline-primary" to="/egitimler/basvuru-yap" >
+                      Soru Sor <i className="mdi mdi-send"></i>
                     </Link>
                   </div>
                 </div>

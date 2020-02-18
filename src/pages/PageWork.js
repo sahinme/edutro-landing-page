@@ -78,9 +78,9 @@ class PageWork extends Component {
                                     <div className="form-group">
                                         <label>Eğitimleri filtrele :</label>
                                         <select className="form-control" id="Sortbylist-Shop">
-                                            <option>Yeni</option>
-                                            <option>En ucuz</option>
-                                            <option>En pahalı</option>
+                                            <option>Yakın Tarihte</option>
+                                            <option>Uzak Tarihte</option>
+                                            <option>En Yeni</option>
                                         </select>
                                     </div>
                                 </div>
