@@ -7,11 +7,14 @@ import CourseInformationCard from "./CourseInformationCard";
 import WhatYouGet from "./WhatYouGet";
 import Requirements from "./Requirements";
 import { Helmet } from "react-helmet";
+import QuestionModal from "../components/Shared/QuestionModal";
 
 class PageJobDetail extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      visible: false
+    };
   }
   componentDidMount() {
     window.addEventListener("scroll", this.scrollNavigation, true);
@@ -29,6 +32,18 @@ class PageJobDetail extends Component {
     } else {
       document.getElementById("topnav").classList.remove("nav-sticky");
     }
+  };
+
+  showModal = () => {
+    this.setState({ visible: true });
+  };
+
+  handleCancel = () => {
+    this.setState({ visible: false });
+  };
+
+  saveFormRef = formRef => {
+    this.formRef = formRef;
   };
 
   render() {
@@ -63,18 +78,21 @@ class PageJobDetail extends Component {
                     It sometimes makes sense to select texts containing the
                     various letters and symbols specific to the output language.
                   </p>
-                
+
                   <div className="mt-4">
                     <Link className="btn btn-outline-primary" to="/egitimler/basvuru-yap" >
                       Hemen Başvur <i className="mdi mdi-send"></i>
                     </Link>
                   </div>
                   <div className="mt-4">
-                    <Link className="btn btn-outline-primary" to="/egitimler/basvuru-yap" >
+                    <Link onClick={this.showModal} className="btn btn-outline-primary" to="#" >
                       Soru Sor <i className="mdi mdi-send"></i>
                     </Link>
                   </div>
                 </div>
+                <QuestionModal
+                  show={this.state.visible} onHide={this.handleCancel}
+                />
               </Col>
             </Row>
           </div>
