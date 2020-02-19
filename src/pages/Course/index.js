@@ -61,17 +61,16 @@ class Index extends Component {
 
                 <Testi />
 
-
                 <Cta1 />
 
 
-                <section className="bg-light section-two">
+                {/* <section className="bg-light section-two">
                     <div className="container">
                         <Row className="justify-content-center">
                             <Partner />
                         </Row>
                     </div>
-                </section>
+                </section> */}
 
             </React.Fragment>
         );
