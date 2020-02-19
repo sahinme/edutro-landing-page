@@ -31,8 +31,8 @@ class Cta1 extends Component {
                         <Row className="align-items-center">
                             <Col lg={8} md={7} className="col-12">
                                 <div className="section-title">
-                                    <h4 className="main-title text-white mb-4">Şimdi Kaydolun</h4>
-                                    <p className="para-desc mb-0 text-light">Edutro'ya Şimdi Kaydolun ve Her Şeyden 6 Ay Ücretsiz Faydalanın</p>
+                                    <h4 className="main-title text-white mb-4">Eğitimlerinizi Tüm Dünyaya Duyurun.</h4>
+                                    <p className="para-desc mb-0 text-light">Edutro'ya Şimdi Kaydolun ve 6 Ay Boyunca Eğitimlerinizi Ücretsiz Paylaşın.</p>
                                 </div>
                                 <Row id="counter">
                                     <Col md={3} className="col-6 mt-4 pt-2">

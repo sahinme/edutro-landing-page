@@ -135,8 +135,7 @@ class PageAboutUs extends Component {
                         <Row>
                             <Col className="text-center">
                                 <div className="section-title mb-4 pb-2">
-                                    <h4 className="main-title mb-4">Our Greatest Minds</h4>
-                                    <p className="text-muted para-desc mx-auto mb-0">Start working with <span className="text-primary font-weight-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                                    <h4 className="main-title mb-4">Eğitmen Ekibimiz</h4>
                                 </div>
                             </Col>
                         </Row>
@@ -216,7 +215,7 @@ class PageAboutUs extends Component {
                         </Row>
                     </div>
 
-                    <div className="container mt-100 mt-60">
+                    {/* <div className="container mt-100 mt-60">
                         <Row className="justify-content-center">
                             <Col className="text-center">
                                 <div className="section-title">
@@ -229,7 +228,7 @@ class PageAboutUs extends Component {
                                 </div>
                             </Col>
                         </Row>
-                    </div>
+                    </div> */}
                 </section>
 
             </React.Fragment>
