@@ -8,12 +8,15 @@ import WhatYouGet from "./WhatYouGet";
 import Requirements from "./Requirements";
 import { Helmet } from "react-helmet";
 import QuestionModal from "../components/Shared/QuestionModal";
+import ApplyModal from "../components/Shared/ApplyModal";
 
 class PageJobDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false
+      visible: false,
+      applyVisible: false
+      
     };
   }
   componentDidMount() {
@@ -34,15 +37,27 @@ class PageJobDetail extends Component {
     }
   };
 
-  showModal = () => {
+  questionShowModal = () => {
     this.setState({ visible: true });
   };
 
-  handleCancel = () => {
+  questionHandleCancel = () => {
     this.setState({ visible: false });
   };
 
-  saveFormRef = formRef => {
+  questionSaveFormRef = formRef => {
+    this.formRef = formRef;
+  };
+
+  applyShowModal = () => {
+    this.setState({ applyVisible: true });
+  };
+
+  applyHandleCancel = () => {
+    this.setState({ applyVisible: false });
+  };
+
+  applySaveFormRf = formRef => {
     this.formRef = formRef;
   };
 
@@ -80,18 +95,20 @@ class PageJobDetail extends Component {
                   </p>
 
                   <div className="mt-4">
-                    <Link className="btn btn-outline-primary" to="/egitimler/basvuru-yap" >
+                    <Link onClick={this.applyShowModal} className="btn btn-outline-primary" to="#" >
                       Hemen Başvur <i className="mdi mdi-send"></i>
                     </Link>
                   </div>
                   <div className="mt-4">
-                    <Link onClick={this.showModal} className="btn btn-outline-primary" to="#" >
+                    <Link onClick={this.questionShowModal} className="btn btn-outline-primary" to="#" >
                       Soru Sor <i className="mdi mdi-send"></i>
                     </Link>
                   </div>
                 </div>
+                <ApplyModal 
+                show={this.state.applyVisible} onHide={this.applyHandleCancel} />
                 <QuestionModal
-                  show={this.state.visible} onHide={this.handleCancel}
+                  show={this.state.visible} onHide={this.questionHandleCancel}
                 />
               </Col>
             </Row>
