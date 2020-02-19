@@ -2,19 +2,27 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col } from "reactstrap";
+import { observer, inject } from "mobx-react";
 
 import CourseCard from "./CourseCard";
-import TeacherCard from "./TeacherCard";
+import Stores from "../../stores/storeIdentifier";
 
+@inject(Stores.DashboardStore)
+@observer
 class Services extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
+  componentDidMount() {
+    this.props.dashboardStore.getPopularCourses();
+  }
+
+
   render() {
     const data = [1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1];
-    const data2 = [1, 1, 1, 1];
+    const { popularCourses } = this.props.dashboardStore;
     return (
       <React.Fragment>
         <section className="section" id="courses">
@@ -35,12 +43,14 @@ class Services extends Component {
             </div>
 
             <Row>
-              {data.map(item => {
+              {popularCourses.map(item => {
                 return (
                   <CourseCard
-                    title="Program for Missionaries"
-                    price="899.99"
-                    students="20"
+                    title={item.title}
+                    price={item.price}
+                    quota={item.quota}
+                    locationName={item.locationName}
+                    startDate={item.startDate}
                   />
                 );
               })}

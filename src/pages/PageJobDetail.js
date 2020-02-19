@@ -16,7 +16,6 @@ class PageJobDetail extends Component {
     this.state = {
       visible: false,
       applyVisible: false
-      
     };
   }
   componentDidMount() {
@@ -45,20 +44,12 @@ class PageJobDetail extends Component {
     this.setState({ visible: false });
   };
 
-  questionSaveFormRef = formRef => {
-    this.formRef = formRef;
-  };
-
   applyShowModal = () => {
     this.setState({ applyVisible: true });
   };
 
   applyHandleCancel = () => {
     this.setState({ applyVisible: false });
-  };
-
-  applySaveFormRf = formRef => {
-    this.formRef = formRef;
   };
 
   render() {
@@ -105,8 +96,8 @@ class PageJobDetail extends Component {
                     </Link>
                   </div>
                 </div>
-                <ApplyModal 
-                show={this.state.applyVisible} onHide={this.applyHandleCancel} />
+                <ApplyModal
+                  show={this.state.applyVisible} onHide={this.applyHandleCancel} />
                 <QuestionModal
                   show={this.state.visible} onHide={this.questionHandleCancel}
                 />
