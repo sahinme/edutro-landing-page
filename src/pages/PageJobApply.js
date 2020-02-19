@@ -52,7 +52,7 @@ class PageJobApply extends Component {
                                 <Row className="justify-content-center">
                                     <Col lg={12} className="text-center">
                                         <div className="page-next-level">
-                                            <h4 className="title"> Job Apply Form </h4>
+                                            <h4 className="title">Başvuru Yap</h4>
                                             <ul className="page-next d-inline-block bg-white shadow p-2 pl-4 pr-4 rounded mb-0">
                                                 <li><Link to="index" className="text-uppercase font-weight-bold text-dark">Home</Link></li>
                                                 <li><Link to="#" className="ml-1 text-uppercase font-weight-bold text-dark">Pages</Link></li>
@@ -75,39 +75,39 @@ class PageJobApply extends Component {
                             <Col lg={10} md={7}>
                                 <div className="custom-form">
                                 <Alert color="info" isOpen={this.state.Contactvisible} toggle={()=>{ this.setState({Contactvisible : !this.state.Contactvisible}) }}>
-                                            Contact details send successfully.
+                                            Bilgileriniz başarıyla gönderildi.
                                          </Alert>
                                     <form onSubmit={this.handleSubmit} className="rounded shadow p-4">
                                         <Row>
                                             <Col md={6}>
                                                 <div className="form-group position-relative">
-                                                    <label>Your Name :<span className="text-danger">*</span></label>
+                                                    <label>İsim :<span className="text-danger">*</span></label>
                                                     <i className="mdi mdi-account ml-3 icons"></i>
-                                                    <input name="name" id="name" type="text" className="form-control pl-5" placeholder="First Name :" required />
+                                                    <input name="name" id="name" type="text" className="form-control pl-5" placeholder="İsim:" required />
                                                 </div>
                                             </Col>
                                             <Col md={6}>
                                                 <div className="form-group position-relative">
-                                                    <label>Your Email :<span className="text-danger">*</span></label>
-                                                    <i className="mdi mdi-email ml-3 icons"></i>
-                                                    <input name="email" id="email" type="email" className="form-control pl-5" placeholder="Your email :" required />
+                                                    <label>Soyisim:<span className="text-danger">*</span></label>
+                                                    <i className="mdi mdi-account ml-3 icons"></i>
+                                                    <input name="name" id="name" type="text" className="form-control pl-5" placeholder="Soyisim :" required />
                                                 </div>
                                             </Col>
                                             <Col md={6}>
                                                 <div className="form-group position-relative">
-                                                    <label>Your Phone no. :<span className="text-danger">*</span></label>
+                                                    <label>Telefon Numaranız:<span className="text-danger">*</span></label>
                                                     <i className="mdi mdi-phone ml-3 icons"></i>
-                                                    <input name="number" id="number" type="number" className="form-control pl-5" placeholder="Your phone no. :" required/>
+                                                    <input name="number" id="number" type="number" className="form-control pl-5" placeholder="Telefon Numaranız:" required/>
                                                 </div>
                                             </Col>
                                             <Col md={6}>
                                                 <div className="form-group position-relative">
-                                                    <label>Job Title :</label>
-                                                    <i className="mdi mdi-book ml-3 icons"></i>
-                                                    <input name="subject" id="subject" className="form-control pl-5" placeholder="Title :" required />
+                                                    <label>E-Posta:</label>
+                                                    <i className="mdi mdi-email ml-3 icons"></i>
+                                                    <input name="mail" id="mail" className="form-control pl-5" placeholder="E-Posta:" required />
                                                 </div>
                                             </Col>
-                                            <Col md={6}>
+                                            {/* <Col md={6}>
                                                 <div className="form-group">
                                                     <label>Types of jobs :</label>
                                                     <select className="form-control" id="Sortbylist-Shop">
@@ -118,32 +118,32 @@ class PageJobApply extends Component {
                                                         <option>In Office</option>
                                                     </select>
                                                 </div>
-                                            </Col>
+                                            </Col> */}
                                             <Col md={12}>
                                                 <div className="form-group position-relative">
-                                                    <label>Description :</label>
+                                                    <label>İsteğe Bağlı Mesaj</label>
                                                     <i className="mdi mdi-comment-text-outline ml-3 icons"></i>
-                                                    <textarea name="comments" id="comments" rows="4" className="form-control pl-5" placeholder="Describe the job :"></textarea>
+                                                    <textarea name="comments" id="comments" rows="4" className="form-control pl-5" placeholder="İsteğe Bağlı Mesaj:"></textarea>
                                                 </div>
                                             </Col>
-                                            <Col md={12}>
+                                           {/*  <Col md={12}>
                                                 <div className="form-group position-relative">
                                                     <label>Upload Your Cv / Resume :</label>
                                                     <input type="file" className="form-control-file" id="fileupload" />
                                                 </div>
-                                            </Col>
+                                            </Col> */}
                                             <Col md={12}>
                                                 <div className="form-group">
                                                     <div className="custom-control custom-checkbox">
                                                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                                                        <label className="custom-control-label">I Accept <Link to="#" className="text-primary">Terms And Condition</Link></label>
+                                                        <label className="custom-control-label"><Link to="#" className="text-primary">Şartlar ve Koşulları </Link>Kabul Ediyorum.</label>
                                                     </div>
                                                 </div>
                                             </Col>
                                         </Row>
                                         <Row>
                                             <Col sm={12}>
-                                                <input type="submit" id="submit" name="send" className="submitBnt btn btn-primary" value="Apply Now" />
+                                                <input type="submit" id="submit" name="send" className="submitBnt btn btn-primary" value="Başvur" />
                                             </Col>
                                         </Row>
                                     </form>

@@ -63,11 +63,10 @@ class PageBlogDetail extends Component {
                                                 <li className="list-inline-item h6 date text-muted"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</li>
                                             </ul>
                                             <ul className="page-next d-inline-block bg-white shadow p-2 pl-4 pr-4 rounded mb-0">
-                                                <li><Link to="/" className="text-uppercase font-weight-bold text-dark">Home</Link></li>
-                                                <li><Link to="#" className="text-uppercase font-weight-bold text-dark">Pages</Link></li>
+                                                <li><Link to="/" className="text-uppercase font-weight-bold text-dark">Anasayfa</Link></li>
                                                 <li><Link to="#" className="text-uppercase font-weight-bold text-dark">Blog</Link></li>
                                                 <li>
-                                                    <span className="text-uppercase text-primary font-weight-bold">Blog Detail</span>
+                                                    <span className="text-uppercase text-primary font-weight-bold">Detay</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -104,10 +103,10 @@ class PageBlogDetail extends Component {
                                     </div>
 
                                     <div className="p-4 shadow rounded mt-4 pt-2">
-                                        <h4 className="page-title pb-3">Comments :</h4>
+                                        <h4 className="page-title pb-3">Yorumlar :</h4>
                                         <ul className="media-list list-unstyled mb-0">
                                             <li className="comment-desk mt-4">
-                                                <Link to="#" className="float-right text-muted"><i className="mdi mdi-reply"></i>&nbsp; Reply</Link>
+                                                <Link to="#" className="float-right text-muted"><i className="mdi mdi-reply"></i>&nbsp; Cevapla</Link>
                                                 <div className="commentor">
                                                     <Link className="float-left pr-3" to="#">
                                                         <img className="d-block mx-auto shadow rounded-circle img-fluid" src={client1} alt="img" />
@@ -139,7 +138,7 @@ class PageBlogDetail extends Component {
                                             </li>
 
                                             <li className="comment-desk mt-4">
-                                                <Link to="#" className="float-right text-muted"><i className="mdi mdi-reply"></i>&nbsp; Reply</Link>
+                                                <Link to="#" className="float-right text-muted"><i className="mdi mdi-reply"></i>&nbsp; Cevapla</Link>
                                                 <div className="commentor">
                                                     <Link className="float-left pr-3" to="#">
                                                         <img className="d-block mx-auto shadow rounded-circle img-fluid" src={client3} alt="img" />
@@ -191,7 +190,7 @@ class PageBlogDetail extends Component {
                                     </div>
 
                                     <div className="mt-4 pt-2 p-4 shadow rounded">
-                                        <h4 className="page-title">Related Posts :</h4>
+                                        <h4 className="page-title">Önceki Yazılar :</h4>
 
                                         <Row>
                                             <Col lg={6} className="mt-4 pt-2">
@@ -243,36 +242,36 @@ class PageBlogDetail extends Component {
                                     </div>
 
                                     <div className="mt-4 pt-2 p-4 shadow rounded">
-                                        <h4 className="page-title pb-3">Leave A Comment :</h4>
+                                        <h4 className="page-title pb-3">Yorum Yap :</h4>
                                         <form>
                                             <Row>
                                                 <Col md={12}>
                                                     <div className="form-group position-relative">
-                                                        <label>Your Comment</label>
+                                                        <label>Yorumunuz:</label>
                                                         <i className="mdi mdi-comment-outline ml-3 icons"></i>
-                                                        <textarea id="message" placeholder="Your Comment" rows="5" name="message" className="form-control pl-5" required=""></textarea>
+                                                        <textarea id="message" placeholder="Yorumunuz" rows="5" name="message" className="form-control pl-5" required=""></textarea>
                                                     </div>
                                                 </Col>
 
                                                 <Col md={6}>
                                                     <div className="form-group position-relative">
-                                                        <label>Name <span className="text-danger">*</span></label>
+                                                        <label>İsim <span className="text-danger">*</span></label>
                                                         <i className="mdi mdi-account ml-3 icons"></i>
-                                                        <input id="name" name="name" type="text" placeholder="Name" className="form-control pl-5" required="" />
+                                                        <input id="name" name="name" type="text" placeholder="İsim" className="form-control pl-5" required="" />
                                                     </div>
                                                 </Col>
 
                                                 <Col md={6}>
                                                     <div className="form-group position-relative">
-                                                        <label>Your Email <span className="text-danger">*</span></label>
+                                                        <label>E-Posta <span className="text-danger">*</span></label>
                                                         <i className="mdi mdi-email ml-3 icons"></i>
-                                                        <input id="email" type="email" placeholder="Email" name="email" className="form-control pl-5" required="" />
+                                                        <input id="email" type="email" placeholder="E-Posta" name="email" className="form-control pl-5" required="" />
                                                     </div>
                                                 </Col>
 
                                                 <Col md={12}>
                                                     <div className="send">
-                                                        <button type="submit" className="btn btn-primary w-100">Send Message</button>
+                                                        <button type="submit" className="btn btn-primary w-100">Gönder</button>
                                                     </div>
                                                 </Col>
                                             </Row>
@@ -285,7 +284,7 @@ class PageBlogDetail extends Component {
                             <Col lg={4} md={5} className="col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                 <div className="sidebar mt-sm-30 p-4 rounded shadow">
                                     <div className="widget mb-4 pb-2">
-                                        <h4 className="widget-title">Search</h4>
+                                        <h4 className="widget-title">Ara</h4>
                                         <div id="search2" className="widget-search mt-4 mb-0">
                                             <form role="search" method="get" id="searchform" className="searchform">
                                                 <div>
@@ -297,7 +296,7 @@ class PageBlogDetail extends Component {
                                     </div>
 
                                     <div className="widget mb-4 pb-2">
-                                        <h4 className="widget-title">Catagories</h4>
+                                        <h4 className="widget-title">Kategoriler</h4>
                                         <ul className="list-unstyled mt-4 mb-0 catagories">
                                             <li><Link to="#">Finance</Link> <span className="float-right">13</span></li>
                                             <li><Link to="#">Business</Link> <span className="float-right">09</span></li>
@@ -308,7 +307,7 @@ class PageBlogDetail extends Component {
                                     </div>
 
                                     <div className="widget mb-4 pb-2">
-                                        <h4 className="widget-title">Recent Post</h4>
+                                        <h4 className="widget-title">Önceki Yazılar</h4>
                                         <div className="mt-4">
                                             <div className="clearfix post-recent">
                                                 <div className="post-recent-thumb float-left"> <Link to="#"> <img alt="img" src={blog07} className="img-fluid rounded" /></Link></div>
