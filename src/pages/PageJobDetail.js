@@ -1,6 +1,6 @@
 // React Basic and Bootstrap
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Row, Col } from "reactstrap";
 import CourseHeader from "./CourseHeader";
 import CourseInformationCard from "./CourseInformationCard";
@@ -9,7 +9,11 @@ import Requirements from "./Requirements";
 import { Helmet } from "react-helmet";
 import QuestionModal from "../components/Shared/QuestionModal";
 import ApplyModal from "../components/Shared/ApplyModal";
+import { inject, observer } from "mobx-react";
+import Stores from "../stores/storeIdentifier";
 
+@inject(Stores.CourseStore)
+@observer
 class PageJobDetail extends Component {
   constructor(props) {
     super(props);
@@ -19,8 +23,10 @@ class PageJobDetail extends Component {
     };
   }
   componentDidMount() {
+    this.props.courseStore.getCourseById(8);
     window.addEventListener("scroll", this.scrollNavigation, true);
   }
+
   // Make sure to remove the DOM listener when the component is unmounted.
   componentWillUnmount() {
     window.removeEventListener("scroll", this.scrollNavigation);
@@ -53,6 +59,7 @@ class PageJobDetail extends Component {
   };
 
   render() {
+    const { course } = this.props.courseStore;
     return (
       <React.Fragment>
         <Helmet title="Üniversite Onaylı NLP Eğitimi" />
@@ -60,7 +67,7 @@ class PageJobDetail extends Component {
         <section className="section">
           <div className="container">
             <Row>
-              <CourseInformationCard />
+              <CourseInformationCard course={course} />
               <Col lg={8} md={7} className="col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div className="ml-lg-4">
                   <h5>Neler Öğreneceksiniz: </h5>
@@ -109,4 +116,4 @@ class PageJobDetail extends Component {
     );
   }
 }
-export default PageJobDetail;
+export default withRouter(PageJobDetail);

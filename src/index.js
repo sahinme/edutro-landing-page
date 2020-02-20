@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'mobx-react';
 import { Helmet } from 'react-helmet'
+import "moment/locale/tr";
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import initializeStores from './stores/storeInitializer';

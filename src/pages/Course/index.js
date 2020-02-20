@@ -17,6 +17,7 @@ import Search from '../CloudHosting/Search';
 
 class Index extends Component {
     componentDidMount() {
+        console.log(this.props);
         document.body.classList = "";
         document.getElementById('topnav').classList.add('bg-white');
         window.addEventListener("scroll", this.scrollNavigation, true);

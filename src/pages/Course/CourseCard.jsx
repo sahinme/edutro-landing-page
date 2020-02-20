@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col } from "reactstrap";
 import moment from "moment";
-import "moment/locale/tr";
 import course1 from "../../images/course/1.jpg";
 
 class CourseCard extends Component {
@@ -21,9 +20,7 @@ class CourseCard extends Component {
               />
               <div className="overlay-work"></div>
               <Link
-                to={`/egitimler/${title
-                  .replace(/ /g, "-")
-                  .toLowerCase()}/${1212}`}
+                to={`/egitimler/${title.replace(/ /g, "-").toLowerCase()}`}
                 className="text-white h6 preview"
               >
                 Hemen İnceleyin <i className="mdi mdi-chevron-right"></i>

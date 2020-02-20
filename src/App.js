@@ -36,7 +36,6 @@ function withLayout(WrappedComponent) {
 class App extends Component {
 
   render() {
-
     return (
       <React.Fragment>
         <Router>
@@ -45,6 +44,7 @@ class App extends Component {
               {routes.map((route, idx) =>
                 <Route path={route.path} component={withLayout(route.component)} key={idx} />
               )}
+              <Route path="/eeee" component={PageComingSoon} />
               <Route path="/page-comingsoon" component={PageComingSoon} />
               <Route path="/page-contact-detail" component={PageContactDetail} />
               <Route path="/page-cover-login" component={PageCoverLogin} />

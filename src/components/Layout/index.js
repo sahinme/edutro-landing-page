@@ -17,8 +17,9 @@ class Layout extends Component {
     super(props);
     this.state = {};
   }
-  
+
   componentDidMount() {
+    console.log("layout", this.props);
     document.getElementById("pageLoader").style.display = "block";
     setTimeout(function () { document.getElementById("pageLoader").style.display = "none"; }, 1000);
   }
@@ -28,33 +29,9 @@ class Layout extends Component {
       <React.Fragment>
         <Topbar />
         {this.props.children}
-        {(() => {
-          if (this.props.location.pathname === "/index-marketing" || this.props.location.pathname === "/index-modern-business" || this.props.location.pathname === "/index-services") {
-            return (
-              <FooterLight />
-            )
-          } else if (this.props.location.pathname === "/index-personal") {
-            return (
-              <FooterWithoutMenu />
-            )
-          }
-          else if (this.props.location.pathname === "/index-portfolio") {
-            return (
-              <FooterWithoutMenuLightSocialOnly />
-            )
-          }
-          else if (this.props.location.pathname === "/page-contact-two") {
-            return (
-              <FooterWithoutMenuLightSocialOnly />
-            )
-          } else {
-            return (
-              <Footer />
-            )
-          }
-        })()}
+        <Footer />
         <div id="bottomIcon">
-          <ScrollUpButton ContainerClassName="back-to-top rounded text-center"  />
+          <ScrollUpButton ContainerClassName="back-to-top rounded text-center" />
         </div>
       </React.Fragment>
     );
