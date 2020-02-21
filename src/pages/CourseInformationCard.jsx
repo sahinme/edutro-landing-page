@@ -108,13 +108,24 @@ class CourseInformationCard extends Component {
                 />
               </span>
               <div className="overflow-hidden d-block">
-                <Link
-                  style={{ color: "black" }}
-                  to={`/egitmenler/abay-akademi`}
-                >
-                  <h4 className="widget-title mb-0">Abay Akademi</h4>
-                  <p className="text-success">Eğitim ve Danışmanlık Merkezi</p>
-                </Link>
+                {course && course.courseOwnerInfo && (
+                  <Link
+                    style={{ color: "black" }}
+                    to={{
+                      pathName: `/egitmenler/${course.courseOwnerInfo[0].name
+                        .replace(/ /g, "-")
+                        .toLowerCase()}`,
+                      state: { educatorId: course.courseOwnerInfo[0].id }
+                    }}
+                  >
+                    <h4 className="widget-title mb-0">
+                      {course.courseOwnerInfo[0].name}
+                    </h4>
+                    <p className="text-success">
+                      {course.courseOwnerInfo[0].profession}
+                    </p>
+                  </Link>
+                )}
               </div>
             </div>
           </div>

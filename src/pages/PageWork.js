@@ -5,7 +5,11 @@ import { Row, Col } from "reactstrap";
 import Search from "./CloudHosting/Search";
 import CourseCard from "./Course/CourseCard";
 import { Helmet } from "react-helmet";
+import { inject, observer } from "mobx-react";
+import Stores from "../stores/storeIdentifier";
 
+@inject(Stores.DashboardStore)
+@observer
 class PageWork extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +18,7 @@ class PageWork extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.scrollNavigation, true);
+    this.props.dashboardStore.getPopularCourses();
   }
   // Make sure to remove the DOM listener when the component is unmounted.
   componentWillUnmount() {
@@ -32,6 +37,7 @@ class PageWork extends Component {
 
   render() {
     const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    const { popularCourses } = this.props.dashboardStore;
     return (
       <React.Fragment>
         <Helmet title="Eğitimler" />
@@ -85,12 +91,15 @@ class PageWork extends Component {
             </Row>
 
             <Row>
-              {data.map(item => {
+              {popularCourses.map(item => {
                 return (
                   <CourseCard
-                    title="Program for Missionaries"
-                    price="899.99"
-                    students="20"
+                    courseId={item.id}
+                    title={item.title}
+                    price={item.price}
+                    quota={item.quota}
+                    locationName={item.locationName}
+                    startDate={item.startDate}
                   />
                 );
               })}

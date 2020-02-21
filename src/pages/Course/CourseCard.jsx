@@ -7,7 +7,14 @@ import course1 from "../../images/course/1.jpg";
 
 class CourseCard extends Component {
   render() {
-    const { title, price, quota, locationName, startDate } = this.props;
+    const {
+      title,
+      price,
+      quota,
+      locationName,
+      startDate,
+      courseId
+    } = this.props;
     return (
       <React.Fragment>
         <Col lg={4} md={6} className="col-12 mt-4 pt-2">
@@ -20,7 +27,12 @@ class CourseCard extends Component {
               />
               <div className="overlay-work"></div>
               <Link
-                to={`/egitimler/${title.replace(/ /g, "-").toLowerCase()}`}
+                to={{
+                  pathname: `/egitimler/${title
+                    .replace(/ /g, "-")
+                    .toLowerCase()}`,
+                  state: { courseId }
+                }}
                 className="text-white h6 preview"
               >
                 Hemen İnceleyin <i className="mdi mdi-chevron-right"></i>
@@ -29,7 +41,12 @@ class CourseCard extends Component {
             <div className="content p-3">
               <h5>
                 <Link
-                  to={`/egitimler/${title.replace(/ /g, "-").toLowerCase()}`}
+                  to={{
+                    pathname: `/egitimler/${title
+                      .replace(/ /g, "-")
+                      .toLowerCase()}`,
+                    state: { courseId }
+                  }}
                   className="title text-dark"
                 >
                   {title}

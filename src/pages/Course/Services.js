@@ -46,6 +46,7 @@ class Services extends Component {
               {popularCourses.map(item => {
                 return (
                   <CourseCard
+                    courseId={item.id}
                     title={item.title}
                     price={item.price}
                     quota={item.quota}

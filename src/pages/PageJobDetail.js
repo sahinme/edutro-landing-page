@@ -23,7 +23,8 @@ class PageJobDetail extends Component {
     };
   }
   componentDidMount() {
-    this.props.courseStore.getCourseById(8);
+    const { location: { state: { courseId } = {} } = {}, } = this.props;
+    this.props.courseStore.getCourseById(courseId);
     window.addEventListener("scroll", this.scrollNavigation, true);
   }
 
@@ -62,8 +63,8 @@ class PageJobDetail extends Component {
     const { course } = this.props.courseStore;
     return (
       <React.Fragment>
-        <Helmet title="Üniversite Onaylı NLP Eğitimi" />
-        <CourseHeader title="NLP Eğitimi" />
+        <Helmet title={course.title} />
+        <CourseHeader title={course.title} />
         <section className="section">
           <div className="container">
             <Row>
@@ -71,25 +72,16 @@ class PageJobDetail extends Component {
               <Col lg={8} md={7} className="col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div className="ml-lg-4">
                   <h5>Neler Öğreneceksiniz: </h5>
-                  <WhatYouGet />
+                  <WhatYouGet whatYouGet={course.teachings} />
 
                   <h5 className="mt-4">Gereksinimler: </h5>
-                  <Requirements />
+                  <Requirements requirements={course.requirements} />
 
                   <h5 className="mt-4">
                     Açıklama:
                   </h5>
                   <p className="text-muted">
-                    It sometimes makes sense to select texts containing the
-                    various letters and symbols specific to the output language.
-                    It sometimes makes sense to select texts containing the
-                    various letters and symbols specific to the output language.
-                    It sometimes makes sense to select texts containing the
-                    various letters and symbols specific to the output language.
-                    It sometimes makes sense to select texts containing the
-                    various letters and symbols specific to the output language.
-                    It sometimes makes sense to select texts containing the
-                    various letters and symbols specific to the output language.
+                    {course.description}
                   </p>
 
                   <div className="mt-4">
