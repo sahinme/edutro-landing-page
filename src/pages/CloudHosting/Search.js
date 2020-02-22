@@ -8,12 +8,25 @@ class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            query: null,
+            locationId: 1
         }
     }
 
+    onInputChange = (e) => {
+        const query = e.target.value;
+        this.setState({ query })
+    }
+
+    onLocationSelect = (e) => {
+        const locationId = parseInt(e.target.value);
+        this.setState({ locationId });
+    }
+
     render() {
+        const {query,locationId} = this.state;
         const data = [{ name: "NLP", }, { name: "NLP", }, { name: "NLP", }, { name: "NLP", }, { name: "NLP", }, { name: "NLP", }]
-        const cities = [{ name: "Ankara" }, { name: "Istanbul" }, { name: "Izmir" }, { name: "Nevsehir" }];
+        const cities = [{ name: "Ankara", id: 1 }, { name: "Istanbul", id: 2 }, { name: "Izmir", id: 3 }, { name: "Nevsehir", id: 4 }];
         return (
             <React.Fragment>
                 <section /* className="section-two bg-light" */>
@@ -25,12 +38,12 @@ class Search extends Component {
                                     <Row>
                                         <Col>
                                             <div className="input-group form-group mb-0">
-                                                <input name="name" id="name" type="text" className="form-control rounded-left" placeholder="eğitim arayın :" />
+                                                <input onChange={this.onInputChange} name="name" id="name" type="text" className="form-control rounded-left" placeholder="eğitim arayın :" />
                                                 <div style={{ width: "500px" }} className="input-group-append" id="button-addon4">
-                                                    <select className="form-control rounded-0" placeholder="lokasyon" id="domain_list">
-                                                        {cities.map(item => <option key={item.name} >{item.name}</option>)}
+                                                    <select onChange={this.onLocationSelect} className="form-control rounded-0" placeholder="lokasyon" id="domain_list">
+                                                        {cities.map(item => <option value={item.id} key={item.id} >{item.name}</option>)}
                                                     </select>
-                                                    <input type="button" id="search" name="search" className="searchbtn btn btn-primary btn-block" value="Ara" />
+                                                    <input type="button" id="search" name="search" onClick={<Link to={`egitimler/${query}&${locationId}`} />} className="searchbtn btn btn-primary btn-block" value="Ara" />
                                                 </div>
                                             </div>
                                         </Col>

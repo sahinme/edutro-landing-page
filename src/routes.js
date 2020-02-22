@@ -39,10 +39,13 @@ const PageTeam = React.lazy(() => import('./pages/PageTeam'));
 const PageTerms = React.lazy(() => import('./pages/PageTerms'));
 const PageWork = React.lazy(() => import('./pages/PageWork'));
 const PageWorkDetail = React.lazy(() => import('./pages/PageWorkDetail'));
+const SearchCourse = React.lazy(() => import('./pages/SearchCourse'));
+
 
 const routes = [
 
     // public Routes
+    { path: '/egitimler/:query&locationId', component: SearchCourse },
     { path: '/index-saas', component: Saas },
     { path: '/index-apps', component: Apps },
     { path: '/index-agency', component: Agency },
