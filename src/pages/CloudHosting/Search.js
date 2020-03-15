@@ -1,8 +1,12 @@
 // React Basic and Bootstrap
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { inject, observer } from 'mobx-react';
+import Stores from '../../stores/storeIdentifier';
 
+@inject(Stores.LocationStore)
+@observer
 class Search extends Component {
 
     constructor(props) {
@@ -11,6 +15,7 @@ class Search extends Component {
             query: null,
             locationId: 1
         }
+        this.props.locationStore.getAllLocations();
     }
 
     onInputChange = (e) => {
@@ -23,17 +28,26 @@ class Search extends Component {
         this.setState({ locationId });
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        const { history } = this.props;
+        const { query, locationId } = this.state;
+        history.push({
+            pathname: `/egitim-ara`,
+            search: `?query=${query}&locationId=${locationId}`
+        })
+    }
+
     render() {
-        const {query,locationId} = this.state;
         const data = [{ name: "NLP", }, { name: "NLP", }, { name: "NLP", }, { name: "NLP", }, { name: "NLP", }, { name: "NLP", }]
-        const cities = [{ name: "Ankara", id: 1 }, { name: "Istanbul", id: 2 }, { name: "Izmir", id: 3 }, { name: "Nevsehir", id: 4 }];
+        const { locations } = this.props.locationStore;
         return (
             <React.Fragment>
-                <section /* className="section-two bg-light" */>
+                <section className="section-two bg-light">
                     <div className="container">
                         <Row className="justify-content-center">
                             <Col lg={10}>
-                                <form className="p-4 shadow bg-white rounded">
+                                <form onSubmit={this.handleSubmit} className="p-4 shadow bg-white rounded">
                                     <h4 className="mb-3">Dilediğiniz eğitimi arayın</h4>
                                     <Row>
                                         <Col>
@@ -41,9 +55,9 @@ class Search extends Component {
                                                 <input onChange={this.onInputChange} name="name" id="name" type="text" className="form-control rounded-left" placeholder="eğitim arayın :" />
                                                 <div style={{ width: "500px" }} className="input-group-append" id="button-addon4">
                                                     <select onChange={this.onLocationSelect} className="form-control rounded-0" placeholder="lokasyon" id="domain_list">
-                                                        {cities.map(item => <option value={item.id} key={item.id} >{item.name}</option>)}
+                                                        {locations.map(item => <option value={item.id} key={item.id} >{item.locationName}</option>)}
                                                     </select>
-                                                    <input type="button" id="search" name="search" onClick={<Link to={`egitimler/${query}&${locationId}`} />} className="searchbtn btn btn-primary btn-block" value="Ara" />
+                                                    <input type="submit" id="search" ty name="search" className="searchbtn btn btn-primary btn-block" value="Ara" />
                                                 </div>
                                             </div>
                                         </Col>
@@ -72,4 +86,4 @@ class Search extends Component {
     }
 }
 
-export default Search;
+export default withRouter(Search);

@@ -12,9 +12,9 @@ class CourseStore {
     }
 
     @action
-    async searchCourses(query, locationId) {
-        let result = await courseService.searchCourses(query, locationId);
-        this.searchCourseResult = result.data;
+    async searchCourses(search) {
+        let result = await courseService.searchCourses(search);
+        this.searchCourseResult = result.data.results;
     }
 }
 

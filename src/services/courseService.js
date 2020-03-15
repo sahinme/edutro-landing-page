@@ -6,8 +6,8 @@ class CourseService {
         return result;
     }
 
-    async searchCourses(query, locationId) {
-        let result = await http.get(`api/course/search-courses?query=${query}&locationId=${locationId}`);
+    async searchCourses(search) {
+        let result = await http.get(`api/course/search-courses${search}`);
         return result;
     }
 }

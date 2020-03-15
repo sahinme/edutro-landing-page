@@ -45,7 +45,7 @@ const SearchCourse = React.lazy(() => import('./pages/SearchCourse'));
 const routes = [
 
     // public Routes
-    { path: '/egitimler/:query&locationId', component: SearchCourse },
+    { path: '/egitim-ara', component: SearchCourse },
     { path: '/index-saas', component: Saas },
     { path: '/index-apps', component: Apps },
     { path: '/index-agency', component: Agency },

@@ -1,15 +1,10 @@
 // React Basic and Bootstrap
 import React, { Component } from 'react';
-import { Row } from 'reactstrap';
 
-// Import Generic components
-import Feature from './Feature';
-import About from './About';
 import Cta from './Cta';
 import Cta1 from './Cta1';
 import Services from './Services';
 import Testi from './Testi';
-import Partner from '../../components/Shared/Partner';
 import Home from './Home';
 import Search from '../CloudHosting/Search';
 

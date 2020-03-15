@@ -43,7 +43,7 @@ class Services extends Component {
             </div>
 
             <Row>
-              {popularCourses.map(item => {
+              {popularCourses.slice(0, 6).map(item => {
                 return (
                   <CourseCard
                     courseId={item.id}
@@ -56,12 +56,12 @@ class Services extends Component {
                 );
               })}
 
-              <Col className="mt-4 pt-2 text-center">
+              {popularCourses.length > 5 && <Col className="mt-4 pt-2 text-center">
                 <Link to="#" className="btn btn-primary">
                   Daha Fazla Eğitim Görüntüle{" "}
                   <i className="mdi mdi-chevron-right"></i>
                 </Link>
-              </Col>
+              </Col>}
             </Row>
           </div>
 

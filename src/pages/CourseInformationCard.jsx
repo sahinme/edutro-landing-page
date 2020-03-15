@@ -112,7 +112,7 @@ class CourseInformationCard extends Component {
                   <Link
                     style={{ color: "black" }}
                     to={{
-                      pathName: `/egitmenler/${course.courseOwnerInfo[0].name
+                      pathname: `/egitmenler/${course.courseOwnerInfo[0].name
                         .replace(/ /g, "-")
                         .toLowerCase()}`,
                       state: { educatorId: course.courseOwnerInfo[0].id }

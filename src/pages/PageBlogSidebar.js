@@ -42,14 +42,14 @@ class PageBlogSidebar extends Component {
       <React.Fragment>
         <Helmet title="Blog" />
 
-        <section className="bg-half bg-light">
+        <section /* className="bg-half bg-light" */>
           <div className="home-center">
             <div className="home-desc-center">
               <div className="container">
                 <Row className="justify-content-center">
                   <Col lg={12} className="text-center">
                     <div className="page-next-level">
-                      <h4 className="title"> Blog </h4>
+                      {/* <h4 className="title"> Blog </h4> */}
                       <ul className="page-next d-inline-block bg-white shadow p-2 pl-4 pr-4 rounded mb-0">
                         <li>
                           <Link

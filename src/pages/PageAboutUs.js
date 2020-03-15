@@ -1,6 +1,6 @@
 // React Basic and Bootstrap
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 import { Helmet } from "react-helmet";
 
@@ -14,8 +14,12 @@ import team4 from '../images/team/4.jpg';
 // Modal Video 
 import ModalVideo from 'react-modal-video'
 import '../../node_modules/react-modal-video/scss/modal-video.scss';
+import { inject, observer } from 'mobx-react';
+import Stores from '../stores/storeIdentifier';
 
 
+@inject(Stores.TenantStore)
+@observer
 class PageAboutUs extends Component {
 
     constructor(props) {
@@ -30,6 +34,8 @@ class PageAboutUs extends Component {
     }
 
     componentDidMount() {
+        const educatorId = this.props.location.state.educatorId;
+        this.props.tenantStore.getTenantById(educatorId);
         document.body.classList = "";
         window.addEventListener("scroll", this.scrollNavigation, true);
     }
@@ -51,10 +57,10 @@ class PageAboutUs extends Component {
     }
 
     render() {
-
+        const { tenant } = this.props.tenantStore;
         return (
             <React.Fragment>
-                <Helmet title="Abay Akademi" />
+                <Helmet title={tenant.tenantName} />
                 <section className="bg-half bg-light">
                     <div className="home-center">
                         <div className="home-desc-center">
@@ -62,8 +68,8 @@ class PageAboutUs extends Component {
                                 <Row className="justify-content-center">
                                     <Col lg={12} className="text-center">
                                         <div className="page-next-level">
-                                            <h4 className="title"> Abay Akademi </h4>
-                                            <p> Eğitim ve Danışmanlık Merkezi </p>
+                                            <h4 className="title"> {tenant.tenantName} </h4>
+                                            <p> {tenant.title} </p>
                                         </div>
                                     </Col>
                                 </Row>
@@ -90,7 +96,7 @@ class PageAboutUs extends Component {
                             <Col lg={7} md={7} className="mt-4 pt-2 mt-sm-0 pt-sm-0">
                                 <div className="section-title ml-lg-4">
                                     <h4 className="title mb-4">Hikayemiz</h4>
-                                    <p className="text-muted">Start working with <span className="text-primary font-weight-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy texts have been in use by typesetters since the 16th century.</p>
+                                    <p className="text-muted">{tenant.aboutUs}</p>
                                 </div>
                             </Col>
                         </Row>
@@ -141,77 +147,21 @@ class PageAboutUs extends Component {
                         </Row>
 
                         <Row>
-                            <Col lg={3} md={6} className="mt-4 pt-2">
-                                <div className="team text-center">
-                                    <div className="position-relative">
-                                        <img src={team1} className="img-fluid d-block rounded-pill mx-auto" alt="" />
-                                        <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-facebook" title="Facebook"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-instagram" title="Instagram"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-twitter" title="Twitter"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded"><i className="mdi mdi-google-plus" title="Twitter"></i></Link></li>
-                                        </ul>
-                                    </div>
-                                    <div className="content pt-3 pb-3">
-                                        <h5 className="mb-0"><Link to="#" className="name text-dark">Ronny Jofra</Link></h5>
-                                        <small className="designation text-muted">C.E.O</small>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={3} md={6} className="mt-4 pt-2">
-                                <div className="team text-center">
-                                    <div className="position-relative">
-                                        <img src={team2} className="img-fluid d-block rounded-pill mx-auto" alt="" />
-                                        <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-facebook" title="Facebook"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-instagram" title="Instagram"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-twitter" title="Twitter"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded"><i className="mdi mdi-google-plus" title="Twitter"></i></Link></li>
-                                        </ul>
-                                    </div>
-                                    <div className="content pt-3 pb-3">
-                                        <h5 className="mb-0"><Link to="#" className="name text-dark">Micheal Carlo</Link></h5>
-                                        <small className="designation text-muted">Director</small>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={3} md={6} className="mt-4 pt-2">
-                                <div className="team text-center">
-                                    <div className="position-relative">
-                                        <img src={team3} className="img-fluid d-block rounded-pill mx-auto" alt="" />
-                                        <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-facebook" title="Facebook"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-instagram" title="Instagram"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-twitter" title="Twitter"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded"><i className="mdi mdi-google-plus" title="Twitter"></i></Link></li>
-                                        </ul>
-                                    </div>
-                                    <div className="content pt-3 pb-3">
-                                        <h5 className="mb-0"><Link to="#" className="name text-dark">Aliana Rosy</Link></h5>
-                                        <small className="designation text-muted">Manager</small>
-                                    </div>
-                                </div>
-                            </Col>
-
-                            <Col lg={3} md={6} className="mt-4 pt-2">
-                                <div className="team text-center">
-                                    <div className="position-relative">
-                                        <img src={team4} className="img-fluid d-block rounded-pill mx-auto" alt="" />
-                                        <ul className="list-unstyled social-icon team-icon mb-0 mt-4">
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-facebook" title="Facebook"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-instagram" title="Instagram"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded mr-1"><i className="mdi mdi-twitter" title="Twitter"></i></Link></li>
-                                            <li className="list-inline-item"><Link to="#" className="rounded"><i className="mdi mdi-google-plus" title="Twitter"></i></Link></li>
-                                        </ul>
-                                    </div>
-                                    <div className="content pt-3 pb-3">
-                                        <h5 className="mb-0"><Link to="#" className="name text-dark">Sofia Razaq</Link></h5>
-                                        <small className="designation text-muted">Developer</small>
-                                    </div>
-                                </div>
-                            </Col>
+                            {tenant && tenant.tenantEducators && tenant.tenantEducators.map(item => {
+                                return (
+                                    <Col lg={3} md={6} className="mt-4 pt-2">
+                                        <div className="team text-center">
+                                            <div className="position-relative">
+                                                <img src={team1} className="img-fluid d-block rounded-pill mx-auto" alt="" />
+                                            </div>
+                                            <div className="content pt-3 pb-3">
+                                                <h5 className="mb-0"><Link to="#" className="name text-dark">{item.educatorName}</Link></h5>
+                                                <small className="designation text-muted">{item.profession}</small>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                )
+                            })}
                         </Row>
                     </div>
 
@@ -235,4 +185,4 @@ class PageAboutUs extends Component {
         );
     }
 }
-export default PageAboutUs;
+export default withRouter(PageAboutUs);

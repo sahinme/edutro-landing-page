@@ -1,6 +1,6 @@
 // React Basic and Bootstrap
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Row, Col } from "reactstrap";
 import Search from "./CloudHosting/Search";
 import CourseCard from "./Course/CourseCard";
@@ -17,6 +17,8 @@ class SearchCourse extends Component {
   }
 
   componentDidMount() {
+    const search = this.props.location.search;
+    this.props.courseStore.searchCourses(search);
     window.addEventListener("scroll", this.scrollNavigation, true);
   }
   // Make sure to remove the DOM listener when the component is unmounted.
@@ -36,7 +38,7 @@ class SearchCourse extends Component {
 
   render() {
     const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-    const { popularCourses } = this.props.dashboardStore;
+    const { searchCourseResult } = this.props.courseStore;
     return (
       <React.Fragment>
         <Helmet title="Eğitimler" />
@@ -71,7 +73,6 @@ class SearchCourse extends Component {
               <Col lg={9} md={8}>
                 <div className="section-title">
                   <h4 className="title mb-2">Tüm Eğitimler</h4>
-                  <p className="text-muted mb-0">En popüler eğitimler</p>
                 </div>
               </Col>
 
@@ -90,18 +91,22 @@ class SearchCourse extends Component {
             </Row>
 
             <Row>
-              {popularCourses.map(item => {
-                return (
-                  <CourseCard
-                    courseId={item.id}
-                    title={item.title}
-                    price={item.price}
-                    quota={item.quota}
-                    locationName={item.locationName}
-                    startDate={item.startDate}
-                  />
-                );
-              })}
+              {searchCourseResult.length > 0 ? (
+                searchCourseResult.map(item => {
+                  return (
+                    <CourseCard
+                      courseId={item.id}
+                      title={item.title}
+                      price={item.price}
+                      quota={item.quota}
+                      locationName={item.locationName}
+                      startDate={item.startDate}
+                    />
+                  );
+                })
+              ) : (
+                <h4 className="title mb-2">Aradiginiz egitim bulunamadi</h4>
+              )}
 
               <div className="col-12">
                 <ul
@@ -112,7 +117,6 @@ class SearchCourse extends Component {
                     <Link to="#" className="pr-3 pl-3 pt-2 pb-2">
                       Prev
                     </Link>
-                    a
                   </li>
                   <li className="active">
                     <Link to="#" className="pr-3 pl-3 pt-2 pb-2">
@@ -143,4 +147,4 @@ class SearchCourse extends Component {
     );
   }
 }
-export default SearchCourse;
+export default withRouter(SearchCourse);

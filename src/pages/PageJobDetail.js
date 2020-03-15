@@ -80,8 +80,8 @@ class PageJobDetail extends Component {
                   <h5 className="mt-4">
                     Açıklama:
                   </h5>
-                  <p className="text-muted">
-                    {course.description}
+                  <p dangerouslySetInnerHTML={{ __html: course.description }} className="text-muted">
+                    {/* {course.description} */}
                   </p>
 
                   <div className="mt-4">
