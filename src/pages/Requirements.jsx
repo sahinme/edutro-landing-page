@@ -6,7 +6,7 @@ class Requirements extends Component {
     return (
       <ul className="list-unstyled">
         {requirements &&
-          requirements.split(",").map(item => {
+          requirements.split("|").map(item => {
             return (
               <li className="text-muted">
                 <i className="mdi mdi-pan-right text-success mdi-18px mr-2"></i>

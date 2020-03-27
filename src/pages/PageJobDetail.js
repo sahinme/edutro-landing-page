@@ -12,7 +12,7 @@ import ApplyModal from "../components/Shared/ApplyModal";
 import { inject, observer } from "mobx-react";
 import Stores from "../stores/storeIdentifier";
 
-@inject(Stores.CourseStore)
+@inject(Stores.CourseStore, Stores.QuestionStore)
 @observer
 class PageJobDetail extends Component {
   constructor(props) {
@@ -59,6 +59,11 @@ class PageJobDetail extends Component {
     this.setState({ applyVisible: false });
   };
 
+  onQuestionSend = (payload) => {
+    const { questionStore } = this.props;
+    questionStore(payload);
+  }
+
   render() {
     const { course } = this.props.courseStore;
     return (
@@ -98,7 +103,7 @@ class PageJobDetail extends Component {
                 <ApplyModal
                   show={this.state.applyVisible} onHide={this.applyHandleCancel} />
                 <QuestionModal
-                  show={this.state.visible} onHide={this.questionHandleCancel}
+                  show={this.state.visible} onSubmit={this.onQuestionSend} onHide={this.questionHandleCancel}
                 />
               </Col>
             </Row>

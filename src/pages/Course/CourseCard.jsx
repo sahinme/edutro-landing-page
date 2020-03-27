@@ -13,7 +13,8 @@ class CourseCard extends Component {
       quota,
       locationName,
       startDate,
-      courseId
+      courseId,
+      discountPrice
     } = this.props;
     return (
       <React.Fragment>
@@ -79,7 +80,18 @@ class CourseCard extends Component {
                 <ul className="list-unstyled float-right mb-0">
                   <li className="h3">
                     <span className="h6">₺</span>
-                    {price}
+                    {discountPrice && discountPrice.toFixed(2)}
+                  </li>
+
+                  <li>
+                    <small>₺</small>
+                    <s>
+                      {" "}
+                      <span style={{ fontWeight: "300" }}>
+                        {" "}
+                        {price && price.toFixed(2)}
+                      </span>
+                    </s>
                   </li>
                 </ul>
                 <ul className="list-unstyled mb-0 numbers">

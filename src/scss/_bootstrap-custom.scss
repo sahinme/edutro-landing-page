@@ -8,6 +8,7 @@ $value in $colors {
     .bg-#{$name} {
         background-color: #{$value} !important;
     }
+
     .text-#{$name} {
         color: #{$value} !important;
     }
@@ -19,28 +20,40 @@ $value in $colors {
     margin-right: 0px;
     margin-bottom: 5px;
 }
+
 // Rounded
 .rounded {
     border-radius: 10px !important;
 }
+
 .rounded-top {
     border-top-left-radius: 10px !important;
     border-top-right-radius: 10px !important;
 }
+
 .rounded-left {
     border-top-left-radius: 10px !important;
     border-bottom-left-radius: 10px !important;
 }
+
 .rounded-bottom {
     border-bottom-left-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
 }
+
 .rounded-right {
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
 }
 
 //Small
-.small, small {
+.small,
+small {
     font-size: 90%;
+}
+
+.rounded-pill {
+    border-radius: 50rem !important;
+    border: 16px solid white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
 }

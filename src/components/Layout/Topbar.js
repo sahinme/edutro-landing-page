@@ -1,9 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
-
+import { Alert } from 'reactstrap';
 import logo from "../../images/edutro.png";
+import SignInModal from "./SignInModal";
+import { inject, observer } from "mobx-react";
+import Stores from "../../stores/storeIdentifier";
+import ProfileMenu from "./ProfileMenu";
+import { readLocalStorage } from "../../helpers";
 
+@inject(Stores.AuthStore)
+@observer
 class Topbar extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +24,10 @@ class Topbar extends Component {
       user: false,
       work: false,
       blog: false,
-      carr: false
+      carr: false,
+      signInModalVisible: false,
+      showAlert: false,
+      isLogged: false
     };
     this.toggleLine = this.toggleLine.bind(this);
   }
@@ -38,6 +48,18 @@ class Topbar extends Component {
     }
     if (matchingMenuItem) {
       this.activateParentDropdown(matchingMenuItem);
+    }
+    const isLogged = readLocalStorage('token');
+    if (isLogged) this.setState({ isLogged: true })
+  }
+
+  onLoginSubmit = async (payload) => {
+    const { authStore } = this.props;
+    const result = await authStore.auth(payload);
+    if (result.data.token) {
+      this.setState({ signInModalVisible: false });
+    } else {
+      this.setState({ showAlert: true })
     }
   }
 
@@ -63,6 +85,7 @@ class Topbar extends Component {
   };
 
   render() {
+    const { signInModalVisible, isLogged } = this.state;
     return (
       <React.Fragment>
         <header id="topnav" className="defaultscroll sticky">
@@ -73,9 +96,13 @@ class Topbar extends Component {
               </Link>
             </div>
             <div className="buy-button">
-              <Link to="/giris-yap" className="btn btn-primary">
-                Giriş Yap
+              {
+                isLogged ? ProfileMenu() :
+                  <Link to="#" onClick={() => this.setState({ signInModalVisible: true })} className="btn btn-primary">
+                    Giriş Yap
               </Link>
+              }
+
             </div>
             <div className="menu-extras">
               <div className="menu-item">
@@ -109,30 +136,10 @@ class Topbar extends Component {
                 <li>
                   <Link to="/page-blog-sidebar">Blog</Link>
                 </li>
-
-                {/*  <li className="has-submenu">
-                  <Link
-                    to="/#"
-                    onClick={event => {
-                      event.preventDefault();
-                      this.setState({ docs: !this.state.docs });
-                    }}
-                  >
-                    Kurumsal
-                  </Link>
-                  <span className="menu-arrow"></span>
-                  <ul className={this.state.docs ? "submenu open" : "submenu"}>
-                    <li>
-                      <Link to="/page-aboutus">Hakkımızda</Link>
-                    </li>
-                    <li>
-                      <Link to="/page-contact-one">İletişim</Link>
-                    </li>
-                  </ul>
-                </li> */}
               </ul>
             </div>
           </div>
+          <SignInModal alertToggle={() => this.setState({ showAlert: false })} showAlert={this.state.showAlert} show={signInModalVisible} onSubmit={this.onLoginSubmit} onHide={() => this.setState({ signInModalVisible: false })} />
         </header>
       </React.Fragment>
     );

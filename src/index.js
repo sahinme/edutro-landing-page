@@ -6,9 +6,13 @@ import { Helmet } from 'react-helmet'
 import "moment/locale/tr";
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import { toast } from "react-toastify";
 import initializeStores from './stores/storeInitializer';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 const stores = initializeStores();
+toast.configure();
 
 const app = (
     <Provider {...stores}>

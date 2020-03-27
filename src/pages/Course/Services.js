@@ -46,6 +46,7 @@ class Services extends Component {
               {popularCourses.slice(0, 6).map(item => {
                 return (
                   <CourseCard
+                    discountPrice={item.discountPrice}
                     courseId={item.id}
                     title={item.title}
                     price={item.price}

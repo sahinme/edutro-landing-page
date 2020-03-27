@@ -104,7 +104,11 @@ class CourseInformationCard extends Component {
               <span className="mdi-24px float-left mr-3">
                 <img
                   style={{ width: "55px" }}
-                  src="https://abayakademi.com/wp-content/uploads/2019/03/ssdgsdfg.png"
+                  src={
+                    course &&
+                    course.courseOwnerInfo &&
+                    course.courseOwnerInfo.logoPath
+                  }
                 />
               </span>
               <div className="overflow-hidden d-block">
@@ -112,17 +116,20 @@ class CourseInformationCard extends Component {
                   <Link
                     style={{ color: "black" }}
                     to={{
-                      pathname: `/egitmenler/${course.courseOwnerInfo[0].name
+                      pathname: `/egitmenler/${course.courseOwnerInfo.name
                         .replace(/ /g, "-")
                         .toLowerCase()}`,
-                      state: { educatorId: course.courseOwnerInfo[0].id }
+                      state: {
+                        entityId: course.courseOwnerInfo.id,
+                        entityType: course.courseOwnerInfo.entityType
+                      }
                     }}
                   >
                     <h4 className="widget-title mb-0">
-                      {course.courseOwnerInfo[0].name}
+                      {course.courseOwnerInfo.name}
                     </h4>
                     <p className="text-success">
-                      {course.courseOwnerInfo[0].profession}
+                      {course.courseOwnerInfo.profession}
                     </p>
                   </Link>
                 )}

@@ -31,6 +31,7 @@ const PageContactThree = React.lazy(() => import('./pages/PageContactThree'));
 const PageContactTwo = React.lazy(() => import('./pages/PageContactTwo'));
 const PageJobApply = React.lazy(() => import('./pages/PageJobApply'));
 const PageJobDetail = React.lazy(() => import('./pages/PageJobDetail'));
+const EducatorDetail = React.lazy(() => import('./pages/EducatorDetail'));
 const PageJob = React.lazy(() => import('./pages/PageJob'));
 const PagePricing = React.lazy(() => import('./pages/PagePricing'));
 const PagePrivacy = React.lazy(() => import('./pages/PagePrivacy'));
@@ -77,6 +78,7 @@ const routes = [
     { path: '/egitimler/:courseName', component: PageJobDetail },
     { path: '/page-job', component: PageJob },
     { path: '/page-pricing', component: PagePricing },
+    { path: '/egitmen/:name', component: EducatorDetail },
     { path: '/page-privacy', component: PagePrivacy },
     { path: '/page-services', component: PageServices },
     { path: '/page-team', component: PageTeam },

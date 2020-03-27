@@ -69,6 +69,8 @@
     "react-scroll-to": "^3.0.0-beta.2",
     "react-scroll-up-button": "^1.6.4",
     "react-syntax-highlighter": "^11.0.2",
+    "react-toast-notifications": "^2.4.0",
+    "react-toastify": "^5.5.0",
     "react-typist": "^2.0.5",
     "react-visibility-sensor": "^5.1.1",
     "reactstrap": "^8.0.1",

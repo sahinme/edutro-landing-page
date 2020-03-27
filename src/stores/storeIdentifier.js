@@ -3,4 +3,6 @@ export default class Stores {
     static CourseStore = 'courseStore';
     static LocationStore = 'locationStore';
     static TenantStore = 'tenantStore';
+    static QuestionStore = 'questionStore';
+    static AuthStore = 'authStore';
 }
