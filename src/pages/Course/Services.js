@@ -48,6 +48,7 @@ class Services extends Component {
                   <CourseCard
                     discountPrice={item.discountPrice}
                     courseId={item.id}
+                    image={item.imagePath}
                     title={item.title}
                     price={item.price}
                     quota={item.quota}

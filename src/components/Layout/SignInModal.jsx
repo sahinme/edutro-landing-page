@@ -28,7 +28,7 @@ class SignInModal extends Component {
   };
 
   render() {
-    const { showAlert } = this.props;
+    const { showAlert, onSignUp } = this.props;
     return (
       <Modal
         {...this.props}
@@ -94,7 +94,11 @@ class SignInModal extends Component {
                   </Col>
                   <Col lg={12} className="mt-4 text-center">
                     <h6>
-                      Hesabın yok mu? Hemen <Link> Kaydol </Link>{" "}
+                      Hesabın yok mu? Hemen{" "}
+                      <Link to="#" onClick={onSignUp}>
+                        {" "}
+                        Kaydol{" "}
+                      </Link>{" "}
                     </h6>
                   </Col>
                 </Row>

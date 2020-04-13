@@ -97,6 +97,8 @@ class PageWork extends Component {
                     courseId={item.id}
                     title={item.title}
                     price={item.price}
+                    image={item.imagePath}
+                    discountPrice={item.discountPrice}
                     quota={item.quota}
                     locationName={item.locationName}
                     startDate={item.startDate}

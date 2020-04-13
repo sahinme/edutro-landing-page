@@ -30,7 +30,11 @@ const PageContactOne = React.lazy(() => import('./pages/PageContactOne'));
 const PageContactThree = React.lazy(() => import('./pages/PageContactThree'));
 const PageContactTwo = React.lazy(() => import('./pages/PageContactTwo'));
 const PageJobApply = React.lazy(() => import('./pages/PageJobApply'));
+const QuestionDetail = React.lazy(() => import('./pages/Questions/components/questionDetail'));
+
 const PageJobDetail = React.lazy(() => import('./pages/PageJobDetail'));
+const Notifications = React.lazy(() => import('./pages/Notifications'));
+const Questions = React.lazy(() => import('./pages/Questions'));
 const EducatorDetail = React.lazy(() => import('./pages/EducatorDetail'));
 const PageJob = React.lazy(() => import('./pages/PageJob'));
 const PagePricing = React.lazy(() => import('./pages/PagePricing'));
@@ -66,6 +70,7 @@ const routes = [
     { path: '/index-services', component: Services },
     { path: '/changelog', component: ChangeLog },
     { path: '/components', component: Components },
+    { path: '/sorularim/:name/:id', component: QuestionDetail, private: true },
     { path: '/documentation', component: Documentation },
     { path: '/egitmenler/:educatorName', component: PageAboutUs },
     { path: '/page-blog', component: PageBlog },
@@ -77,6 +82,8 @@ const routes = [
     { path: '/egitimler/basvuru-yap', component: PageJobApply },
     { path: '/egitimler/:courseName', component: PageJobDetail },
     { path: '/page-job', component: PageJob },
+    { path: '/bildirimler', component: Notifications, private: true },
+    { path: '/sorularim', component: Questions, private: true },
     { path: '/page-pricing', component: PagePricing },
     { path: '/egitmen/:name', component: EducatorDetail },
     { path: '/page-privacy', component: PagePrivacy },

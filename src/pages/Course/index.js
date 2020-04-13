@@ -8,19 +8,17 @@ import Testi from './Testi';
 import Home from './Home';
 import Search from '../CloudHosting/Search';
 
-
-
 class Index extends Component {
     componentDidMount() {
         console.log(this.props);
         document.body.classList = "";
         document.getElementById('topnav').classList.add('bg-white');
-        window.addEventListener("scroll", this.scrollNavigation, true);
+        /*   window.addEventListener("scroll", this.scrollNavigation, true); */
     }
 
     // Make sure to remove the DOM listener when the component is unmounted.
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.scrollNavigation);
+        /*  window.removeEventListener("scroll", this.scrollNavigation); */
     }
     scrollNavigation = () => {
         var doc = document.documentElement;
@@ -38,15 +36,6 @@ class Index extends Component {
         return (
             <React.Fragment>
 
-                {/* <div id="preloader">
-                    <div id="status">
-                        <div className="spinner">
-                            <div className="double-bounce1"></div>
-                            <div className="double-bounce2"></div>
-                        </div>
-                    </div>
-                </div> */}
-
                 <Home />
 
                 <Search />
@@ -58,16 +47,6 @@ class Index extends Component {
                 <Testi />
 
                 <Cta1 />
-
-
-                {/* <section className="bg-light section-two">
-                    <div className="container">
-                        <Row className="justify-content-center">
-                            <Partner />
-                        </Row>
-                    </div>
-                </section> */}
-
             </React.Fragment>
         );
     }

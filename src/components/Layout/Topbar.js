@@ -6,8 +6,8 @@ import logo from "../../images/edutro.png";
 import SignInModal from "./SignInModal";
 import { inject, observer } from "mobx-react";
 import Stores from "../../stores/storeIdentifier";
-import ProfileMenu from "./ProfileMenu";
-import { readLocalStorage } from "../../helpers";
+import { ProfileMenu } from "./ProfileMenu";
+import SignUpModal from "./SignUpModal";
 
 @inject(Stores.AuthStore)
 @observer
@@ -26,6 +26,7 @@ class Topbar extends Component {
       blog: false,
       carr: false,
       signInModalVisible: false,
+      signUpModalVisible: false,
       showAlert: false,
       isLogged: false
     };
@@ -49,8 +50,6 @@ class Topbar extends Component {
     if (matchingMenuItem) {
       this.activateParentDropdown(matchingMenuItem);
     }
-    const isLogged = readLocalStorage('token');
-    if (isLogged) this.setState({ isLogged: true })
   }
 
   onLoginSubmit = async (payload) => {
@@ -84,8 +83,21 @@ class Topbar extends Component {
     }
   };
 
+  logOut = () => {
+    const { authStore } = this.props;
+    authStore.logOut()
+    authStore.isLogged()
+  }
+
+  onRegisterSubmit = (payload) => {
+    const { authStore } = this.props;
+    authStore.register(payload);
+    this.setState({ signUpModalVisible: false })
+  }
+
   render() {
-    const { signInModalVisible, isLogged } = this.state;
+    const { signInModalVisible, signUpModalVisible } = this.state;
+    const { authStore } = this.props;
     return (
       <React.Fragment>
         <header id="topnav" className="defaultscroll sticky">
@@ -97,7 +109,7 @@ class Topbar extends Component {
             </div>
             <div className="buy-button">
               {
-                isLogged ? ProfileMenu() :
+                authStore.token ? <ProfileMenu logOut={this.logOut} /> :
                   <Link to="#" onClick={() => this.setState({ signInModalVisible: true })} className="btn btn-primary">
                     Giriş Yap
               </Link>
@@ -139,7 +151,18 @@ class Topbar extends Component {
               </ul>
             </div>
           </div>
-          <SignInModal alertToggle={() => this.setState({ showAlert: false })} showAlert={this.state.showAlert} show={signInModalVisible} onSubmit={this.onLoginSubmit} onHide={() => this.setState({ signInModalVisible: false })} />
+          <SignInModal
+            onSignUp={() => this.setState({ signInModalVisible: false, signUpModalVisible: true })}
+            alertToggle={() => this.setState({ showAlert: false })}
+            showAlert={this.state.showAlert} show={signInModalVisible}
+            onSubmit={this.onLoginSubmit}
+            onHide={() => this.setState({ signInModalVisible: false })} />
+          <SignUpModal
+            showAlert={false}
+            show={signUpModalVisible}
+            onHide={() => this.setState({ signUpModalVisible: false })}
+            onSubmit={this.onRegisterSubmit}
+          />
         </header>
       </React.Fragment>
     );

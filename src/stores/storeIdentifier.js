@@ -5,4 +5,5 @@ export default class Stores {
     static TenantStore = 'tenantStore';
     static QuestionStore = 'questionStore';
     static AuthStore = 'authStore';
+    static LoaderStore = 'loaderStore';
 }

@@ -14,7 +14,8 @@ class CourseCard extends Component {
       locationName,
       startDate,
       courseId,
-      discountPrice
+      discountPrice,
+      image,
     } = this.props;
     return (
       <React.Fragment>
@@ -22,7 +23,8 @@ class CourseCard extends Component {
           <div className="courses-desc position-relative overflow-hidden rounded border">
             <div className="position-relative d-block overflow-hidden">
               <img
-                src={course1}
+                style={{ width: "350px", height: "196px" }}
+                src={image}
                 className="img-fluid rounded-top mx-auto"
                 alt="Landrick"
               />
@@ -32,7 +34,7 @@ class CourseCard extends Component {
                   pathname: `/egitimler/${title
                     .replace(/ /g, "-")
                     .toLowerCase()}`,
-                  state: { courseId }
+                  state: { courseId },
                 }}
                 className="text-white h6 preview"
               >
@@ -46,7 +48,7 @@ class CourseCard extends Component {
                     pathname: `/egitimler/${title
                       .replace(/ /g, "-")
                       .toLowerCase()}`,
-                    state: { courseId }
+                    state: { courseId },
                   }}
                   className="title text-dark"
                 >
@@ -71,7 +73,7 @@ class CourseCard extends Component {
                     <i className="mdi mdi-star h5 mb-0 text-warning"></i>
                   </li>
                   <li className="list-inline-item">
-                    5 Star ({quota}
+                    ({quota}
                     <i className="mdi mdi-account text-muted"></i>)
                   </li>
                 </ul>

@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
+import { readLocalStorage } from "../../helpers";
 
 class QuestionModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
       values: {
-        email: "",
         phoneNumber: "",
-        description: ""
-      }
+        description: "",
+        title: "",
+      },
     };
   }
 
@@ -21,6 +22,9 @@ class QuestionModal extends Component {
 
   handleSubmit = () => {
     const values = { ...this.state.values };
+    const userData = readLocalStorage("userData");
+    values.email = userData.email;
+    values.userId = userData.id;
     const { onSubmit } = this.props;
     onSubmit(values);
   };
@@ -33,14 +37,14 @@ class QuestionModal extends Component {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Form onSubmit={this.handleSubmit}>
+        <Form /* onSubmit={this.handleSubmit} */>
           <Modal.Body>
-            <Form.Group controlId="email">
-              <Form.Label>E-Posta</Form.Label>
+            <Form.Group controlId="title">
+              <Form.Label>Konu</Form.Label>
               <Form.Control
                 onChange={this.handleChange}
-                type="email"
-                placeholder="e-posta adresinizi giriniz..."
+                type="title"
+                placeholder="hangi konuda soru sormak istersiniz?..."
               />
             </Form.Group>
 
@@ -64,7 +68,7 @@ class QuestionModal extends Component {
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.props.onHide}>Vazgeç</Button>
-            <Button type="submit">Gönder</Button>
+            <Button onClick={this.handleSubmit}>Gönder</Button>
           </Modal.Footer>
         </Form>
       </Modal>

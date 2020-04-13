@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -25,17 +26,23 @@ const menu = [
   }
 ];
 
-export default function ProfileMenu() {
+export const ProfileMenu = ({ logOut }) => {
+  let history = useHistory();
   return (
     <UncontrolledDropdown style={{ marginTop: "10px" }}>
       <DropdownToggle color="primary" caret>
         Hesabım
       </DropdownToggle>
       <DropdownMenu>
-        {menu.map(menuItem => (
-          <DropdownItem>{menuItem.title}</DropdownItem>
-        ))}
+        <DropdownItem onClick={() => history.push("/sorularim")}>
+          Sorularım
+        </DropdownItem>
+        <DropdownItem onClick={() => history.push("/bildirimler")}>
+          Bildirimler
+        </DropdownItem>
+        <DropdownItem>Favori Kurslarim</DropdownItem>
+        <DropdownItem onClick={logOut}>Çıkış Yap</DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
   );
-}
+};

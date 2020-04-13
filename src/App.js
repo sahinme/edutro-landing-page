@@ -8,6 +8,7 @@ import './css/materialdesignicons.min.css';
 
 // Include Routes 
 import routes from './routes';
+import { readLocalStorage } from './helpers';
 
 // Root Include
 const Root = React.lazy(() => import('./pages/Course'));

@@ -34,7 +34,7 @@ class Search extends Component {
         const { query, locationId } = this.state;
         history.push({
             pathname: `/egitim-ara`,
-            search: `?query=${query}&locationId=${locationId}`
+            search: `?query=${query}&locationId=${locationId}`,
         })
     }
 

@@ -18,6 +18,7 @@ class SearchCourse extends Component {
 
   componentDidMount() {
     const search = this.props.location.search;
+    debugger;
     this.props.courseStore.searchCourses(search);
     window.addEventListener("scroll", this.scrollNavigation, true);
   }
@@ -65,7 +66,7 @@ class SearchCourse extends Component {
           </div>
         </section>
 
-        <Search />
+        {/*  <Search /> */}
 
         <section className="section">
           <div className="container">
@@ -92,12 +93,14 @@ class SearchCourse extends Component {
 
             <Row>
               {searchCourseResult.length > 0 ? (
-                searchCourseResult.map(item => {
+                searchCourseResult.map((item) => {
                   return (
                     <CourseCard
                       courseId={item.id}
                       title={item.title}
                       price={item.price}
+                      discountPrice={item.discountPrice}
+                      image={item.imagePath}
                       quota={item.quota}
                       locationName={item.locationName}
                       startDate={item.startDate}
@@ -107,39 +110,6 @@ class SearchCourse extends Component {
               ) : (
                 <h4 className="title mb-2">Aradiginiz egitim bulunamadi</h4>
               )}
-
-              <div className="col-12">
-                <ul
-                  style={{ marginTop: "30px" }}
-                  className="pagination justify-content-center mb-0 list-unstyled"
-                >
-                  <li>
-                    <Link to="#" className="pr-3 pl-3 pt-2 pb-2">
-                      Prev
-                    </Link>
-                  </li>
-                  <li className="active">
-                    <Link to="#" className="pr-3 pl-3 pt-2 pb-2">
-                      1
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="pr-3 pl-3 pt-2 pb-2">
-                      2
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="pr-3 pl-3 pt-2 pb-2">
-                      3
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="pr-3 pl-3 pt-2 pb-2">
-                      Next
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </Row>
           </div>
         </section>

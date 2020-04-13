@@ -87,7 +87,9 @@ class CourseInformationCard extends Component {
               <div className="overflow-hidden d-block">
                 <h4 className="widget-title mb-0">Eğitim Süresi:</h4>
                 <p className="text-success mb-0">
-                  {course.duration ? course.duration : "-"}
+                  {course.durationCount
+                    ? course.durationCount + " " + course.durationType
+                    : "-"}
                 </p>
               </div>
             </div>
@@ -121,8 +123,8 @@ class CourseInformationCard extends Component {
                         .toLowerCase()}`,
                       state: {
                         entityId: course.courseOwnerInfo.id,
-                        entityType: course.courseOwnerInfo.entityType
-                      }
+                        entityType: course.courseOwnerInfo.entityType,
+                      },
                     }}
                   >
                     <h4 className="widget-title mb-0">

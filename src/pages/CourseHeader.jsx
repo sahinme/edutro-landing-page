@@ -3,7 +3,7 @@ import { Row, Col } from "reactstrap";
 
 class CourseHeader extends Component {
   render() {
-    const { title } = this.props;
+    const { title, shortDescription, locationName, address } = this.props;
     return (
       <section className="bg-half bg-light">
         <div className="home-center">
@@ -14,18 +14,16 @@ class CourseHeader extends Component {
                   <div className="page-next-level">
                     <h4 className="title mb-3"> {title} </h4>
                     <p className="para-desc mx-auto text-muted">
-                      Launch your campaign and benefit from our expertise on
-                      designing and managing conversion centered bootstrap4 html
-                      page.
+                      {shortDescription}
                     </p>
                     <ul className="list-unstyled">
                       <li className="list-inline-item text-primary mr-3">
                         <i className="mdi mdi-map-marker text-warning mr-2"></i>
-                        Beijing, China
+                        {locationName}
                       </li>
                       <li className="list-inline-item text-primary">
                         <i className="mdi mdi-office-building text-warning mr-2"></i>
-                        Vivo
+                        {address}
                       </li>
                     </ul>
                     <ul className="page-next d-inline-block bg-white shadow p-2 pl-4 pr-4 rounded mb-0">
